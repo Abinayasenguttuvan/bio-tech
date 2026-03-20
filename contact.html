@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Biotech Header</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+body{height:2000px;background:linear-gradient(120deg,#e0f2fe,#f5f9ff);}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;left:0;width:100%;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.3);
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+z-index:1000;
+}
+
+/* SHRINK */
+header.shrink{
+padding:5px 0;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 40px;
+position:relative;
+}
+
+/* LEFT LOGO */
+.logo img{height:40px;}
+
+/* CENTER NAV */
+.nav-links{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#0f172a;
+font-weight:500;
+position:relative;
+}
+
+/* ACTIVE */
+.nav-links a.active,
+.nav-links a:hover{color:#2563eb;}
+
+.nav-links a.active::after,
+.nav-links a:hover::after{
+content:"";
+position:absolute;
+bottom:-6px;left:0;
+width:100%;height:2px;
+background:#2563eb;
+}
+
+/* RIGHT */
+.right{display:flex;gap:12px;}
+
+.btn{
+padding:8px 18px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-size:14px;
+transition:0.3s;
+}
+
+.login{background:transparent;border:1px solid #2563eb;color:#2563eb;}
+.login:hover{background:#2563eb;color:white;}
+
+.register{background:#2563eb;color:white;}
+.register:hover{background:#1d4ed8;}
+
+/* MENU */
+.menu-toggle{display:none;font-size:22px;cursor:pointer;}
+
+/* MOBILE MENU */
+.mobile-menu{
+position:fixed;
+top:0;left:-100%;
+width:260px;height:100vh;
+background:white;
+padding:20px;
+transition:0.3s;
+box-shadow:10px 0 25px rgba(0,0,0,0.1);
+z-index:2000;
+}
+.mobile-menu.active{left:0;}
+.mobile-menu a{display:block;margin:15px 0;text-decoration:none;color:#0f172a;}
+
+/* OVERLAY */
+.overlay{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.4);display:none;z-index:1500;
+}
+.overlay.active{display:block;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.nav-links{display:none;}
+.right{display:none;}
+.menu-toggle{display:block;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<header id="header">
+
+<div class="navbar">
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa fa-bars"></i>
+</div>
+
+<div class="logo">
+<img src="https://dummyimage.com/100x40/2563eb/ffffff&text=Stackly" alt="Stackly">
+</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#" class="active">Home</a>
+<a href="#">Researcher</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="right">
+<button class="btn login">Login</button>
+<button class="btn register">Register</button>
+</div>
+
+</div>
+
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<a href="#">Home</a>
+<a href="#">Researcher</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+<hr>
+<a href="#">Login</a>
+<a href="#">Register</a>
+</div>
+
+<script>
+// MENU
+function toggleMenu(){
+const menu=document.getElementById("mobileMenu");
+const overlay=document.getElementById("overlay");
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+}
+
+overlay.onclick=()=>{
+document.getElementById("mobileMenu").classList.remove("active");
+overlay.classList.remove("active");
+};
+
+// SHRINK HEADER
+window.addEventListener("scroll",()=>{
+const header=document.getElementById("header");
+header.classList.toggle("shrink",window.scrollY>50);
+});
+
+// ACTIVE LINK
+const links=document.querySelectorAll(".nav-links a");
+links.forEach(link=>{
+link.addEventListener("click",()=>{
+links.forEach(l=>l.classList.remove("active"));
+link.classList.add("active");
+});
+});
+</script>
+
+</body>
+</html>
+
+<!-- GLASSMORPHISM BIOTECH CONTACT -->
+
+<section class="bio-glass-contact-hero">
+
+    <div class="bio-glass-contact-hero-inner">
+    
+    <h1 class="bio-glass-contact-title">
+    Talk to Our <span>Biotechnology Team</span>
+    </h1>
+    
+    <p class="bio-glass-contact-sub">
+    Research collaborations, instrument demos, CRO enquiries and scientific discussions.
+    </p>
+    
+    </div>
+    
+    </section>
+    
+    
+    <section class="bio-glass-contact-section">
+    
+    <div class="bio-glass-contact-container">
+    
+    <div class="bio-glass-contact-grid">
+    
+    <!-- INFO SIDE -->
+    
+    <div class="bio-glass-contact-info">
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">📍</div>
+    <h3>Stackly Biotechnology Lab</h3>
+    <p>Biotech Park, SIDCO Industrial Estate</p>
+    <p>Salem – 636016, Tamil Nadu</p>
+    </div>
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">📞</div>
+    <h3>Call / WhatsApp</h3>
+    <p>+91-427-234-5678</p>
+    <p>+91-98765-43210</p>
+    </div>
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">📧</div>
+    <h3>Email</h3>
+    <p>research@stackly.in</p>
+    <p>support@stackly.in</p>
+    </div>
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">⏰</div>
+    <h3>Working Hours</h3>
+    <p>Mon-Fri : 8AM – 6PM</p>
+    <p>Saturday : 9AM – 1PM</p>
+    </div>
+    
+    </div>
+    
+    
+    <!-- FORM SIDE -->
+    
+    <div class="bio-glass-contact-form-card">
+    
+    <h3 class="bio-glass-contact-form-title">
+    Send a Biotechnology Enquiry
+    </h3>
+    
+    <form id="bioGlassContactForm">
+    
+    <div class="bio-glass-contact-row">
+    <input type="text" id="bioGlassFirst" placeholder="First Name *">
+    <input type="text" id="bioGlassLast" placeholder="Last Name *">
+    </div>
+    
+    <input type="email" id="bioGlassEmail" placeholder="Email *">
+    
+    <input type="text" id="bioGlassInstitute" placeholder="Institution / Organisation">
+    
+    <select id="bioGlassService">
+    <option value="">Select Service</option>
+    <option>Genomic Sequencing</option>
+    <option>CRISPR Screening</option>
+    <option>Proteomics</option>
+    <option>Bioinformatics</option>
+    <option>Research Collaboration</option>
+    <option>Other</option>
+    </select>
+    
+    <textarea id="bioGlassMessage" rows="5" placeholder="Describe your project"></textarea>
+    
+    <div class="bio-glass-contact-error" id="bioGlassError">
+    Please fill the required fields correctly
+    </div>
+    
+    <button type="submit" class="bio-glass-contact-btn">
+    Send Enquiry →
+    </button>
+    
+    </form>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* HERO */
+    
+    .bio-glass-contact-hero{
+    padding:110px 20px;
+    background:linear-gradient(120deg,#020617,#071428);
+    text-align:center;
+    }
+    
+    .bio-glass-contact-title{
+    font-size:42px;
+    color:white;
+    }
+    
+    .bio-glass-contact-title span{
+    color:#00eaff;
+    }
+    
+    .bio-glass-contact-sub{
+    color:#cbd5e1;
+    max-width:650px;
+    margin:auto;
+    margin-top:12px;
+    }
+    
+    
+    /* SECTION */
+    
+    .bio-glass-contact-section{
+    padding:80px 20px;
+    background:#020817;
+    }
+    
+    .bio-glass-contact-container{
+    max-width:1200px;
+    margin:auto;
+    }
+    
+    
+    /* GRID */
+    
+    .bio-glass-contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    }
+    
+    
+    /* GLASS CARD */
+    
+    .bio-glass-contact-card,
+    .bio-glass-contact-form-card{
+    
+    background:rgba(255,255,255,0.06);
+    
+    backdrop-filter:blur(18px);
+    
+    border:1px solid rgba(255,255,255,0.15);
+    
+    border-radius:16px;
+    
+    padding:28px;
+    
+    color:white;
+    
+    box-shadow:0 0 25px rgba(0,255,255,0.05);
+    
+    transition:0.4s;
+    
+    margin-bottom:20px;
+    
+    }
+    
+    .bio-glass-contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 40px rgba(0,255,255,0.15);
+    }
+    
+    .bio-glass-contact-card h3{
+    color:#00eaff;
+    margin-bottom:8px;
+    }
+    
+    
+    /* FORM */
+    
+    #bioGlassContactForm{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    }
+    
+    .bio-glass-contact-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    }
+    
+    #bioGlassContactForm input,
+    #bioGlassContactForm select,
+    #bioGlassContactForm textarea{
+    
+    padding:12px;
+    
+    border-radius:8px;
+    
+    border:1px solid rgba(255,255,255,0.15);
+    
+    background:rgba(255,255,255,0.05);
+    
+    color:white;
+    
+    outline:none;
+    
+    transition:0.3s;
+    
+    }
+    
+    #bioGlassContactForm input:focus,
+    #bioGlassContactForm textarea:focus{
+    
+    border-color:#00eaff;
+    box-shadow:0 0 8px #00eaff;
+    
+    }
+    
+    .bio-glass-contact-btn{
+    
+    padding:14px;
+    
+    border:none;
+    
+    border-radius:10px;
+    
+    background:linear-gradient(90deg,#00eaff,#4ade80);
+    
+    color:#021018;
+    
+    font-weight:bold;
+    
+    cursor:pointer;
+    
+    transition:0.3s;
+    
+    }
+    
+    .bio-glass-contact-btn:hover{
+    transform:scale(1.05);
+    }
+    
+    
+    /* ERROR */
+    
+    .bio-glass-contact-error{
+    display:none;
+    color:#ff6b6b;
+    font-size:14px;
+    }
+    
+    
+    /* RESPONSIVE */
+    
+    
+    /* LAPTOP */
+    
+    @media (max-width:1200px){
+    
+    .bio-glass-contact-container{
+    max-width:1000px;
+    }
+    
+    }
+    
+    
+    /* TABLET */
+    
+    @media (max-width:992px){
+    
+    .bio-glass-contact-grid{
+    grid-template-columns:1fr;
+    }
+    
+    }
+    
+    
+    /* MOBILE */
+    
+    @media (max-width:600px){
+    
+    .bio-glass-contact-title{
+    font-size:28px;
+    }
+    
+    .bio-glass-contact-row{
+    grid-template-columns:1fr;
+    }
+    
+    .bio-glass-contact-section{
+    padding:60px 15px;
+    }
+    
+    .bio-glass-contact-card,
+    .bio-glass-contact-form-card{
+    padding:22px;
+    }
+    
+    }
+    
+    </style>
+    
+    
+    <script>
+    
+    /* FORM VALIDATION */
+    
+    document.getElementById("bioGlassContactForm")
+    .addEventListener("submit",function(e){
+    
+    e.preventDefault();
+    
+    let first=document.getElementById("bioGlassFirst").value.trim();
+    let last=document.getElementById("bioGlassLast").value.trim();
+    let email=document.getElementById("bioGlassEmail").value.trim();
+    let message=document.getElementById("bioGlassMessage").value.trim();
+    
+    let error=document.getElementById("bioGlassError");
+    
+    let emailCheck=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    
+    if(first==="" || last==="" || message==="" || !email.match(emailCheck)){
+    
+    error.style.display="block";
+    
+    return;
+    
+    }
+    
+    error.style.display="none";
+    
+    /* redirect if valid */
+    
+    window.location.href="404.html";
+    
+    });
+    
+    </script>

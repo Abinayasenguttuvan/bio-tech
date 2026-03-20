@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biotech Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ROOT */
+:root{
+--bio-primary:#00eaff;
+--bio-secondary:#9333ea;
+--bio-dark:#020817;
+--bio-card:rgba(255,255,255,0.06);
+--bio-border:rgba(255,255,255,0.15);
+--bio-text:#cbd5e1;
+}
+
+/* GLOBAL */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#020817,#041028);
+overflow:hidden;
+}
+
+/* ===== BACK BUTTON ===== */
+.bio-back-home{
+position:fixed;
+top:20px;
+left:20px;
+display:flex;
+align-items:center;
+gap:8px;
+color:#cbd5e1;
+text-decoration:none;
+font-size:14px;
+z-index:10;
+padding:8px 14px;
+border-radius:8px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+.bio-back-home:hover{
+color:#00eaff;
+border-color:#00eaff;
+}
+
+/* BACKGROUND GLOW */
+body::before,
+body::after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border-radius:50%;
+filter:blur(80px);
+}
+
+body::before{
+background:#00eaff33;
+top:-100px;
+left:-100px;
+animation:float 6s infinite alternate;
+}
+
+body::after{
+background:#9333ea33;
+bottom:-100px;
+right:-100px;
+animation:float 8s infinite alternate;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(40px)}
+}
+
+/* WRAPPER */
+.bio-auth-wrapper{
+width:100%;
+max-width:420px;
+padding:20px;
+z-index:2;
+}
+
+/* CARD */
+.bio-auth-card{
+background:var(--bio-card);
+border:1px solid var(--bio-border);
+backdrop-filter:blur(14px);
+border-radius:18px;
+padding:35px 30px;
+color:#fff;
+box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+.bio-logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.bio-logo i{
+font-size:28px;
+color:var(--bio-primary);
+}
+
+/* TITLE */
+.bio-title{
+text-align:center;
+font-size:26px;
+margin-bottom:5px;
+}
+
+.bio-sub{
+text-align:center;
+color:var(--bio-text);
+font-size:13px;
+margin-bottom:25px;
+}
+
+/* INPUT */
+.bio-input{
+margin-bottom:18px;
+}
+
+.bio-input label{
+display:block;
+font-size:13px;
+margin-bottom:6px;
+}
+
+.bio-input input,
+.bio-input select{
+width:100%;
+height:44px;
+padding:0 12px;
+border-radius:10px;
+border:1px solid var(--bio-border);
+background:transparent;
+color:#fff;
+outline:none;
+}
+
+.bio-input input:focus{
+border-color:var(--bio-primary);
+}
+
+/* PASSWORD */
+.bio-pass-wrap{
+position:relative;
+}
+
+.bio-pass-wrap span{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+}
+
+/* ERROR */
+.bio-error{
+font-size:11px;
+color:#ff6b6b;
+display:none;
+}
+
+/* ROW */
+.bio-row{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+.bio-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:linear-gradient(90deg,#00eaff,#9333ea);
+color:#fff;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.bio-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 0 20px #00eaff55;
+}
+
+/* LINK */
+.bio-link{
+text-align:center;
+margin-top:12px;
+font-size:13px;
+}
+
+.bio-link a{
+color:var(--bio-primary);
+text-decoration:none;
+}
+
+/* DEMO BOX */
+.bio-demo-box{
+margin-top:20px;
+padding:15px;
+border-radius:12px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.12);
+font-size:12px;
+color:#dbeafe;
+}
+
+.bio-demo-box h4{
+margin-bottom:8px;
+font-size:13px;
+color:#00eaff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media(max-width:768px){
+.bio-auth-card{
+padding:28px 22px;
+}
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+.bio-title{
+font-size:22px;
+}
+
+.bio-auth-card{
+padding:24px 18px;
+}
+
+.bio-back-home{
+top:10px;
+left:10px;
+font-size:12px;
+padding:6px 10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACK BUTTON -->
+<a href="index.html" class="bio-back-home">
+<i class="fa fa-arrow-left"></i> Back
+</a>
+
+<div class="bio-auth-wrapper">
+
+<div class="bio-auth-card">
+
+<div class="bio-logo">
+<i class="fa-solid fa-dna"></i>
+</div>
+
+<h2 class="bio-title">Biotech Login</h2>
+<p class="bio-sub">Access your research dashboard</p>
+
+<form id="bioLoginForm">
+
+<div class="bio-input">
+<label>Role</label>
+<select id="bioRole">
+<option>Administrator</option>
+<option selected>Researcher</option>
+<option>Patient</option>
+</select>
+</div>
+
+<div class="bio-input">
+<label>Email</label>
+<input type="email" id="bioEmail">
+<p id="bioEmailError" class="bio-error">Invalid email</p>
+</div>
+
+<div class="bio-input">
+<label>Password</label>
+<div class="bio-pass-wrap">
+<input type="password" id="bioPassword">
+<span id="bioToggle"><i class="fa fa-eye"></i></span>
+</div>
+<p id="bioPassError" class="bio-error">Invalid password</p>
+</div>
+
+<div class="bio-row">
+<label><input type="checkbox"> Remember</label>
+<a href="404.html" style="color:#aaa;">Forgot?</a>
+</div>
+
+<button class="bio-btn">Login</button>
+
+<div class="bio-link">
+New user? <a href="register.html">Register</a>
+</div>
+
+<div class="bio-demo-box">
+<h4>Demo Credentials</h4>
+<ul>
+<li>Admin: admin@bio.com</li>
+<li>Researcher: researcher@bio.com</li>
+<li>Patient: patient@bio.com</li>
+<li>Password: any (min 6 chars)</li>
+</ul>
+</div>
+
+</form>
+
+</div>
+</div>
+
+<script>
+
+/* PASSWORD TOGGLE */
+const pass = document.getElementById("bioPassword");
+
+document.getElementById("bioToggle").onclick = ()=>{
+pass.type = pass.type === "password" ? "text" : "password";
+};
+
+/* VALIDATION */
+const email = document.getElementById("bioEmail");
+const role = document.getElementById("bioRole");
+
+const emailErr = document.getElementById("bioEmailError");
+const passErr = document.getElementById("bioPassError");
+
+const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const passPattern=/.{6,}/;
+
+document.getElementById("bioLoginForm").addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+let valid=true;
+
+if(!emailPattern.test(email.value)){
+emailErr.style.display="block";
+valid=false;
+}else emailErr.style.display="none";
+
+if(!passPattern.test(pass.value)){
+passErr.style.display="block";
+valid=false;
+}else passErr.style.display="none";
+
+if(!valid) return;
+
+localStorage.setItem("userRole", role.value);
+localStorage.setItem("userEmail", email.value);
+
+if(role.value==="Administrator"){
+location.href="admin.html";
+}else if(role.value==="Researcher"){
+location.href="researcher.html";
+}else{
+location.href="patient.html";
+}
+
+});
+
+</script>
+
+</body>
+</html>

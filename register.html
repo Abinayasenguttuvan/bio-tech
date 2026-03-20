@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biotech Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== ROOT ===== */
+:root{
+--bio-primary:#00eaff;
+--bio-secondary:#9333ea;
+--bio-dark:#020817;
+--bio-card:rgba(255,255,255,0.06);
+--bio-border:rgba(255,255,255,0.15);
+--bio-text:#cbd5e1;
+}
+
+/* ===== GLOBAL ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#020817,#041028);
+overflow:hidden;
+}
+
+/* ===== DNA BACKGROUND ===== */
+.bio-reg-dna{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:0;
+}
+
+.bio-reg-dna span{
+position:absolute;
+width:6px;
+height:6px;
+background:#00eaff;
+border-radius:50%;
+animation:bioDNA 8s linear infinite;
+}
+
+@keyframes bioDNA{
+0%{transform:translateY(0) translateX(0)}
+50%{transform:translateY(50vh) translateX(30px)}
+100%{transform:translateY(100vh) translateX(0)}
+}
+
+/* ===== WRAPPER ===== */
+.bio-reg-wrapper{
+width:100%;
+max-width:780px;
+padding:20px;
+z-index:2;
+}
+
+/* BACK BUTTON */
+.bio-reg-back{
+display:inline-flex;
+align-items:center;
+gap:8px;
+color:#cbd5e1;
+text-decoration:none;
+margin-bottom:15px;
+font-size:14px;
+}
+
+.bio-reg-back:hover{
+color:var(--bio-primary);
+}
+
+/* ===== CARD ===== */
+.bio-reg-card{
+background:var(--bio-card);
+border:1px solid var(--bio-border);
+backdrop-filter:blur(18px);
+border-radius:18px;
+padding:35px;
+color:#fff;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* LOGO */
+.bio-reg-logo{
+text-align:center;
+margin-bottom:10px;
+}
+
+.bio-reg-logo img{
+height:55px;
+}
+
+.bio-reg-icon{
+width:70px;
+height:70px;
+margin:15px auto;
+border-radius:50%;
+background:linear-gradient(135deg,#00eaff,#9333ea);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+}
+
+/* TITLE */
+.bio-reg-title{
+text-align:center;
+font-size:26px;
+margin-bottom:5px;
+}
+
+.bio-reg-sub{
+text-align:center;
+color:var(--bio-text);
+margin-bottom:25px;
+font-size:13px;
+}
+
+/* GRID */
+.bio-reg-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+/* INPUT */
+.bio-reg-group{
+margin-bottom:18px;
+}
+
+.bio-reg-group label{
+font-size:13px;
+display:block;
+margin-bottom:6px;
+}
+
+.bio-reg-input{
+display:flex;
+align-items:center;
+border:1px solid var(--bio-border);
+border-radius:10px;
+height:46px;
+padding:0 12px;
+}
+
+.bio-reg-input i{
+margin-right:8px;
+color:#94a3b8;
+}
+
+.bio-reg-input input,
+.bio-reg-input select{
+border:none;
+outline:none;
+background:transparent;
+color:#fff;
+width:100%;
+}
+
+/* PASSWORD */
+.bio-reg-pass{
+position:relative;
+}
+
+.bio-reg-pass span{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+}
+
+/* ERROR */
+.bio-reg-error{
+color:#ff6b6b;
+font-size:11px;
+display:none;
+}
+
+/* TERMS */
+.bio-reg-terms{
+font-size:13px;
+margin:10px 0;
+color:#cbd5e1;
+}
+
+/* BUTTON */
+.bio-reg-btn{
+width:100%;
+padding:13px;
+border:none;
+border-radius:10px;
+background:linear-gradient(90deg,#00eaff,#9333ea);
+color:#fff;
+font-weight:600;
+cursor:pointer;
+}
+
+.bio-reg-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 0 20px #00eaff55;
+}
+
+/* LINK */
+.bio-reg-link{
+text-align:center;
+margin-top:15px;
+font-size:13px;
+}
+
+.bio-reg-link a{
+color:var(--bio-primary);
+text-decoration:none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media(max-width:900px){
+.bio-reg-grid{
+grid-template-columns:1fr;
+}
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+.bio-reg-card{
+padding:25px 20px;
+}
+
+.bio-reg-title{
+font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- DNA BG -->
+<div class="bio-reg-dna">
+<span style="left:10%; animation-delay:0s;"></span>
+<span style="left:30%; animation-delay:2s;"></span>
+<span style="left:50%; animation-delay:4s;"></span>
+<span style="left:70%; animation-delay:1s;"></span>
+<span style="left:90%; animation-delay:3s;"></span>
+</div>
+
+<div class="bio-reg-wrapper">
+
+<a href="index.html" class="bio-reg-back">
+<i class="fa fa-arrow-left"></i> Back to Home
+</a>
+
+<div class="bio-reg-card">
+
+<div class="bio-reg-logo">
+<img src="assets/images/logo/stackly_logo.webp">
+</div>
+
+<div class="bio-reg-icon">
+<i class="fa-solid fa-dna"></i>
+</div>
+
+<h2 class="bio-reg-title">Create Biotech Account</h2>
+<p class="bio-reg-sub">Join advanced research platform</p>
+
+<form id="bioRegForm">
+
+<div class="bio-reg-grid">
+
+<div class="bio-reg-group">
+<label>Full Name</label>
+<div class="bio-reg-input">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Dr. Jane">
+</div>
+</div>
+
+<div class="bio-reg-group">
+<label>Role</label>
+<div class="bio-reg-input">
+<select>
+<option>Admin</option>
+<option>Researcher</option>
+<option>Patient</option>
+</select>
+</div>
+</div>
+
+</div>
+
+<div class="bio-reg-group">
+<label>Email</label>
+<div class="bio-reg-input">
+<i class="fa fa-envelope"></i>
+<input type="email" id="email">
+</div>
+<p id="emailErr" class="bio-reg-error">Invalid email</p>
+</div>
+
+<div class="bio-reg-grid">
+
+<div class="bio-reg-group">
+<label>Password</label>
+<div class="bio-reg-input bio-reg-pass">
+<input type="password" id="pass">
+<span onclick="togglePass('pass')"><i class="fa fa-eye"></i></span>
+</div>
+<p id="passErr" class="bio-reg-error">Weak password</p>
+</div>
+
+<div class="bio-reg-group">
+<label>Confirm</label>
+<div class="bio-reg-input bio-reg-pass">
+<input type="password" id="confirm">
+<span onclick="togglePass('confirm')"><i class="fa fa-eye"></i></span>
+</div>
+<p id="confirmErr" class="bio-reg-error">Not matching</p>
+</div>
+
+</div>
+
+<div class="bio-reg-terms">
+<input type="checkbox"> Accept terms & policy
+</div>
+
+<button class="bio-reg-btn">Create Account</button>
+
+<div class="bio-reg-link">
+Already have account? <a href="login.html">Login</a>
+</div>
+
+</form>
+
+</div>
+</div>
+
+<script>
+
+/* TOGGLE */
+function togglePass(id){
+const el=document.getElementById(id);
+el.type = el.type==="password"?"text":"password";
+}
+
+/* VALIDATION */
+const email=document.getElementById("email");
+const pass=document.getElementById("pass");
+const confirm=document.getElementById("confirm");
+
+document.getElementById("bioRegForm").addEventListener("submit",(e)=>{
+
+e.preventDefault();
+let valid=true;
+
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+emailErr.style.display="block"; valid=false;
+}else emailErr.style.display="none";
+
+if(pass.value.length<6){
+passErr.style.display="block"; valid=false;
+}else passErr.style.display="none";
+
+if(pass.value!==confirm.value){
+confirmErr.style.display="block"; valid=false;
+}else confirmErr.style.display="none";
+
+if(valid){
+window.location.href="login.html";
+}
+
+});
+
+</script>
+
+</body>
+</html>

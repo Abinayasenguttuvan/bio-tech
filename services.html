@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Biotech Header</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+body{height:2000px;background:linear-gradient(120deg,#e0f2fe,#f5f9ff);}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;left:0;width:100%;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.3);
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+z-index:1000;
+}
+
+/* SHRINK */
+header.shrink{
+padding:5px 0;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 40px;
+position:relative;
+}
+
+/* LEFT LOGO */
+.logo img{height:40px;}
+
+/* CENTER NAV */
+.nav-links{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#0f172a;
+font-weight:500;
+position:relative;
+}
+
+/* ACTIVE */
+.nav-links a.active,
+.nav-links a:hover{color:#2563eb;}
+
+.nav-links a.active::after,
+.nav-links a:hover::after{
+content:"";
+position:absolute;
+bottom:-6px;left:0;
+width:100%;height:2px;
+background:#2563eb;
+}
+
+/* RIGHT */
+.right{display:flex;gap:12px;}
+
+.btn{
+padding:8px 18px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-size:14px;
+transition:0.3s;
+}
+
+.login{background:transparent;border:1px solid #2563eb;color:#2563eb;}
+.login:hover{background:#2563eb;color:white;}
+
+.register{background:#2563eb;color:white;}
+.register:hover{background:#1d4ed8;}
+
+/* MENU */
+.menu-toggle{display:none;font-size:22px;cursor:pointer;}
+
+/* MOBILE MENU */
+.mobile-menu{
+position:fixed;
+top:0;left:-100%;
+width:260px;height:100vh;
+background:white;
+padding:20px;
+transition:0.3s;
+box-shadow:10px 0 25px rgba(0,0,0,0.1);
+z-index:2000;
+}
+.mobile-menu.active{left:0;}
+.mobile-menu a{display:block;margin:15px 0;text-decoration:none;color:#0f172a;}
+
+/* OVERLAY */
+.overlay{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,0.4);display:none;z-index:1500;
+}
+.overlay.active{display:block;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.nav-links{display:none;}
+.right{display:none;}
+.menu-toggle{display:block;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<header id="header">
+
+<div class="navbar">
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa fa-bars"></i>
+</div>
+
+<div class="logo">
+<img src="https://dummyimage.com/100x40/2563eb/ffffff&text=Stackly" alt="Stackly">
+</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#" class="active">Home</a>
+<a href="#">Researcher</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="right">
+<button class="btn login">Login</button>
+<button class="btn register">Register</button>
+</div>
+
+</div>
+
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<a href="#">Home</a>
+<a href="#">Researcher</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+<hr>
+<a href="#">Login</a>
+<a href="#">Register</a>
+</div>
+
+<script>
+// MENU
+function toggleMenu(){
+const menu=document.getElementById("mobileMenu");
+const overlay=document.getElementById("overlay");
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+}
+
+overlay.onclick=()=>{
+document.getElementById("mobileMenu").classList.remove("active");
+overlay.classList.remove("active");
+};
+
+// SHRINK HEADER
+window.addEventListener("scroll",()=>{
+const header=document.getElementById("header");
+header.classList.toggle("shrink",window.scrollY>50);
+});
+
+// ACTIVE LINK
+const links=document.querySelectorAll(".nav-links a");
+links.forEach(link=>{
+link.addEventListener("click",()=>{
+links.forEach(l=>l.classList.remove("active"));
+link.classList.add("active");
+});
+});
+</script>
+
+</body>
+
+
+<section class="bio-mv-section">
+
+    <!-- Background Canvas -->
+    <canvas id="bio-mv-canvas"></canvas>
+  
+    <div class="bio-mv-container">
+  
+      <!-- MISSION -->
+      <div class="bio-mv-row bio-mv-mission">
+        <!-- LEFT CONTENT -->
+        <div class="bio-mv-content">
+          <h2>Our Mission</h2>
+          <h3>Advancing Biotechnology for a Healthier Future</h3>
+          <p>
+            Our mission is to leverage cutting-edge biotechnology and AI-driven research
+            to develop innovative therapies, enhance healthcare solutions, and create
+            sustainable solutions for the global community.
+          </p>
+          <p>
+            We believe in precision, innovation, and collaboration to transform scientific breakthroughs
+            into real-world applications.
+          </p>
+        </div>
+        <!-- RIGHT IMAGE -->
+        <div class="bio-mv-image">
+          <img src="https://images.unsplash.com/photo-1581092580492-5d1abbbf3a40" alt="Mission Image">
+        </div>
+      </div>
+  
+      <!-- VISION -->
+      <div class="bio-mv-row bio-mv-vision">
+        <!-- LEFT IMAGE -->
+        <div class="bio-mv-image">
+          <img src="https://images.unsplash.com/photo-1581093458791-9d09a8f5f8c0" alt="Vision Image">
+        </div>
+        <!-- RIGHT CONTENT -->
+        <div class="bio-mv-content">
+          <h2>Our Vision</h2>
+          <h3>Transforming Biotechnology for Global Impact</h3>
+          <p>
+            Our vision is to be at the forefront of biotechnology innovation,
+            creating sustainable solutions that improve health outcomes worldwide.
+          </p>
+          <p>
+            By integrating advanced research, AI technologies, and collaborative partnerships,
+            we aim to make scientific discoveries accessible and impactful for society.
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <style>
+  /* MAIN SECTION */
+  .bio-mv-section{
+    position: relative;
+    padding:100px 20px;
+    background:#020817;
+    overflow:hidden;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  
+  /* DNA PARTICLE CANVAS */
+  #bio-mv-canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+  }
+  
+  /* CONTAINER */
+  .bio-mv-container{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+    z-index:1;
+  }
+  
+  /* ROW */
+  .bio-mv-row{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+    margin-bottom:100px;
+  }
+  
+  /* CONTENT */
+  .bio-mv-content{
+    flex:1;
+    opacity:0;
+    transform:translateY(50px);
+    transition:0.8s ease-out;
+  }
+  .bio-mv-content.bio-mv-show{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .bio-mv-content h2{
+    font-size:38px;
+    margin-bottom:15px;
+    color:#00ffff;
+  }
+  .bio-mv-content h3{
+    font-size:28px;
+    margin-bottom:20px;
+    color:#00ffff;
+  }
+  .bio-mv-content p{
+    font-size:16px;
+    line-height:1.6;
+    color:#cfe6ff;
+    margin-bottom:15px;
+  }
+  
+  /* IMAGE */
+  .bio-mv-image{
+    flex:1;
+    opacity:0;
+    transform:scale(0.95) translateY(30px);
+    transition:0.8s ease-out, transform 0.5s ease;
+  }
+  .bio-mv-image.bio-mv-show{
+    opacity:1;
+    transform:scale(1) translateY(0);
+  }
+  .bio-mv-image img{
+    width:100%;
+    border-radius:16px;
+    object-fit:cover;
+    transition:transform 0.5s ease;
+    cursor:pointer;
+  }
+  .bio-mv-image:hover img{
+    transform:scale(1.08);
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width:1024px){
+    .bio-mv-row{
+      gap:30px;
+    }
+  }
+  @media(max-width:768px){
+    .bio-mv-row{
+      flex-direction:column;
+    }
+    .bio-mv-content h3{
+      font-size:24px;
+    }
+  }
+  @media(max-width:480px){
+    .bio-mv-content p{
+      font-size:15px;
+    }
+    .bio-mv-content h2{
+      font-size:28px;
+    }
+  }
+  </style>
+  
+  <script>
+  // Scroll-trigger animations
+  const mvElements = document.querySelectorAll('.bio-mv-content, .bio-mv-image');
+  
+  const mvObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('bio-mv-show');
+      }
+    });
+  },{threshold:0.3});
+  
+  mvElements.forEach(el => mvObserver.observe(el));
+  
+  /* DNA PARTICLE ANIMATION */
+  const canvas = document.getElementById('bio-mv-canvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  function resizeCanvas(){
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  
+  let particles = [];
+  for(let i=0;i<150;i++){
+    particles.push({
+      x: Math.random()*width,
+      y: Math.random()*height,
+      radius: Math.random()*2+1,
+      angle: Math.random()*Math.PI*2,
+      speed: 0.01 + Math.random()*0.02
+    });
+  }
+  
+  function drawParticles(){
+    ctx.clearRect(0,0,width,height);
+    ctx.strokeStyle = 'rgba(0,255,255,0.15)';
+    ctx.lineWidth=1;
+    particles.forEach(p=>{
+      p.angle += p.speed;
+      const x = p.x + Math.sin(p.angle*2)*20;
+      const y = p.y + Math.cos(p.angle*2)*20;
+      ctx.beginPath();
+      ctx.arc(x,y,p.radius,0,Math.PI*2);
+      ctx.stroke();
+    });
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+  </script>
+
+<!-- THREE JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<section class="bio-lab-section">
+
+  <!-- Background -->
+  <div id="bio-lab-bg"></div>
+
+  <div class="bio-lab-container">
+
+    <h2 class="bio-lab-title">Biotechnology Research Laboratory</h2>
+    <p class="bio-lab-sub">
+      Advanced laboratories driving genomics, molecular biology,
+      AI bioinformatics and pharmaceutical innovation.
+    </p>
+
+    <div class="bio-lab-grid">
+
+      <div class="bio-lab-card">
+        <div class="bio-lab-icon">🔬</div>
+        <h3>Genome Sequencing</h3>
+        <p>Next generation sequencing technology for precision medicine.</p>
+      </div>
+
+      <div class="bio-lab-card">
+        <div class="bio-lab-icon">🧬</div>
+        <h3>DNA Engineering</h3>
+        <p>CRISPR gene editing and advanced molecular genetics research.</p>
+      </div>
+
+      <div class="bio-lab-card">
+        <div class="bio-lab-icon">🧪</div>
+        <h3>Molecular Diagnostics</h3>
+        <p>High accuracy molecular and protein diagnostic systems.</p>
+      </div>
+
+      <div class="bio-lab-card">
+        <div class="bio-lab-icon">💊</div>
+        <h3>Drug Discovery</h3>
+        <p>AI powered pharmaceutical discovery and development.</p>
+      </div>
+
+      <div class="bio-lab-card">
+        <div class="bio-lab-icon">🤖</div>
+        <h3>AI Bioinformatics</h3>
+        <p>Machine learning accelerating genomic analysis.</p>
+      </div>
+
+      <div class="bio-lab-card">
+        <div class="bio-lab-icon">🌱</div>
+        <h3>Biotech Innovation</h3>
+        <p>Sustainable biotechnology and bioengineering research.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+/* SECTION */
+.bio-lab-section{
+  position:relative;
+  padding:100px 20px;
+  background:#020817;
+  overflow:hidden;
+}
+
+/* BACKGROUND CANVAS */
+#bio-lab-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+/* CONTAINER */
+.bio-lab-container{
+  position:relative;
+  z-index:10;
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+/* TITLE */
+.bio-lab-title{
+  font-size:40px;
+  color:#fff;
+  margin-bottom:10px;
+}
+.bio-lab-sub{
+  color:#9bb7d3;
+  max-width:650px;
+  margin:auto;
+  margin-bottom:60px;
+}
+
+/* GRID */
+.bio-lab-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* CARD */
+.bio-lab-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:16px;
+  padding:35px 25px;
+  color:#fff;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(60px);
+  cursor:pointer;
+}
+.bio-lab-icon{
+  font-size:40px;
+  margin-bottom:15px;
+}
+.bio-lab-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px rgba(0,255,255,0.4);
+}
+
+/* VISIBLE */
+.bio-lab-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .bio-lab-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:600px){
+  .bio-lab-title{
+    font-size:28px;
+  }
+  .bio-lab-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<script>
+/* CARD ANIMATION ON LOAD */
+const bioLabCards = document.querySelectorAll(".bio-lab-card");
+
+window.addEventListener("load", ()=>{
+  bioLabCards.forEach((card, i)=>{
+    setTimeout(()=>{
+      card.classList.add("bio-lab-visible");
+    }, i*250);
+  });
+});
+
+/* THREE JS BACKGROUND */
+const labContainer = document.getElementById("bio-lab-bg");
+const labScene = new THREE.Scene();
+const labCamera = new THREE.PerspectiveCamera(
+  70,
+  labContainer.offsetWidth/labContainer.offsetHeight,
+  1,
+  1000
+);
+const labRenderer = new THREE.WebGLRenderer({alpha:true});
+labRenderer.setSize(labContainer.offsetWidth, labContainer.offsetHeight);
+labContainer.appendChild(labRenderer.domElement);
+
+/* PARTICLES */
+const labGeometry = new THREE.BufferGeometry();
+const labVertices = [];
+for(let i=0;i<500;i++){
+  labVertices.push(
+    Math.random()*400-200,
+    Math.random()*400-200,
+    Math.random()*400-200
+  );
+}
+labGeometry.setAttribute("position", new THREE.Float32BufferAttribute(labVertices,3));
+const labMaterial = new THREE.PointsMaterial({color:0x00ffff, size:2});
+const labParticles = new THREE.Points(labGeometry, labMaterial);
+labScene.add(labParticles);
+labCamera.position.z = 250;
+
+/* ANIMATE PARTICLES */
+function labAnimate(){
+  requestAnimationFrame(labAnimate);
+  labParticles.rotation.y += 0.001;
+  labParticles.rotation.x += 0.0005;
+  labRenderer.render(labScene, labCamera);
+}
+labAnimate();
+
+/* RESPONSIVE CAMERA */
+window.addEventListener("resize", ()=>{
+  const w = labContainer.offsetWidth;
+  const h = labContainer.offsetHeight;
+  labRenderer.setSize(w,h);
+  labCamera.aspect = w/h;
+  labCamera.updateProjectionMatrix();
+});
+</script>
+
+<section class="bio-case2-section">
+
+    <div class="bio-case2-container">
+    
+    <h2 class="bio-case2-title">Biotech Research Case Studies</h2>
+    
+    <p class="bio-case2-sub">
+    Explore groundbreaking biotechnology innovations transforming
+    healthcare, genomics and pharmaceutical research.
+    </p>
+    
+    <!-- CASE 1 -->
+    
+    <div class="bio-case2-card bio-case2-left">
+    
+    <div class="bio-case2-img">
+    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074">
+    </div>
+    
+    <div class="bio-case2-content">
+    <h3>CRISPR Gene Therapy</h3>
+    <p>
+    Scientists developed a CRISPR-based gene therapy capable of correcting
+    rare genetic mutations responsible for inherited diseases.
+    </p>
+    </div>
+    
+    </div>
+    
+    <!-- CASE 2 -->
+    
+    <div class="bio-case2-card bio-case2-right">
+    
+    <div class="bio-case2-img">
+    <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e">
+    </div>
+    
+    <div class="bio-case2-content">
+    <h3>AI Vaccine Discovery</h3>
+    <p>
+    Artificial intelligence accelerated vaccine design by predicting viral
+    protein structures and identifying effective antigen targets.
+    </p>
+    </div>
+    
+    </div>
+    
+    <!-- CASE 3 -->
+    
+    <div class="bio-case2-card bio-case2-left">
+    
+    <div class="bio-case2-img">
+    <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762">
+    </div>
+    
+    <div class="bio-case2-content">
+    <h3>Protein Folding Prediction</h3>
+    <p>
+    AI models simulated complex protein folding patterns helping
+    pharmaceutical companies design more effective drugs.
+    </p>
+    </div>
+    
+    </div>
+    
+    <!-- CASE 4 -->
+    
+    <div class="bio-case2-card bio-case2-right">
+    
+    <div class="bio-case2-img">
+    <img src="https://images.unsplash.com/photo-1581093458791-9d09a8f5f8c0">
+    </div>
+    
+    <div class="bio-case2-content">
+    <h3>Precision Oncology</h3>
+    <p>
+    Genomic sequencing enabled personalized cancer therapies targeting
+    specific mutations found in individual patients.
+    </p>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    .bio-case2-section{
+    padding:100px 20px;
+    background:#020817;
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    }
+    
+    /* CONTAINER */
+    
+    .bio-case2-container{
+    max-width:1200px;
+    margin:auto;
+    }
+    
+    /* TITLE */
+    
+    .bio-case2-title{
+    text-align:center;
+    font-size:40px;
+    color:white;
+    margin-bottom:10px;
+    }
+    
+    .bio-case2-sub{
+    text-align:center;
+    color:#9bb7d3;
+    max-width:650px;
+    margin:auto;
+    margin-bottom:70px;
+    }
+    
+    /* CARD */
+    
+    .bio-case2-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-bottom:70px;
+    background:rgba(255,255,255,0.05);
+    border-radius:16px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(60px);
+    }
+    
+    /* IMAGE */
+    
+    .bio-case2-img{
+    flex:1;
+    overflow:hidden;
+    border-radius:12px;
+    }
+    
+    .bio-case2-img img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:0.5s;
+    }
+    
+    /* CONTENT */
+    
+    .bio-case2-content{
+    flex:1;
+    color:white;
+    }
+    
+    .bio-case2-content h3{
+    margin-bottom:12px;
+    font-size:24px;
+    }
+    
+    .bio-case2-content p{
+    color:#cfe6ff;
+    font-size:15px;
+    line-height:1.6;
+    }
+    
+    /* HOVER TILT EFFECT */
+    
+    .bio-case2-card:hover{
+    transform:rotateY(3deg) rotateX(3deg) scale(1.02);
+    box-shadow:0 20px 40px rgba(0,255,255,0.25);
+    }
+    
+    .bio-case2-card:hover img{
+    transform:scale(1.08);
+    }
+    
+    /* SHOW ANIMATION */
+    
+    .bio-case2-show{
+    opacity:1;
+    transform:translateY(0);
+    }
+    
+    /* ALTERNATE LAYOUT */
+    
+    .bio-case2-right{
+    flex-direction:row-reverse;
+    }
+    
+    /* TABLET */
+    
+    @media(max-width:1000px){
+    
+    .bio-case2-card{
+    flex-direction:column;
+    text-align:center;
+    }
+    
+    .bio-case2-right{
+    flex-direction:column;
+    }
+    
+    }
+    
+    /* MOBILE */
+    
+    @media(max-width:600px){
+    
+    .bio-case2-title{
+    font-size:28px;
+    }
+    
+    .bio-case2-img img{
+    height:220px;
+    }
+    
+    }
+    
+    </style>
+    
+    
+    
+    <script>
+    
+    /* SCROLL REVEAL */
+    
+    const caseCards = document.querySelectorAll(".bio-case2-card");
+    
+    function revealCases(){
+    
+    caseCards.forEach((card,i)=>{
+    
+    const top = card.getBoundingClientRect().top;
+    
+    if(top < window.innerHeight-100){
+    
+    setTimeout(()=>{
+    card.classList.add("bio-case2-show");
+    },i*250);
+    
+    }
+    
+    });
+    
+    }
+    
+    window.addEventListener("scroll",revealCases);
+    window.addEventListener("load",revealCases);
+    
+    </script>
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <!-- BIOTECH 3D DNA HELIX SECTION -->
+
+<section id="bio3d-dna-section">
+
+    <div class="bio3d-canvas-wrap">
+    <canvas id="bio3d-dna-canvas"></canvas>
+    </div>
+    
+    <div class="bio3d-content">
+    
+    <h2 class="bio3d-title">Ready to transform AI Powered Biotechnology</h2>
+    
+    <p class="bio3d-text">
+    Advanced biotechnology research powered by artificial intelligence,
+    genomic sequencing, and high-performance computing systems.
+    </p>
+    
+    <a href="./404.html" class="bio3d-btn">Explore your free trial today</a>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    #bio3d-dna-section{
+    
+    position:relative;
+    height:600px;
+    overflow:hidden;
+    
+    background:linear-gradient(135deg,#0b1026,#0f1b46);
+    
+    font-family:Arial;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    }
+    
+    
+    /* CANVAS */
+    
+    #bio3d-dna-section .bio3d-canvas-wrap{
+    
+    position:absolute;
+    top:0;
+    left:0;
+    
+    width:100%;
+    height:100%;
+    
+    z-index:1;
+    
+    }
+    
+    #bio3d-dna-section canvas{
+    
+    width:100%;
+    height:100%;
+    
+    display:block;
+    
+    }
+    
+    
+    /* CONTENT */
+    
+    #bio3d-dna-section .bio3d-content{
+    
+    position:relative;
+    z-index:2;
+    
+    max-width:700px;
+    
+    text-align:center;
+    
+    padding:40px;
+    
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    
+    border-radius:18px;
+    
+    border:1px solid rgba(255,255,255,.15);
+    
+    }
+    
+    
+    /* TITLE */
+    
+    #bio3d-dna-section .bio3d-title{
+    
+    color:white;
+    font-size:40px;
+    margin-bottom:20px;
+    
+    }
+    
+    
+    /* TEXT */
+    
+    #bio3d-dna-section .bio3d-text{
+    
+    color:#d7ddff;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:30px;
+    
+    }
+    
+    
+    /* BUTTON */
+    
+    #bio3d-dna-section .bio3d-btn{
+    
+    display:inline-block;
+    
+    padding:12px 28px;
+    
+    border-radius:30px;
+    
+    background:linear-gradient(135deg,#7c6cff,#00d4ff);
+    
+    color:white;
+    text-decoration:none;
+    
+    font-size:15px;
+    
+    transition:.3s;
+    
+    }
+    
+    #bio3d-dna-section .bio3d-btn:hover{
+    
+    transform:translateY(-3px);
+    
+    box-shadow:0 10px 20px rgba(0,0,0,.4),
+    0 0 15px rgba(100,120,255,.7);
+    
+    }
+    
+    
+    /* RESPONSIVE */
+    
+    @media(max-width:900px){
+    
+    #bio3d-dna-section{
+    height:520px;
+    }
+    
+    #bio3d-dna-section .bio3d-title{
+    font-size:32px;
+    }
+    
+    }
+    
+    @media(max-width:600px){
+    
+    #bio3d-dna-section{
+    
+    height:auto;
+    padding:80px 20px;
+    
+    }
+    
+    #bio3d-dna-section .bio3d-title{
+    font-size:26px;
+    }
+    
+    #bio3d-dna-section .bio3d-text{
+    font-size:15px;
+    }
+    
+    }
+    
+    </style>
+    
+
+    
