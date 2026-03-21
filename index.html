@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stackly Biotech Header</title>
+<title>Stackly Biotech </title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
@@ -58,7 +59,7 @@ position:relative;
 
 /* ACTIVE */
 .nav-links a.active,
-.nav-links a:hover{color:#2563eb;}
+.nav-links a:hover{color:#00f7ff;;}
 
 .nav-links a.active::after,
 .nav-links a:hover::after{
@@ -66,7 +67,7 @@ content:"";
 position:absolute;
 bottom:-6px;left:0;
 width:100%;height:2px;
-background:#2563eb;
+background:#00f7ff;
 }
 
 /* RIGHT */
@@ -81,11 +82,11 @@ font-size:14px;
 transition:0.3s;
 }
 
-.login{background:transparent;border:1px solid #2563eb;color:#2563eb;}
-.login:hover{background:#2563eb;color:white;}
+.login{background:transparent;border:1px solid #00d1a7;color:#00f7ff;}
+.login:hover{background:#00f7ff;;color:white;}
 
-.register{background:#2563eb;color:white;}
-.register:hover{background:#1d4ed8;}
+.register{background:#00f7ff;;color:white;}
+.register:hover{background:#00f7ff;}
 
 /* MENU */
 .menu-toggle{display:none;font-size:22px;cursor:pointer;}
@@ -134,19 +135,22 @@ background:rgba(0,0,0,0.4);display:none;z-index:1500;
 </div>
 
 <div class="logo">
+  <a href="./index.html">
 <img src="./logo.webp" alt="Stackly">
+  </a>
 </div>
 
 <div class="nav-links" id="navLinks">
-<a href="#" class="active">Home</a>
-<a href="#">Researcher</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+<a href="./index.html">Home</a>
+<a href="./research.html">About</a>
+<a href="./services.html">Services</a>
+<a href="./contact.html">Contact</a>
 </div>
 
+
 <div class="right">
-<button class="btn login">Login</button>
-<button class="btn register">Register</button>
+  <button class="btn login" onclick="location.href='login.html'">Login</button>
+  <button class="btn register" onclick="location.href='register.html'">Register</button>
 </div>
 
 </div>
@@ -156,12 +160,12 @@ background:rgba(0,0,0,0.4);display:none;z-index:1500;
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
 <a href="./index.html">Home</a>
-<a href="./research.html">Researcher</a>
+<a href="./research.html">About</a>
 <a href="./services.html">Services</a>
 <a href="./contact.html">Contact</a>
 <hr>
 <a href="./login.html">Login</a>
-<a href="">Register</a>
+<a href="./register.html">Register</a>
 </div>
 
 <script>
@@ -308,7 +312,7 @@ margin-bottom:20px;
 }
 
 .bio-type{
-color:#00ffd0;
+color:#00f7ff;
 }
 
 /* DESC */
@@ -420,9 +424,9 @@ text-align:center;
 
 <!-- SLIDER -->
 
-<div class="bio-slide active" style="background-image:url('https://images.unsplash.com/photo-1581093588401-16e6e0b1c9b3');"></div>
-<div class="bio-slide" style="background-image:url('https://images.unsplash.com/photo-1579154204601-01588f351e67');"></div>
-<div class="bio-slide" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');"></div>
+<div class="bio-slide active" style="background-image:url('./bio1.webp');"></div>
+<div class="bio-slide" style="background-image:url('./bio2.webp');"></div>
+<div class="bio-slide" style="background-image:url('./bio3.webp');"></div>
 
 <div class="bio-overlay"></div>
 
@@ -561,17 +565,17 @@ slides[index].classList.add("active")
 const testimonials=[
 
 {
-img:"https://randomuser.me/api/portraits/women/44.jpg",
+img:"./sana.webp",
 text:"Outstanding biotech innovation platform. Our research improved significantly."
 },
 
 {
-img:"https://randomuser.me/api/portraits/men/32.jpg",
+img:"./nithiya.webp",
 text:"Advanced laboratory technology with impressive accuracy and performance."
 },
 
 {
-img:"https://randomuser.me/api/portraits/women/65.jpg",
+img:"./sana.webp",
 text:"A revolutionary biotech solution for modern healthcare research labs."
 }
 
@@ -679,14 +683,6 @@ camera.updateProjectionMatrix()
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Biotech Stats</title>
 
 <style>
 
@@ -811,7 +807,7 @@ margin-bottom:10px;
 .bio-line{
 height:2px;
 width:60px;
-background:#00ffc8;
+background:#00f7ff;
 margin:12px auto 15px;
 opacity:0.7;
 }
@@ -1066,7 +1062,7 @@ canvas.height=window.innerHeight
     
     </div>
     
-    <a href="#" class="stkBio-btn stkBio-animate stkBio-bottomIn">
+    <a href="./404.html" class="stkBio-btn stkBio-animate stkBio-bottomIn">
     More About Us
     </a>
     
@@ -1088,10 +1084,10 @@ canvas.height=window.innerHeight
     
     <div class="stkBio-avatars">
     
-    <img src="https://randomuser.me/api/portraits/men/32.jpg">
-    <img src="https://randomuser.me/api/portraits/women/44.jpg">
-    <img src="https://randomuser.me/api/portraits/men/52.jpg">
-    <img src="https://randomuser.me/api/portraits/women/68.jpg">
+    <img src="./pro2.webp">
+    <img src="./pro1.webp">
+    <img src="./pro2.webp">
+    <img src="./pro3.webp">
     
     </div>
     
@@ -1124,7 +1120,7 @@ canvas.height=window.innerHeight
     /* LEFT */
     
     .stkBio-left h5{
-    color:#2f8b93;
+    color:#00f7ff;
     margin-bottom:10px;
     }
     
@@ -1157,7 +1153,7 @@ canvas.height=window.innerHeight
     
     .stkBio-feature::before{
     content:"✔";
-    color:#2f8b93;
+    color:#00f7ff;
     margin-right:8px;
     }
     
@@ -1454,7 +1450,7 @@ canvas.height=window.innerHeight
     }
     
     .biox-strand2{
-    stroke:#8a2eff;
+    stroke:#00f7ff;
     stroke-dasharray:12;
     animation:bioxHelixMove 6s linear reverse infinite;
     }
@@ -1492,7 +1488,7 @@ canvas.height=window.innerHeight
     }
     
     .biox-card h3{
-    color:#00eaff;
+    color:#00f7ff;
     margin-bottom:10px;
     }
     
@@ -1504,7 +1500,7 @@ canvas.height=window.innerHeight
     top:32px;
     width:70px;
     height:3px;
-    background:#00eaff;
+    background:#00f7ff;
     }
     
     .biox-card:nth-child(odd)::before{
@@ -1715,7 +1711,7 @@ canvas.height=window.innerHeight
     <div class="biopx-card biopx-left">
     
     <div class="biopx-imgbox">
-    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+    <img src="./bio1.webp">
     </div>
     
     <h3>DNA Research Laboratory</h3>
@@ -1735,7 +1731,7 @@ canvas.height=window.innerHeight
     <div class="biopx-card biopx-bottom">
     
     <div class="biopx-imgbox">
-    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b">
+    <img src="./molecular.webp">
     </div>
     
     <h3>Molecular Engineering</h3>
@@ -1755,7 +1751,7 @@ canvas.height=window.innerHeight
     <div class="biopx-card biopx-right">
     
     <div class="biopx-imgbox">
-    <img src="https://images.unsplash.com/photo-1576089172869-4f5f6f315620">
+    <img src="./AI genomic.webp">
     </div>
     
     <h3>AI Genomic Analysis</h3>
@@ -1881,7 +1877,7 @@ canvas.height=window.innerHeight
     .biopx-btn{
     display:inline-block;
     padding:8px 22px;
-    background:#00eaff;
+    background:#00f7ff;
     color:#000;
     text-decoration:none;
     border-radius:20px;
@@ -1897,7 +1893,7 @@ canvas.height=window.innerHeight
     
     .biopx-card:hover{
     transform:translateY(-12px) scale(1.03);
-    box-shadow:0 0 25px rgba(0,255,255,.5);
+    box-shadow:0 0 25px #00f7ff;;
     }
     
     /* INITIAL DIRECTIONS */
@@ -2123,6 +2119,7 @@ canvas.height=window.innerHeight
     background:#f4f7fb;
     font-family:Arial, Helvetica, sans-serif;
     overflow:hidden;
+    color:black;
     }
     
     .bioai-stats-container{
@@ -2198,7 +2195,7 @@ canvas.height=window.innerHeight
     }
     
     .bioai-dna-line1{
-    stroke:#7c6cff;
+    stroke:#00f7ff;;
     stroke-width:4;
     fill:none;
     stroke-dasharray:12 10;
@@ -2357,7 +2354,7 @@ Next-generation biotech platforms powered by artificial intelligence
 
 <div class="biofx-card">
 <div class="biofx-img">
-<img src="https://images.unsplash.com/photo-1581093588401-16fba9f70b2c?w=800">
+<img src="./AI genomic.webp">
 </div>
 <div class="biofx-icon"><i class="fas fa-brain"></i></div>
 <h3>AI Molecular Analysis</h3>
@@ -2366,7 +2363,7 @@ Next-generation biotech platforms powered by artificial intelligence
 
 <div class="biofx-card">
 <div class="biofx-img">
-<img src="https://images.unsplash.com/photo-1581091870627-3c3b2c9c1e35?w=800">
+<img src="./molecular.webp">
 </div>
 <div class="biofx-icon"><i class="fas fa-dna"></i></div>
 <h3>Genomic Sequencing</h3>
@@ -2375,7 +2372,7 @@ Next-generation biotech platforms powered by artificial intelligence
 
 <div class="biofx-card">
 <div class="biofx-img">
-<img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800">
+<img src="./b1.webp">
 </div>
 <div class="biofx-icon"><i class="fas fa-microscope"></i></div>
 <h3>Smart Laboratories</h3>
@@ -2384,7 +2381,7 @@ Next-generation biotech platforms powered by artificial intelligence
 
 <div class="biofx-card">
 <div class="biofx-img">
-<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800">
+<img src="./clinical.webp">
 </div>
 <div class="biofx-icon"><i class="fas fa-heartbeat"></i></div>
 <h3>Clinical Innovation</h3>
@@ -2393,7 +2390,7 @@ Next-generation biotech platforms powered by artificial intelligence
 
 <div class="biofx-card">
 <div class="biofx-img">
-<img src="https://images.unsplash.com/photo-1582719478173-43c4a37f3f52?w=800">
+<img src="./data security.webp">
 </div>
 <div class="biofx-icon"><i class="fas fa-shield-alt"></i></div>
 <h3>Bio Data Security</h3>
@@ -2402,7 +2399,7 @@ Next-generation biotech platforms powered by artificial intelligence
 
 <div class="biofx-card">
 <div class="biofx-img">
-<img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?w=800">
+<img src="./real time.webp">
 </div>
 <div class="biofx-icon"><i class="fas fa-bolt"></i></div>
 <h3>Real Time Processing</h3>
@@ -2440,7 +2437,7 @@ height:100%;
 
 background:
 linear-gradient(rgba(12,20,60,.85),rgba(12,20,60,.9)),
-url("https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920");
+url("./b1.webp");
 
 background-size:cover;
 background-position:center;
@@ -2827,7 +2824,7 @@ animate();
       <!-- CARD 1 -->
       <div class="bioteam-card">
         <div class="bioteam-img-wrap">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" class="bioteam-img">
+          <img src="./pro1.webp" class="bioteam-img">
           <div class="bioteam-overlay">
             <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
             <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
@@ -2843,7 +2840,7 @@ animate();
       <!-- CARD 2 -->
       <div class="bioteam-card">
         <div class="bioteam-img-wrap">
-          <img src="https://images.unsplash.com/photo-1603415526960-f8f0cbbf2c7e" class="bioteam-img">
+          <img src="./sana.webp" class="bioteam-img">
           <div class="bioteam-overlay">
             <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
             <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
@@ -2859,7 +2856,7 @@ animate();
       <!-- CARD 3 -->
       <div class="bioteam-card">
         <div class="bioteam-img-wrap">
-          <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" class="bioteam-img">
+          <img src="./pro3.webp" class="bioteam-img">
           <div class="bioteam-overlay">
             <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
             <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
@@ -2875,7 +2872,7 @@ animate();
       <!-- CARD 4 -->
       <div class="bioteam-card">
         <div class="bioteam-img-wrap">
-          <img src="https://images.unsplash.com/photo-1581091870627-3b6d5c7c0d68" class="bioteam-img">
+          <img src="./pro2.webp" class="bioteam-img">
           <div class="bioteam-overlay">
             <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
             <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
@@ -3178,7 +3175,7 @@ bioteamObserver.observe(bioteamSub);
     left:0;
     width:100%;
     height:100%;
-    background:url("https://images.unsplash.com/photo-1581093588401-22a63cbe50b8") center/cover no-repeat;
+    background:url("./bio3.webp") center/cover no-repeat;
     opacity:0.15;
     animation:bioPriceBgMove 20s linear infinite;
     z-index:0;
@@ -3213,7 +3210,7 @@ bioteamObserver.observe(bioteamSub);
     }
     
     .bio-price-subtitle{
-    color:#9bb7d3;
+    color:#00f7ff;
     max-width:650px;
     margin:auto;
     margin-bottom:60px;
@@ -3413,7 +3410,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     height:600px;
     overflow:hidden;
     
-    background:linear-gradient(135deg,#0b1026,#0f1b46);
+    /* background:linear-gradient(135deg,#0b1026,#0f1b46); */
     
     font-family:Arial;
     
@@ -3562,5 +3559,347 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     </style>
     
 
+<!-- ================= PRE-FOOTER ================= -->
+<section class="pre-footer">
+  <div class="pre-container">
+
+    <div class="pre-box">
+      <i class="ri-map-pin-2-fill"></i>
+      <h4>Research Facility</h4>
+      <p>BioGen Research Institute,<br>Chennai, India</p>
+    </div>
+
+    <div class="pre-box">
+      <i class="ri-mail-send-fill"></i>
+      <h4>Laboratory Email</h4>
+      <p>research@biogenlab.com</p>
+    </div>
+
+    <div class="pre-box">
+      <i class="ri-flask-fill"></i>
+      <h4>Scientific Support</h4>
+      <p>Advanced biotech & lab assistance</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bio-footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO + ABOUT -->
+<div class="footer-col">
+  <img src="./logo.webp" class="footer-logo">
+
+  <p>
+    Advancing biotechnology through innovation and research.
+    Transforming healthcare and life sciences globally.
+  </p>
+
+  <!-- FOLLOW US -->
+  <h4 class="follow-title">Follow Us</h4>
+
+  <div class="social-icons">
+    <a href="404.html"><i class="ri-facebook-fill"></i></a>
+    <a href="404.html"><i class="ri-twitter-x-line"></i></a>
+    <a href="404.html"><i class="ri-instagram-line"></i></a>
+    <a href="404.html"><i class="ri-linkedin-fill"></i></a>
+   
+  </div>
+</div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- LAB SERVICES -->
+    <div class="footer-col">
+      <h4>Laboratory Services</h4>
+      <ul>
+        <li><a href="404.html">Genetic Testing</a></li>
+        <li><a href="404.html">DNA Sequencing</a></li>
+        <li><a href="404.html">Cell Analysis</a></li>
+        <li><a href="404.html">Bioinformatics</a></li>
+        <li><a href="404.html">Clinical Trials</a></li>
+      </ul>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="footer-col">
+      <h4>Location</h4>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"></iframe>
+      </div>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-col">
+      <h4>Research Updates</h4>
+
+      <div class="subscribe">
+        <input type="email" id="email" placeholder="Enter Email">
+        <button onclick="subscribe()">Subscribe</button>
+      </div>
+
+      <span id="msg"></span>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>
+      © 2026 BioGen | All Rights Reserved |
+      <a href="404.html">Privacy Policy</a> |
+      <a href="404.html">Terms & Conditions</a>
+    </p>
+  </div>
+
+</footer>
+
+<style>
+  /* FOLLOW TITLE */
+.follow-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #00f7ff;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ICON STYLE */
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT (BIO GLOW) */
+.social-icons a:hover {
+  /* background: #00f7ff; */
+  color: #000;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+/* MOBILE CENTER ALIGN */
+@media (max-width: 480px) {
+  .social-icons {
+    justify-content: center;
+  }
+
+  .follow-title {
+    text-align: center;
+  }
+}
+  /* PRE FOOTER */
+.pre-footer {
+  background: #0a0f1a;
+  padding: 40px 20px;
+}
+
+.pre-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pre-box {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+.pre-box i {
+  font-size: 30px;
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.bio-footer {
+  background: #05070d;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+/* LOGO */
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* LINKS */
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: #00f7ff;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #00f7ff;
+}
+
+/* SOCIAL */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.social-icons a:hover {
+  color: #00f7ff;
+}
+
+/* MAP */
+.map iframe {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* SUBSCRIBE */
+.subscribe {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.subscribe button {
+  padding: 10px;
+  background: #00f7ff;
+  border: none;
+  cursor: pointer;
+}
+
+/* MESSAGE */
+#msg {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #00f7ff;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+  </style>
+
+<script>
+  function subscribe() {
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("msg");
+  
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  
+    if (email === "" || !email.match(pattern)) {
+      msg.style.color = "red";
+      msg.innerText = "Please fill correct mail id";
+      return;
+    }
+  
+    msg.style.color = "lightgreen";
+    msg.innerText = "Subscribed successfully!";
+  
+    setTimeout(() => {
+      window.location.href = "404.html";
+    }, 1200);
+  }
+  </script>
 </body>
 </html>
