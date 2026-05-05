@@ -47,7 +47,7 @@ body{height:2000px;background:linear-gradient(120deg,#e0f2fe,#f5f9ff);}
   width: 160px;
   height: 160px;
   border: 2px solid rgba(0, 247, 255, 0.2);
-  border-top: 2px solid #00f7ff;
+  border-top: 2px solid white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: spin 1.5s linear infinite;
@@ -57,11 +57,11 @@ body{height:2000px;background:linear-gradient(120deg,#e0f2fe,#f5f9ff);}
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 5px #00f7ff);
+    filter: drop-shadow(0 0 5px white);
   }
   50% {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 20px #00f7ff);
+    filter: drop-shadow(0 0 20px white);
   }
 }
 
@@ -158,7 +158,7 @@ position:relative;
 
 /* ACTIVE */
 .nav-links a.active,
-.nav-links a:hover{color:#00f7ff;;}
+.nav-links a:hover{color:black;}
 
 .nav-links a.active::after,
 .nav-links a:hover::after{
@@ -166,7 +166,7 @@ content:"";
 position:absolute;
 bottom:-6px;left:0;
 width:100%;height:2px;
-background:#00f7ff;
+background:white;
 }
 
 /* RIGHT */
@@ -181,11 +181,11 @@ font-size:14px;
 transition:0.3s;
 }
 
-.login{background:transparent;border:1px solid #00d1a7;color:#00f7ff;}
-.login:hover{background:#00f7ff;;color:white;}
+.login{background:transparent;border:1px solid #0b2a5c;color:black;}
+.login:hover{background:#0b2a5c;color:white;}
 
-.register{background:#00f7ff;;color:white;}
-.register:hover{background:#00f7ff;}
+.register{background:#0b2a5c;color:white;}
+.register:hover{background:#0b2a5c;}
 
 /* MENU */
 .menu-toggle{display:none;font-size:22px;cursor:pointer;}
@@ -224,12 +224,12 @@ background:rgba(0,0,0,0.4);display:none;z-index:1500;
 <body>
 
   <!-- PRELOADER -->
-<div id="preloader">
+<!-- <div id="preloader">
   <div class="loader-content">
     <img src="./logo.webp" alt="Stackly Logo" class="loader-logo">
     <div class="loader-ring"></div>
   </div>
-</div>
+</div> -->
 
 <div class="overlay" id="overlay"></div>
 
@@ -801,2401 +801,2937 @@ camera.updateProjectionMatrix()
 
 
 
-<style>
 
-/* GLOBAL */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-/* SECTION */
-
-.bio-stats-section{
-position:relative;
-padding:120px 20px;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-}
-
-/* DNA PARTICLE CANVAS */
-
-#dnaParticles{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:0;
-}
-
-/* CARD */
-
-.bio-stats-card{
-
-position:relative;
-z-index:2;
-
-width:100%;
-max-width:1200px;
-
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-
-padding:50px 40px;
-
-border-radius:18px;
-
-/* GLASSMORPHISM */
-
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(14px);
-border:1px solid rgba(255,255,255,0.2);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.4);
-
-/* FLOAT */
-
-animation:floatCard 6s ease-in-out infinite;
-
-/* SCROLL ANIMATION */
-
-opacity:0;
-transform:translateY(60px);
-transition:1s ease;
-
-}
-
-/* SHOW */
-
-.bio-stats-card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* FLOAT KEYFRAME */
-
-@keyframes floatCard{
-
-0%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-100%{transform:translateY(0)}
-
-}
-
-/* ITEM */
-
-.bio-stat{
-text-align:center;
-}
-
-/* NUMBER */
-
-.bio-number{
-
-font-size:48px;
-font-weight:700;
-
-background:linear-gradient(90deg,#00e5ff,#00ffa6);
--webkit-background-clip:text;
-color:transparent;
-
-text-shadow:
-0 0 10px rgba(0,255,200,0.5),
-0 0 20px rgba(0,255,200,0.3);
-
-margin-bottom:10px;
-
-}
-
-/* LINE */
-
-.bio-line{
-height:2px;
-width:60px;
-background:#00f7ff;
-margin:12px auto 15px;
-opacity:0.7;
-}
-
-/* TEXT */
-
-.bio-text{
-font-size:16px;
-opacity:0.9;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:992px){
-
-.bio-stats-card{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:600px){
-
-.bio-stats-card{
-grid-template-columns:1fr;
-padding:40px 25px;
-}
-
-.bio-number{
-font-size:36px;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
 
-<section class="bio-stats-section">
+    <section class="stkAbtX-section">
 
-<canvas id="dnaParticles"></canvas>
-
-<div class="bio-stats-card" id="bioStats">
-
-<div class="bio-stat">
-
-<div class="bio-number" data-target="1200">0</div>
-<div class="bio-line"></div>
-<div class="bio-text">Biotech Devices Developed</div>
-
-</div>
-
-
-<div class="bio-stat">
-
-<div class="bio-number" data-target="350">0</div>
-<div class="bio-line"></div>
-<div class="bio-text">Research Labs Partnered</div>
-
-</div>
-
-
-<div class="bio-stat">
-
-<div class="bio-number" data-target="85">0</div>
-<div class="bio-line"></div>
-<div class="bio-text">Advanced Biotech Solutions</div>
-
-</div>
-
-
-<div class="bio-stat">
-
-<div class="bio-number" data-target="15">0</div>
-<div class="bio-line"></div>
-<div class="bio-text">Years of Innovation</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<script>
-
-/* DNA PARTICLE BACKGROUND */
-
-const canvas=document.getElementById("dnaParticles")
-const ctx=canvas.getContext("2d")
-
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-
-let particles=[]
-
-for(let i=0;i<80;i++){
-
-particles.push({
-
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2,
-dx:(Math.random()-0.5)*0.5,
-dy:(Math.random()-0.5)*0.5
-
-})
-
-}
-
-function animateParticles(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height)
-
-particles.forEach(p=>{
-
-p.x+=p.dx
-p.y+=p.dy
-
-if(p.x<0||p.x>canvas.width)p.dx*=-1
-if(p.y<0||p.y>canvas.height)p.dy*=-1
-
-ctx.beginPath()
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2)
-ctx.fillStyle="#00ffc8"
-ctx.fill()
-
-})
-
-requestAnimationFrame(animateParticles)
-
-}
-
-animateParticles()
-
-
-
-/* SCROLL REVEAL */
-
-const stats=document.getElementById("bioStats")
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-stats.classList.add("show")
-startCounter()
-
-}
-
-})
-
-},{threshold:0.4})
-
-observer.observe(stats)
-
-
-
-/* COUNTER */
-
-function startCounter(){
-
-const counters=document.querySelectorAll(".bio-number")
-
-counters.forEach(counter=>{
-
-const target=+counter.getAttribute("data-target")
-
-let count=0
-const speed=target/90
-
-function update(){
-
-count+=speed
-
-if(count<target){
-
-counter.innerText=Math.floor(count)+"+"
-requestAnimationFrame(update)
-
-}
-
-else{
-
-counter.innerText=target+"+"
-
-}
-
-}
-
-update()
-
-})
-
-}
-
-
-
-/* RESPONSIVE CANVAS */
-
-window.addEventListener("resize",()=>{
-
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-
-})
-
-</script>
-
-<section class="stkBio-about-section">
-
-    <div class="stkBio-container">
-    
-    <!-- LEFT CONTENT -->
-    
-    <div class="stkBio-left">
-    
-    <h5 class="stkBio-animate stkBio-leftIn">About Us</h5>
-    
-    <h2 class="stkBio-title stkBio-animate stkBio-leftIn">
-    Innovative Medical Devices Engineered for Precision
-    </h2>
-    
-    <p class="stkBio-desc stkBio-animate stkBio-bottomIn">
-    We specialize in delivering high-quality, technologically advanced medical
-    equipment designed to improve clinical efficiency, diagnostic accuracy,
-    and patient safety across healthcare facilities.
-    </p>
-    
-    <div class="stkBio-features">
-    
-    <div class="stkBio-feature stkBio-animate stkBio-bottomIn">
-    Advanced Diagnostic Equipment
-    </div>
-    
-    <div class="stkBio-feature stkBio-animate stkBio-bottomIn">
-    Reliable ICU & Monitoring Devices
-    </div>
-    
-    <div class="stkBio-feature stkBio-animate stkBio-bottomIn">
-    Certified & Quality-Assured Products
-    </div>
-    
-    <div class="stkBio-feature stkBio-animate stkBio-bottomIn">
-    Nationwide Supply & Support
-    </div>
-    
-    </div>
-    
-    <a href="./404.html" class="stkBio-btn stkBio-animate stkBio-bottomIn">
-    More About Us
-    </a>
-    
-    </div>
-    
-    
-    <!-- RIGHT IMAGE -->
-    
-    <div class="stkBio-right stkBio-animate stkBio-rightIn">
-    
-    <img
-    src="./b1.webp"
-    class="stkBio-image"
-    id="stkBio-parallaxImg">
-    
-    <div class="stkBio-glassCard stkBio-animate stkBio-bottomIn">
-    
-    <h4>Delivering Excellence In Medical Technology</h4>
-    
-    <div class="stkBio-avatars">
-    
-    <img src="./pro2.webp">
-    <img src="./pro1.webp">
-    <img src="./pro2.webp">
-    <img src="./pro3.webp">
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    
-    <style>
-    
-    /* WRAPPER */
-    
-    .stkBio-about-section{
-    padding:100px 20px;
-    background:#f5f7fa;
-    }
-    
-    .stkBio-container{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-    }
-    
-    
-    /* LEFT */
-    
-    .stkBio-left h5{
-    color:#00f7ff;
-    margin-bottom:10px;
-    }
-    
-    .stkBio-title{
-    font-size:40px;
-    color:#0b2a5c;
-    line-height:1.2;
-    margin-bottom:20px;
-    }
-    
-    .stkBio-desc{
-    color:#5d6a7a;
-    line-height:1.7;
-    margin-bottom:25px;
-    }
-    
-    /* FEATURES */
-    
-    .stkBio-features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-bottom:25px;
-    }
-    
-    .stkBio-feature{
-    font-size:15px;
-    color:#2e3b4e;
-    }
-    
-    .stkBio-feature::before{
-    content:"✔";
-    color:#00f7ff;
-    margin-right:8px;
-    }
-    
-    /* BUTTON */
-    
-    .stkBio-btn{
-    display:inline-block;
-    padding:12px 26px;
-    border-radius:30px;
-    background:#e7ecf2;
-    color:#0b2a5c;
-    font-weight:600;
-    text-decoration:none;
-    }
-    
-    
-    /* RIGHT */
-    
-    .stkBio-right{
-    position:relative;
-    }
-    
-    .stkBio-image{
-    width:100%;
-    border-radius:14px;
-    transition:transform 0.2s linear;
-    }
-    
-    
-    /* GLASS CARD */
-    
-    .stkBio-glassCard{
-    
-    position:absolute;
-    bottom:-35px;
-    left:40px;
-    
-    padding:22px 28px;
-    
-    border-radius:14px;
-    
-    background:rgba(255,255,255,0.35);
-    backdrop-filter:blur(12px);
-    
-    border:1px solid rgba(255,255,255,0.5);
-    
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
-    
-    text-align:center;
-    
-    max-width:260px;
-    
-    }
-    
-    .stkBio-glassCard h4{
-    font-size:16px;
-    color:#0b2a5c;
-    margin-bottom:10px;
-    }
-    
-    .stkBio-avatars{
-    display:flex;
-    justify-content:center;
-    }
-    
-    .stkBio-avatars img{
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    border:2px solid white;
-    margin-left:-10px;
-    }
-    
-    
-    /* ANIMATION INITIAL */
-    
-    .stkBio-animate{
-    opacity:0;
-    transition:1s ease;
-    }
-    
-    .stkBio-leftIn{transform:translateX(-60px);}
-    .stkBio-rightIn{transform:translateX(60px);}
-    .stkBio-bottomIn{transform:translateY(50px);}
-    
-    .stkBio-show{
-    opacity:1;
-    transform:translate(0);
-    }
-    
-    
-    /* RESPONSIVE */
-    
-    @media(max-width:992px){
-    
-    .stkBio-container{
-    grid-template-columns:1fr;
-    gap:50px;
-    }
-    
-    .stkBio-title{
-    font-size:32px;
-    }
-    
-    .stkBio-glassCard{
-    position:relative;
-    left:auto;
-    bottom:auto;
-    margin-top:20px;
-    }
-    
-    }
-    
-    @media(max-width:600px){
-    
-    .stkBio-title{
-    font-size:26px;
-    }
-    
-    .stkBio-features{
-    grid-template-columns:1fr;
-    }
-    
-    }
-    
-    </style>
-    
-    
-    <script>
-    
-    /* SCROLL ANIMATION */
-    
-    const stkBioSection=document.querySelector(".stkBio-about-section")
-    
-    const stkBioObserver=new IntersectionObserver(entries=>{
-    
-    entries.forEach(entry=>{
-    
-    if(entry.isIntersecting){
-    
-    const items=entry.target.querySelectorAll(".stkBio-animate")
-    
-    items.forEach((el,i)=>{
-    
-    setTimeout(()=>{
-    el.classList.add("stkBio-show")
-    },i*150)
-    
-    })
-    
-    }
-    
-    })
-    
-    })
-    
-    stkBioObserver.observe(stkBioSection)
-    
-    
-    
-    /* PARALLAX IMAGE */
-    
-    const stkBioImg=document.getElementById("stkBio-parallaxImg")
-    
-    window.addEventListener("scroll",()=>{
-    
-    const offset=window.pageYOffset
-    stkBioImg.style.transform="translateY("+offset*0.05+"px)"
-    
-    })
-    
-    </script>
-    
-    </section>
-
-
-
-
-
-    <!-- BIOTECH DNA TIMELINE SECTION -->
-
-<section class="biox-section">
-
-    <canvas class="biox-particles"></canvas>
-    <div class="biox-dna3d"></div>
-    
-    <div class="biox-container">
-    
-    <h2 class="biox-title">Biotechnology Innovation Timeline</h2>
-    
-    <div class="biox-timeline">
-    
-    <!-- SVG DOUBLE HELIX -->
-    <svg class="biox-helix" viewBox="0 0 200 800">
-    
-    <path class="biox-strand1"
-    d="M100 0 C40 100 160 200 100 300 C40 400 160 500 100 600 C40 700 160 800 100 900"/>
-    
-    <path class="biox-strand2"
-    d="M100 0 C160 100 40 200 100 300 C160 400 40 500 100 600 C160 700 40 800 100 900"/>
-    
-    </svg>
-    
-    
-    <div class="biox-card">
-    <h3>Genome Editing</h3>
-    <p>CRISPR technology revolutionizing gene modification and disease treatment.</p>
-    </div>
-    
-    <div class="biox-card">
-    <h3>Biopharmaceutical Innovation</h3>
-    <p>Development of targeted biological drugs and vaccines.</p>
-    </div>
-    
-    <div class="biox-card">
-    <h3>AI Bioinformatics</h3>
-    <p>Artificial intelligence accelerating genetic data analysis.</p>
-    </div>
-    
-    <div class="biox-card">
-    <h3>Advanced Laboratory Research</h3>
-    <p>Cutting edge research laboratories driving global discoveries.</p>
-    </div>
-    
-    </div>
-    </div>
-    
-    </section>
-    
-    
-    
-    <style>
-    
-    /* SECTION */
-    
-    .biox-section{
-    position:relative;
-    padding:120px 8%;
-    background:#0a0f1a;
-    overflow:hidden;
-    font-family:Arial;
-    }
-    
-    /* CONTAINER */
-    
-    .biox-container{
-    max-width:1200px;
-    margin:auto;
-    position:relative;
-    z-index:3;
-    }
-    
-    /* TITLE */
-    
-    .biox-title{
-    text-align:center;
-    color:#fff;
-    font-size:40px;
-    margin-bottom:90px;
-    }
-    
-    /* TIMELINE */
-    
-    .biox-timeline{
-    position:relative;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px 120px;
-    }
-    
-    /* SVG HELIX */
-    
-    .biox-helix{
-    position:absolute;
-    left:50%;
-    top:0;
-    transform:translateX(-50%);
-    width:200px;
-    height:100%;
-    z-index:1;
-    }
-    
-    .biox-strand1,
-    .biox-strand2{
-    fill:none;
-    stroke-width:4;
-    stroke-linecap:round;
-    }
-    
-    .biox-strand1{
-    stroke:#00f7ff;
-    stroke-dasharray:12;
-    animation:bioxHelixMove 6s linear infinite;
-    }
-    
-    .biox-strand2{
-    stroke:#00f7ff;
-    stroke-dasharray:12;
-    animation:bioxHelixMove 6s linear reverse infinite;
-    }
-    
-    @keyframes bioxHelixMove{
-    from{stroke-dashoffset:0}
-    to{stroke-dashoffset:200}
-    }
-    
-    /* CARD */
-    
-    .biox-card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    padding:28px;
-    border-radius:18px;
-    color:#fff;
-    box-shadow:0 10px 40px rgba(0,0,0,.4);
-    position:relative;
-    z-index:2;
-    
-    opacity:0;
-    transform:translateY(60px);
-    transition:.6s;
-    }
-    
-    .biox-card.show{
-    opacity:1;
-    transform:translateY(0);
-    }
-    
-    .biox-card:hover{
-    transform:translateY(-8px) scale(1.03);
-    box-shadow:0 0 25px rgba(0,255,255,.6);
-    }
-    
-    .biox-card h3{
-    color:#00f7ff;
-    margin-bottom:10px;
-    }
-    
-    /* CONNECTOR */
-    
-    .biox-card::before{
-    content:"";
-    position:absolute;
-    top:32px;
-    width:70px;
-    height:3px;
-    background:#00f7ff;
-    }
-    
-    .biox-card:nth-child(odd)::before{
-    right:-70px;
-    }
-    
-    .biox-card:nth-child(even)::before{
-    left:-70px;
-    }
-    
-    /* PARTICLE CANVAS */
-    
-    .biox-particles{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:0;
-    }
-    
-    /* 3D DNA BACKGROUND */
-    
-    .biox-dna3d{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    opacity:.25;
-    z-index:1;
-    }
-    
-    /* RESPONSIVE */
-    
-    @media(max-width:900px){
-    
-    .biox-timeline{
-    grid-template-columns:1fr;
-    gap:60px;
-    }
-    
-    .biox-helix{
-    left:30px;
-    }
-    
-    .biox-card{
-    margin-left:60px;
-    }
-    
-    .biox-card::before{
-    left:-50px!important;
-    width:50px;
-    }
-    
-    }
-    
-    @media(max-width:600px){
-    
-    .biox-title{
-    font-size:28px;
-    }
-    
-    }
-    
-    </style>
-    
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    
-    <script>
-    
-    (function(){
-    
-    /* SCROLL REVEAL */
-    
-    const cards=document.querySelectorAll(".biox-card");
-    
-    function reveal(){
-    cards.forEach(c=>{
-    if(c.getBoundingClientRect().top < window.innerHeight-80){
-    c.classList.add("show")
-    }
-    })
-    }
-    
-    window.addEventListener("scroll",reveal);
-    window.addEventListener("load",reveal);
-    
-    
-    
-    /* PARTICLE MOLECULE NETWORK */
-    
-    const canvas=document.querySelector(".biox-particles");
-    const ctx=canvas.getContext("2d");
-    
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-    
-    let particles=[];
-    
-    for(let i=0;i<60;i++){
-    particles.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    vx:(Math.random()-0.5)*0.6,
-    vy:(Math.random()-0.5)*0.6
-    })
-    }
-    
-    function animateParticles(){
-    
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    
-    particles.forEach((p,i)=>{
-    
-    p.x+=p.vx
-    p.y+=p.vy
-    
-    ctx.beginPath()
-    ctx.arc(p.x,p.y,2,0,Math.PI*2)
-    ctx.fillStyle="#00f7ff"
-    ctx.fill()
-    
-    particles.forEach(p2=>{
-    let dist=Math.hypot(p.x-p2.x,p.y-p2.y)
-    if(dist<120){
-    ctx.beginPath()
-    ctx.moveTo(p.x,p.y)
-    ctx.lineTo(p2.x,p2.y)
-    ctx.strokeStyle="rgba(0,255,255,0.15)"
-    ctx.stroke()
-    }
-    })
-    
-    })
-    
-    requestAnimationFrame(animateParticles)
-    
-    }
-    
-    animateParticles()
-    
-    
-    
-    /* 3D ROTATING DNA */
-    
-    const scene=new THREE.Scene()
-    const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000)
-    
-    const renderer=new THREE.WebGLRenderer({alpha:true})
-    renderer.setSize(window.innerWidth,window.innerHeight)
-    
-    document.querySelector(".biox-dna3d").appendChild(renderer.domElement)
-    
-    camera.position.z=40
-    
-    const geometry=new THREE.SphereGeometry(0.6,16,16)
-    const material=new THREE.MeshBasicMaterial({color:0x00ffff})
-    
-    for(let i=0;i<70;i++){
-    
-    let angle=i*0.35
-    
-    let x=Math.cos(angle)*6
-    let y=(i-35)*0.7
-    let z=Math.sin(angle)*6
-    
-    let sphere=new THREE.Mesh(geometry,material)
-    sphere.position.set(x,y,z)
-    
-    scene.add(sphere)
-    
-    }
-    
-    function animateDNA(){
-    
-    requestAnimationFrame(animateDNA)
-    
-    scene.rotation.y+=0.002
-    
-    renderer.render(scene,camera)
-    
-    }
-    
-    animateDNA()
-    
-    })();
-    
-    </script>
-
-
-<!-- FUTURISTIC BIOTECH RESEARCH SECTION -->
-
-<section class="biopx-section">
-
-    <canvas class="biopx-molecule"></canvas>
-    
-    <div class="biopx-container">
-    
-    <h2 class="biopx-title">Next-Generation Biotechnology Research</h2>
-    
-    <div class="biopx-grid">
-    
-    <!-- CARD 1 -->
-    
-    <div class="biopx-card biopx-left">
-    
-    <div class="biopx-imgbox">
-    <img src="./bio1.webp">
-    </div>
-    
-    <h3>DNA Research Laboratory</h3>
-    
-    <p>
-    Advanced laboratories equipped with automated sequencing
-    systems and AI powered molecular analysis.
-    </p>
-    
-    <a href="./404.html" class="biopx-btn">Explore</a>
-    
-    </div>
-    
-    
-    <!-- CARD 2 -->
-    
-    <div class="biopx-card biopx-bottom">
-    
-    <div class="biopx-imgbox">
-    <img src="./molecular.webp">
-    </div>
-    
-    <h3>Molecular Engineering</h3>
-    
-    <p>
-    Biotech scientists design and modify biological systems
-    to create innovative medical therapies.
-    </p>
-    
-    <a href="./404.html" class="biopx-btn">Explore</a>
-    
-    </div>
-    
-    
-    <!-- CARD 3 -->
-    
-    <div class="biopx-card biopx-right">
-    
-    <div class="biopx-imgbox">
-    <img src="./AI genomic.webp">
-    </div>
-    
-    <h3>AI Genomic Analysis</h3>
-    
-    <p>
-    Machine learning models analyze genomic sequences
-    to accelerate biological discoveries.
-    </p>
-    
-    <a href="./404.html" class="biopx-btn">Explore</a>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-    </section>
-    
-    
-    
-    <style>
-    
-    /* SECTION */
-    
-    .biopx-section{
-    position:relative;
-    padding:120px 8%;
-    background:#0a0f1a;
-    overflow:hidden;
-    font-family:Arial, Helvetica, sans-serif;
-    }
-    
-    /* BACKGROUND MOLECULE NETWORK */
-    
-    .biopx-molecule{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:0;
-    }
-    
-    /* CONTAINER */
-    
-    .biopx-container{
-    max-width:1200px;
-    margin:auto;
-    position:relative;
-    z-index:2;
-    }
-    
-    /* TITLE */
-    
-    .biopx-title{
-    text-align:center;
-    color:#fff;
-    font-size:38px;
-    margin-bottom:70px;
-    }
-    
-    /* GRID */
-    
-    .biopx-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:35px;
-    }
-    
-    /* CARD */
-    
-    .biopx-card{
-    
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
-    padding:22px;
-    border-radius:20px;
-    color:#fff;
-    text-align:center;
-    
-    opacity:0;
-    transition:0.8s;
-    
-    }
-    
-    /* IMAGE */
-    
-    .biopx-imgbox{
-    overflow:hidden;
-    margin-bottom:16px;
-    border-radius:40px;
-    }
-    
-    .biopx-imgbox img{
-    width:100%;
-    height:210px;
-    object-fit:cover;
-    transition:.6s;
-    }
-    
-    .biopx-card:hover img{
-    transform:scale(1.15);
-    }
-    
-    /* TITLE */
-    
-    .biopx-card h3{
-    color:#00eaff;
-    margin-bottom:10px;
-    }
-    
-    /* TEXT */
-    
-    .biopx-card p{
-    font-size:14px;
-    line-height:1.6;
-    margin-bottom:18px;
-    }
-    
-    /* BUTTON */
-    
-    .biopx-btn{
-    display:inline-block;
-    padding:8px 22px;
-    background:#00f7ff;
-    color:#000;
-    text-decoration:none;
-    border-radius:20px;
-    font-size:14px;
-    transition:.3s;
-    }
-    
-    .biopx-btn:hover{
-    background:#fff;
-    }
-    
-    /* HOVER PARALLAX */
-    
-    .biopx-card:hover{
-    transform:translateY(-12px) scale(1.03);
-    box-shadow:0 0 25px #00f7ff;;
-    }
-    
-    /* INITIAL DIRECTIONS */
-    
-    .biopx-left{
-    transform:translateX(-120px);
-    }
-    
-    .biopx-right{
-    transform:translateX(120px);
-    }
-    
-    .biopx-top{
-    transform:translateY(-120px);
-    }
-    
-    .biopx-bottom{
-    transform:translateY(120px);
-    }
-    
-    /* SHOW ANIMATION */
-    
-    .biopx-card.show{
-    opacity:1;
-    transform:translate(0,0);
-    }
-    
-    /* TABLET */
-    
-    @media(max-width:992px){
-    
-    .biopx-grid{
-    grid-template-columns:repeat(2,1fr);
-    }
-    
-    }
-    
-    /* MOBILE */
-    
-    @media(max-width:600px){
-    
-    .biopx-title{
-    font-size:28px;
-    }
-    
-    .biopx-grid{
-    grid-template-columns:1fr;
-    }
-    
-    .biopx-imgbox img{
-    height:180px;
-    }
-    
-    }
-    
-    </style>
-    
-    
-    
-    <script>
-    
-    (function(){
-    
-    /* SCROLL REVEAL */
-    
-    const cards=document.querySelectorAll(".biopx-card");
-    
-    function revealCards(){
-    
-    cards.forEach((card,i)=>{
-    
-    const top=card.getBoundingClientRect().top;
-    
-    if(top < window.innerHeight - 80){
-    
-    setTimeout(()=>{
-    card.classList.add("show")
-    }, i * 200)
-    
-    }
-    
-    })
-    
-    }
-    
-    window.addEventListener("scroll",revealCards);
-    window.addEventListener("load",revealCards);
-    
-    
-    
-    /* MOLECULE NETWORK */
-    
-    const canvas=document.querySelector(".biopx-molecule");
-    const ctx=canvas.getContext("2d");
-    
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-    
-    let particles=[];
-    
-    for(let i=0;i<70;i++){
-    
-    particles.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    vx:(Math.random()-.5)*0.7,
-    vy:(Math.random()-.5)*0.7
-    })
-    
-    }
-    
-    function animate(){
-    
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    
-    particles.forEach(p=>{
-    
-    p.x+=p.vx;
-    p.y+=p.vy;
-    
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,2,0,Math.PI*2);
-    ctx.fillStyle="#00eaff";
-    ctx.fill();
-    
-    particles.forEach(p2=>{
-    
-    let dist=Math.hypot(p.x-p2.x,p.y-p2.y);
-    
-    if(dist<120){
-    
-    ctx.beginPath();
-    ctx.moveTo(p.x,p.y);
-    ctx.lineTo(p2.x,p2.y);
-    ctx.strokeStyle="rgba(0,255,255,0.15)";
-    ctx.stroke();
-    
-    }
-    
-    })
-    
-    })
-    
-    requestAnimationFrame(animate);
-    
-    }
-    
-    animate();
-    
-    })();
-    
-    </script>
-
+        <div class="stkAbtX-container">
       
-<!-- BIOTECH AI STATISTICS SECTION -->
-
-<section class="bioai-stats-section">
-
-    <div class="bioai-stats-container">
-    
-    <h2 class="bioai-stats-title">AI Biotechnology Impact</h2>
-    <p class="bioai-stats-subtitle">
-    Transforming global research with artificial intelligence and biotechnology
-    </p>
-    
-    
-    <div class="bioai-stats-grid">
-    
-    <!-- STAT 1 -->
-    <div class="bioai-stat-card bioai-anim-left">
-    <h3 class="bioai-counter" data-target="96">0</h3>
-    <p>AI Genetic Accuracy</p>
-    </div>
-    
-    <!-- STAT 2 -->
-    <div class="bioai-stat-card bioai-anim-bottom">
-    <h3 class="bioai-counter" data-target="150">0</h3>
-    <p>Global Research Labs</p>
-    </div>
-    
-    <!-- STAT 3 -->
-    <div class="bioai-stat-card bioai-anim-top">
-    <h3 class="bioai-counter" data-target="85">0</h3>
-    <p>Drug Discovery Speed</p>
-    </div>
-    
-    <!-- STAT 4 -->
-    <div class="bioai-stat-card bioai-anim-right">
-    <h3 class="bioai-counter" data-target="500">0</h3>
-    <p>Genome Projects Completed</p>
-    </div>
-    
-    </div>
-    
-    
-    <!-- DNA DIVIDER -->
-    
-    <div class="bioai-dna-divider">
-    
-    <svg viewBox="0 0 800 200" class="bioai-dna-svg">
-    
-    <path class="bioai-dna-line1"
-    d="M0 100 Q100 20 200 100 T400 100 T600 100 T800 100"/>
-    
-    <path class="bioai-dna-line2"
-    d="M0 100 Q100 180 200 100 T400 100 T600 100 T800 100"/>
-    
-    </svg>
-    
-    </div>
-    
-    </div>
-    </section>
-    
-    
-    
-    <style>
-    
-    /* SECTION */
-    
-    .bioai-stats-section{
-    padding:110px 20px;
-    background:#f4f7fb;
-    font-family:Arial, Helvetica, sans-serif;
-    overflow:hidden;
-    color:black;
-    }
-    
-    .bioai-stats-container{
-    max-width:1200px;
-    margin:auto;
-    text-align:center;
-    }
-    
-    /* TITLE */
-    
-    .bioai-stats-title{
-    font-size:38px;
-    font-weight:700;
-    margin-bottom:10px;
-    }
-    
-    .bioai-stats-subtitle{
-    color:#666;
-    margin-bottom:70px;
-    font-size:17px;
-    }
-    
-    /* GRID */
-    
-    .bioai-stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    }
-    
-    /* CARD */
-    
-    .bioai-stat-card{
-    background:white;
-    padding:40px 20px;
-    border-radius:14px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
-    transition:0.4s;
-    opacity:0;
-    }
-    
-    .bioai-stat-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    }
-    
-    /* NUMBER */
-    
-    .bioai-counter{
-    font-size:42px;
-    font-weight:700;
-    background:linear-gradient(45deg,#6a5cff,#00c6ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    }
-    
-    .bioai-stat-card p{
-    margin-top:10px;
-    color:#555;
-    font-size:15px;
-    }
-    
-    /* DNA DIVIDER */
-    
-    .bioai-dna-divider{
-    margin-top:90px;
-    opacity:0;
-    }
-    
-    .bioai-dna-svg{
-    width:100%;
-    height:160px;
-    }
-    
-    .bioai-dna-line1{
-    stroke:#00f7ff;;
-    stroke-width:4;
-    fill:none;
-    stroke-dasharray:12 10;
-    animation:dnaMove 6s linear infinite;
-    }
-    
-    .bioai-dna-line2{
-    stroke:#00c6ff;
-    stroke-width:4;
-    fill:none;
-    stroke-dasharray:12 10;
-    animation:dnaMoveReverse 6s linear infinite;
-    }
-    
-    @keyframes dnaMove{
-    from{stroke-dashoffset:0}
-    to{stroke-dashoffset:200}
-    }
-    
-    @keyframes dnaMoveReverse{
-    from{stroke-dashoffset:200}
-    to{stroke-dashoffset:0}
-    }
-    
-    
-    /* LOAD DIRECTIONS */
-    
-    .bioai-anim-left{transform:translateX(-60px);}
-    .bioai-anim-right{transform:translateX(60px);}
-    .bioai-anim-top{transform:translateY(-60px);}
-    .bioai-anim-bottom{transform:translateY(60px);}
-    
-    /* ACTIVE */
-    
-    .bioai-show{
-    opacity:1;
-    transform:translate(0,0);
-    transition:0.9s ease;
-    }
-    
-    
-    /* RESPONSIVE */
-    
-    @media(max-width:1024px){
-    
-    .bioai-stats-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-    }
-    
-    }
-    
-    @media(max-width:600px){
-    
-    .bioai-stats-grid{
-    grid-template-columns:1fr;
-    }
-    
-    .bioai-stats-title{
-    font-size:30px;
-    }
-    
-    .bioai-counter{
-    font-size:36px;
-    }
-    
-    }
-    
-    </style>
-    
-    
-    
-    <script>
-    
-    /* SCROLL ANIMATION */
-    
-    const bioStats = document.querySelectorAll(".bioai-stat-card");
-    const bioDNA = document.querySelector(".bioai-dna-divider");
-    
-    const bioObserver = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-    if(entry.isIntersecting){
-    
-    entry.target.classList.add("bioai-show");
-    
-    if(entry.target.querySelector(".bioai-counter")){
-    startCounter(entry.target);
-    }
-    
-    }
-    });
-    },{threshold:0.3});
-    
-    bioStats.forEach(card=>{
-    bioObserver.observe(card);
-    });
-    
-    bioObserver.observe(bioDNA);
-    
-    
-    /* COUNTER */
-    
-    function startCounter(card){
-    
-    const counters = card.querySelectorAll(".bioai-counter");
-    
-    counters.forEach(counter=>{
-    
-    const target = +counter.getAttribute("data-target");
-    
-    let count = 0;
-    
-    const update = ()=>{
-    
-    count += target/80;
-    
-    if(count < target){
-    
-    counter.innerText = Math.floor(count) + "+";
-    requestAnimationFrame(update);
-    
-    }else{
-    
-    counter.innerText = target + "+";
-    
-    }
-    
-    }
-    
-    update();
-    
-    })
-    
-    }
-    
-    </script>
-
-
-
-
-    <!-- BIOTECH AI NETWORK FEATURES -->
-
-<section id="biofx-ai-network-fixed">
-
-<div class="biofx-bg"></div>
-<canvas class="biofx-network"></canvas>
-
-<div class="biofx-container">
-
-<h2 class="biofx-title">Advanced Biotechnology & AI Systems</h2>
-<p class="biofx-subtitle">
-Next-generation biotech platforms powered by artificial intelligence
-</p>
-
-<div class="biofx-grid">
-
-<div class="biofx-card">
-<div class="biofx-img">
-<img src="./AI genomic.webp">
-</div>
-<div class="biofx-icon"><i class="fas fa-brain"></i></div>
-<h3>AI Molecular Analysis</h3>
-<p>Machine learning models analyze biological datasets and accelerate discoveries.</p>
-</div>
-
-<div class="biofx-card">
-<div class="biofx-img">
-<img src="./molecular.webp">
-</div>
-<div class="biofx-icon"><i class="fas fa-dna"></i></div>
-<h3>Genomic Sequencing</h3>
-<p>Advanced sequencing technology enabling rapid DNA mutation detection.</p>
-</div>
-
-<div class="biofx-card">
-<div class="biofx-img">
-<img src="./b1.webp">
-</div>
-<div class="biofx-icon"><i class="fas fa-microscope"></i></div>
-<h3>Smart Laboratories</h3>
-<p>AI powered laboratories improving efficiency and experiment accuracy.</p>
-</div>
-
-<div class="biofx-card">
-<div class="biofx-img">
-<img src="./clinical.webp">
-</div>
-<div class="biofx-icon"><i class="fas fa-heartbeat"></i></div>
-<h3>Clinical Innovation</h3>
-<p>Next generation clinical research and patient monitoring systems.</p>
-</div>
-
-<div class="biofx-card">
-<div class="biofx-img">
-<img src="./data security.webp">
-</div>
-<div class="biofx-icon"><i class="fas fa-shield-alt"></i></div>
-<h3>Bio Data Security</h3>
-<p>Encrypted infrastructure protecting genetic and medical research data.</p>
-</div>
-
-<div class="biofx-card">
-<div class="biofx-img">
-<img src="./real time.webp">
-</div>
-<div class="biofx-icon"><i class="fas fa-bolt"></i></div>
-<h3>Real Time Processing</h3>
-<p>High performance computing delivering instant biotechnology insights.</p>
-</div>
-
-</div>
-</div>
-
-</section>
-
-
-
-<style>
-
-/* SECTION */
-
-#biofx-ai-network-fixed{
-position:relative;
-padding:110px 20px;
-overflow:hidden;
-font-family:Arial;
-}
-
-
-/* BACKGROUND */
-
-#biofx-ai-network-fixed .biofx-bg{
-
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-background:
-linear-gradient(rgba(12,20,60,.85),rgba(12,20,60,.9)),
-url("./b1.webp");
-
-background-size:cover;
-background-position:center;
-
-z-index:0;
-
-}
-
-
-/* CANVAS */
-
-#biofx-ai-network-fixed .biofx-network{
-
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-opacity:.5;
-
-z-index:1;
-
-}
-
-
-/* CONTENT */
-
-#biofx-ai-network-fixed .biofx-container{
-
-position:relative;
-z-index:2;
-
-max-width:1200px;
-margin:auto;
-text-align:center;
-
-}
-
-
-/* TITLE */
-
-#biofx-ai-network-fixed .biofx-title{
-color:white;
-font-size:38px;
-margin-bottom:10px;
-}
-
-#biofx-ai-network-fixed .biofx-subtitle{
-color:#cfd6ff;
-margin-bottom:70px;
-}
-
-
-/* GRID */
-
-#biofx-ai-network-fixed .biofx-grid{
-
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:35px;
-
-}
-
-
-/* CARD */
-
-#biofx-ai-network-fixed .biofx-card{
-
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-
-border-radius:16px;
-padding:22px;
-
-border:1px solid rgba(255,255,255,.15);
-
-transition:.4s;
-
-}
-
-
-/* HOVER */
-
-#biofx-ai-network-fixed .biofx-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 15px 35px rgba(0,0,0,.4),
-0 0 20px rgba(100,120,255,.6);
-
-}
-
-
-/* IMAGE */
-
-#biofx-ai-network-fixed .biofx-img{
-height:160px;
-overflow:hidden;
-border-radius:12px;
-margin-bottom:15px;
-}
-
-#biofx-ai-network-fixed .biofx-img img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.6s;
-}
-
-#biofx-ai-network-fixed .biofx-card:hover img{
-transform:scale(1.15);
-}
-
-
-/* ICON */
-
-#biofx-ai-network-fixed .biofx-icon{
-
-width:55px;
-height:55px;
-
-margin:12px auto;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-border-radius:12px;
-
-background:linear-gradient(135deg,#7c6cff,#00e0ff);
-
-color:white;
-font-size:22px;
-
-}
-
-
-/* TEXT */
-
-#biofx-ai-network-fixed h3{
-color:white;
-margin:10px 0;
-}
-
-#biofx-ai-network-fixed p{
-color:#d9ddff;
-font-size:14px;
-line-height:1.6;
-}
-
-
-/* RESPONSIVE */
-
-@media(max-width:1024px){
-
-#biofx-ai-network-fixed .biofx-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:600px){
-
-#biofx-ai-network-fixed .biofx-grid{
-grid-template-columns:1fr;
-}
-
-#biofx-ai-network-fixed .biofx-title{
-font-size:28px;
-}
-
-}
-
-</style>
-
-
-
-<script>
-
-/* AI MOLECULE NETWORK */
-
-const canvas=document.querySelector("#biofx-ai-network-fixed .biofx-network");
-const ctx=canvas.getContext("2d");
-
-function resizeCanvas(){
-canvas.width=canvas.offsetWidth;
-canvas.height=canvas.offsetHeight;
-}
-
-resizeCanvas();
-window.addEventListener("resize",resizeCanvas);
-
-let nodes=[];
-
-for(let i=0;i<60;i++){
-nodes.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-vx:(Math.random()-.5)*0.6,
-vy:(Math.random()-.5)*0.6
-});
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-nodes.forEach(n=>{
-
-n.x+=n.vx;
-n.y+=n.vy;
-
-if(n.x<0||n.x>canvas.width)n.vx*=-1;
-if(n.y<0||n.y>canvas.height)n.vy*=-1;
-
-ctx.beginPath();
-ctx.arc(n.x,n.y,2,0,Math.PI*2);
-ctx.fillStyle="#8fa2ff";
-ctx.fill();
-
-nodes.forEach(m=>{
-
-let dx=n.x-m.x;
-let dy=n.y-m.y;
-
-let dist=Math.sqrt(dx*dx+dy*dy);
-
-if(dist<120){
-
-ctx.beginPath();
-ctx.moveTo(n.x,n.y);
-ctx.lineTo(m.x,m.y);
-ctx.strokeStyle="rgba(140,160,255,.15)";
-ctx.stroke();
-
-}
-
-});
-
-});
-
-requestAnimationFrame(animate);
-
-}
-
-animate();
-
-</script>
-
-
-
-
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    
-    <script>
-    
-    (function(){
-    
-    const canvas=document.getElementById("bio3d-dna-canvas");
-    
-    const scene=new THREE.Scene();
-    
-    const camera=new THREE.PerspectiveCamera(
-    60,
-    canvas.clientWidth/canvas.clientHeight,
-    0.1,
-    1000
-    );
-    
-    camera.position.z=40;
-    
-    const renderer=new THREE.WebGLRenderer({
-    canvas:canvas,
-    alpha:true,
-    antialias:true
-    });
-    
-    renderer.setSize(canvas.clientWidth,canvas.clientHeight);
-    
-    
-    /* DNA HELIX */
-    
-    const group=new THREE.Group();
-    
-    for(let i=0;i<80;i++){
-    
-    const geometry=new THREE.SphereGeometry(.6,16,16);
-    
-    const material1=new THREE.MeshBasicMaterial({
-    color:0x7c6cff
-    });
-    
-    const material2=new THREE.MeshBasicMaterial({
-    color:0x00d4ff
-    });
-    
-    const sphere1=new THREE.Mesh(geometry,material1);
-    const sphere2=new THREE.Mesh(geometry,material2);
-    
-    const angle=i*.35;
-    
-    const radius=8;
-    
-    sphere1.position.set(
-    Math.cos(angle)*radius,
-    i*.35-14,
-    Math.sin(angle)*radius
-    );
-    
-    sphere2.position.set(
-    Math.cos(angle+Math.PI)*radius,
-    i*.35-14,
-    Math.sin(angle+Math.PI)*radius
-    );
-    
-    group.add(sphere1);
-    group.add(sphere2);
-    
-    }
-    
-    scene.add(group);
-    
-    
-    /* ROTATION */
-    
-    function animate(){
-    
-    requestAnimationFrame(animate);
-    
-    group.rotation.y+=0.004;
-    
-    renderer.render(scene,camera);
-    
-    }
-    
-    animate();
-    
-    
-    /* RESPONSIVE */
-    
-    function resize(){
-    
-    const width=canvas.clientWidth;
-    const height=canvas.clientHeight;
-    
-    renderer.setSize(width,height);
-    
-    camera.aspect=width/height;
-    camera.updateProjectionMatrix();
-    
-    }
-    
-    window.addEventListener("resize",resize);
-    
-    })();
-    
-    </script>
-
-
-
-
-
-
-    <!-- Load Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<section class="bioteam-sec">
-
-  <div class="bioteam-container">
-
-    <h2 class="bioteam-title">Our Biotechnology Scientists</h2>
-
-    <p class="bioteam-sub">
-      Our team of researchers, genetic engineers and AI specialists
-      are driving the future of biotechnology innovation.
-    </p>
-
-    <div class="bioteam-grid">
-
-      <!-- CARD 1 -->
-      <div class="bioteam-card">
-        <div class="bioteam-img-wrap">
-          <img src="./pro1.webp" class="bioteam-img">
-          <div class="bioteam-overlay">
-            <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon3"><i class="fas fa-envelope"></i></a>
+          <!-- LEFT -->
+          <div class="stkAbtX-left">
+      
+            <h5 class="stkAbtX-badge stkAbtX-anim">About Us</h5>
+      
+            <h2 class="stkAbtX-title stkAbtX-anim">
+              Innovative Medical Devices Engineered for Precision
+            </h2>
+      
+            <p class="stkAbtX-desc stkAbtX-anim">
+              We deliver advanced medical equipment that improves diagnostics,
+              efficiency, and patient safety.
+            </p>
+      
+            <div class="stkAbtX-features">
+              <div class="stkAbtX-feature stkAbtX-anim">Advanced Diagnostic Equipment</div>
+              <div class="stkAbtX-feature stkAbtX-anim">ICU & Monitoring Devices</div>
+              <div class="stkAbtX-feature stkAbtX-anim">Certified Products</div>
+              <div class="stkAbtX-feature stkAbtX-anim">Nationwide Support</div>
+            </div>
+      
+            <a href="./404.html" class="stkAbtX-btn stkAbtX-anim">More About Us</a>
+      
           </div>
-        </div>
-        <div class="bioteam-info">
-          <h3>Dr. Sarah Williams</h3>
-          <p>Genetic Engineering Specialist</p>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="bioteam-card">
-        <div class="bioteam-img-wrap">
-          <img src="./sana.webp" class="bioteam-img">
-          <div class="bioteam-overlay">
-            <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon3"><i class="fas fa-envelope"></i></a>
+      
+          <!-- RIGHT -->
+          <div class="stkAbtX-right stkAbtX-anim">
+      
+            <img src="./b1.webp" class="stkAbtX-image" id="stkAbtX-img">
+      
+            <div class="stkAbtX-glass">
+              <h4>Medical Innovation Excellence</h4>
+      
+              <div class="stkAbtX-avatars">
+                <img src="./pro1.webp">
+                <img src="./pro2.webp">
+                <img src="./pro3.webp">
+              </div>
+            </div>
+      
           </div>
+      
         </div>
-        <div class="bioteam-info">
-          <h3>Dr. Michael Chen</h3>
-          <p>AI Bioinformatics Scientist</p>
-        </div>
-      </div>
+      
+      </section>
 
-      <!-- CARD 3 -->
-      <div class="bioteam-card">
-        <div class="bioteam-img-wrap">
-          <img src="./pro3.webp" class="bioteam-img">
-          <div class="bioteam-overlay">
-            <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon3"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="bioteam-info">
-          <h3>Dr. Emma Rodriguez</h3>
-          <p>Molecular Diagnostics Expert</p>
-        </div>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="bioteam-card">
-        <div class="bioteam-img-wrap">
-          <img src="./pro2.webp" class="bioteam-img">
-          <div class="bioteam-overlay">
-            <a href="404.html" class="bioteam-icon bioteam-icon1"><i class="fab fa-facebook-f"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon2"><i class="fab fa-twitter"></i></a>
-            <a href="404.html" class="bioteam-icon bioteam-icon3"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="bioteam-info">
-          <h3>Dr. David Kim</h3>
-          <p>Pharmaceutical Research Lead</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<style>
-/* SECTION */
-.bioteam-sec{
-  padding:100px 20px;
-  background:#020817;
-  text-align:center;
-  font-family:Arial,Helvetica,sans-serif;
+      <style>
+        /* ===== SECTION ===== */
+.stkAbtX-section{
+  padding:90px 20px;
+  background:#f4f7fb;
+  font-family:'Poppins',sans-serif;
   overflow:hidden;
 }
 
-/* CONTAINER */
-.bioteam-container{
+.stkAbtX-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* ===== LEFT ===== */
+.stkAbtX-badge{
+  display:inline-block;
+  background:#0b2a5c;
+  color:#fff;
+  padding:10px 28px;
+  border-radius:50px;
+  font-size:15px;
+  margin-bottom:15px;
+}
+
+.stkAbtX-title{
+  font-size:40px;
+  color:#0b2a5c;
+  margin-bottom:15px;
+}
+
+.stkAbtX-desc{
+  color:#5d6a7a;
+  margin-bottom:20px;
+}
+
+/* FEATURES */
+.stkAbtX-features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.stkAbtX-feature{
+  font-size:14px;
+  color:#2e3b4e;
+}
+
+.stkAbtX-feature::before{
+  content:"✔";
+  color:#00c6ff;
+  margin-right:6px;
+}
+
+/* BUTTON */
+.stkAbtX-btn{
+  padding:10px 22px;
+  border-radius:30px;
+  background:#e8edf5;
+  color:#0b2a5c;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== RIGHT IMAGE FIX ===== */
+.stkAbtX-right{
+  position:relative;
+  max-width:500px;
+  margin:auto;
+}
+
+.stkAbtX-image{
+  width:100%;
+  height:420px; /* ✅ FIXED HEIGHT */
+  object-fit:cover; /* crop clean */
+  border-radius:16px;
+  transition:transform 0.3s ease;
+}
+
+/* GLASS CARD */
+.stkAbtX-glass{
+  position:absolute;
+  bottom:-25px;
+  left:30px;
+  padding:18px 24px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.35);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.5);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+.stkAbtX-glass h4{
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+.stkAbtX-avatars{
+  display:flex;
+  justify-content:center;
+}
+
+.stkAbtX-avatars img{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  margin-left:-8px;
+  border:2px solid #fff;
+}
+
+/* ===== ANIMATION ===== */
+.stkAbtX-anim{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s ease;
+}
+
+.stkAbtX-show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .stkAbtX-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .stkAbtX-title{
+    font-size:30px;
+  }
+
+  .stkAbtX-image{
+    height:300px; /* smaller image */
+  }
+
+  .stkAbtX-glass{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    margin-top:15px;
+  }
+}
+
+@media(max-width:600px){
+  .stkAbtX-title{
+    font-size:24px;
+  }
+
+  .stkAbtX-features{
+    grid-template-columns:1fr;
+  }
+
+  .stkAbtX-image{
+    height:240px;
+  }
+}
+        </style>
+
+        <script>
+            
+(function(){
+
+  const section = document.querySelector(".stkAbtX-section");
+
+  if(!section) return;
+
+  const items = section.querySelectorAll(".stkAbtX-anim");
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+
+        items.forEach((el,i)=>{
+          setTimeout(()=>{
+            el.classList.add("stkAbtX-show");
+          }, i*120);
+        });
+
+      }
+    });
+  },{threshold:0.2});
+
+  observer.observe(section);
+
+  /* LIGHT PARALLAX */
+  const img = document.getElementById("stkAbtX-img");
+
+  window.addEventListener("scroll",()=>{
+    if(!img) return;
+
+    let y = window.scrollY * 0.03;
+    img.style.transform = `translateY(${y}px)`;
+  });
+
+})();
+</script>
+    <section id="xSrvPro">
+
+        <div class="xSrvPro-container">
+      
+          <!-- HEADER -->
+          <div class="xSrvPro-header">
+      
+            <!-- <span class="xSrvPro-pill">Service Area</span> -->
+      
+            <div class="xSrvPro-flex">
+              <h2 class="xSrvPro-title">
+                Biological breakthroughs <br> for a better tomorrow
+              </h2>
+      
+              <a href="./404.html" class="xSrvPro-btn">All Services</a>
+            </div>
+      
+          </div>
+      
+          <!-- SLIDER -->
+          <div class="xSrvPro-slider">
+      
+            <div class="xSrvPro-track">
+      
+              <!-- CARD -->
+              <div class="xSrvPro-card">
+                <img src="./AI genomic.webp">
+                <div class="xSrvPro-content">
+                  <span>01</span>
+                  <h4>Genomic Sequencing</h4>
+                  <p>Advanced DNA mapping for medical insights.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./bio1.webp">
+                <div class="xSrvPro-content">
+                  <span>02</span>
+                  <h4>Bioinformatics</h4>
+                  <p>AI-driven biological data analysis.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./molecular.webp">
+                <div class="xSrvPro-content">
+                  <span>03</span>
+                  <h4>Bioprocess Eng</h4>
+                  <p>Scaling lab research to production.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./clinical.webp">
+                <div class="xSrvPro-content">
+                  <span>04</span>
+                  <h4>Clinical Research</h4>
+                  <p>Precision-driven medical trials.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./data security.webp">
+                <div class="xSrvPro-content">
+                  <span>05</span>
+                  <h4>Medical AI</h4>
+                  <p>Smart diagnosis with AI systems.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./bio3.webp">
+                <div class="xSrvPro-content">
+                  <span>06</span>
+                  <h4>Healthcare Analytics</h4>
+                  <p>Data-driven patient insights.</p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- NAV -->
+            <div class="xSrvPro-nav">
+              <button class="xPrev">‹</button>
+              <button class="xNext">›</button>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+      
+      <style>
+      
+      /* SECTION */
+      #xSrvPro{
+        padding:100px 20px;
+      
+        background:url("./AI\ genomic.webp") center/cover no-repeat;
+        position:relative;
+      }
+      
+      #xSrvPro::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,0.65);
+      }
+      
+      #xSrvPro .xSrvPro-container{
+        position:relative;
+        max-width:1200px;
+        margin:auto;
+      }
+      
+      /* HEADER */
+      #xSrvPro .xSrvPro-header{
+        margin-bottom:60px;
+      }
+      
+      /* CAPSULE */
+      #xSrvPro .xSrvPro-pill{
+        display:inline-block;
+        padding:10px 26px;
+        border-radius:40px;
+        background:rgba(255,255,255,0.15);
+        backdrop-filter:blur(10px);
+        color:#0b2a5c;
+        font-weight:600;
+        font-size:18px; /* BIGGER */
+      }
+      
+      /* TITLE */
+      #xSrvPro .xSrvPro-title{
+        font-size:48px;
+        color:#fff;
+        margin-top:15px;
+      }
+      
+      /* FLEX */
+      #xSrvPro .xSrvPro-flex{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:20px;
+      }
+      
+      /* BUTTON CAPSULE */
+      #xSrvPro .xSrvPro-btn{
+        padding:12px 28px;
+        border-radius:40px;
+        background:rgba(255,255,255,0.2);
+        backdrop-filter:blur(10px);
+        color:#fff;
+        text-decoration:none;
+        border:1px solid rgba(255,255,255,0.3);
+      }
+      
+      /* SLIDER */
+      #xSrvPro .xSrvPro-slider{
+        overflow:hidden;
+      }
+      
+      #xSrvPro .xSrvPro-track{
+        display:flex;
+        gap:25px;
+        transition:0.5s;
+      }
+      
+      /* CARD */
+      #xSrvPro .xSrvPro-card{
+        min-width:320px;
+        border-radius:18px;
+        overflow:hidden;
+      
+        background:rgba(255,255,255,0.08);
+        backdrop-filter:blur(14px);
+        border:1px solid rgba(255,255,255,0.2);
+      
+        transform:translateY(50px);
+        opacity:0;
+        transition:0.7s;
+      }
+      
+      #xSrvPro .xSrvPro-card.show{
+        transform:translateY(0);
+        opacity:1;
+      }
+      
+      #xSrvPro .xSrvPro-card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+      }
+      
+      #xSrvPro .xSrvPro-content{
+        padding:20px;
+        color:#fff;
+      }
+      
+      #xSrvPro .xSrvPro-content span{
+        color: white;
+      }
+      
+      /* NAV */
+      #xSrvPro .xSrvPro-nav{
+        text-align:center;
+        margin-top:25px;
+      }
+      
+      #xSrvPro button{
+        padding:10px 16px;
+        margin:5px;
+        border:none;
+        border-radius:6px;
+        background:rgba(255,255,255,0.2);
+        color:#fff;
+        cursor:pointer;
+      }
+      
+      /* RESPONSIVE */
+      @media(max-width:992px){
+        #xSrvPro .xSrvPro-title{font-size:34px;}
+      }
+      
+      @media(max-width:600px){
+        #xSrvPro .xSrvPro-title{font-size:26px;}
+        #xSrvPro .xSrvPro-card{min-width:260px;}
+        #xSrvPro .xSrvPro-flex{
+          flex-direction:column;
+          align-items:flex-start;
+        }
+      }
+      
+      </style>
+      
+      <script>
+      (function(){
+      
+      const section = document.getElementById("xSrvPro");
+      if(!section) return;
+      
+      const track = section.querySelector(".xSrvPro-track");
+      const cards = section.querySelectorAll(".xSrvPro-card");
+      const next = section.querySelector(".xNext");
+      const prev = section.querySelector(".xPrev");
+      
+      let index = 0;
+      
+      /* SLIDE */
+      function update(){
+        const w = cards[0].offsetWidth + 25;
+        track.style.transform = `translateX(-${index * w}px)`;
+      }
+      
+      next.onclick = ()=>{
+        index = (index + 1) % cards.length;
+        update();
+      };
+      
+      prev.onclick = ()=>{
+        index = (index - 1 + cards.length) % cards.length;
+        update();
+      };
+      
+      /* AUTO */
+      let auto = setInterval(()=>{
+        index = (index + 1) % cards.length;
+        update();
+      },4000);
+      
+      section.addEventListener("mouseenter",()=>clearInterval(auto));
+      section.addEventListener("mouseleave",()=>{
+        auto = setInterval(()=>{
+          index = (index + 1) % cards.length;
+          update();
+        },4000);
+      });
+      
+      /* ANIMATION */
+      const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            cards.forEach((el,i)=>{
+              setTimeout(()=>el.classList.add("show"), i*150);
+            });
+          }
+        });
+      },{threshold:0.3});
+      
+      observer.observe(section);
+      
+      })();
+      </script>
+
+
+<section class="stkChoose-section">
+
+    <div class="stkChoose-container">
+  
+      <!-- LEFT -->
+      <div class="stkChoose-left">
+  
+        <!-- CAPSULE SUBTITLE -->
+        <div class="stkChoose-badge stkChoose-animate">Mission & Vision</div>
+  
+        <h2 class="stkChoose-title stkChoose-animate">
+          Solving biological complexities to improve global life quality.
+        </h2>
+  
+        <!-- TABS -->
+        <div class="stkChoose-tabs stkChoose-animate">
+          <button class="stkChoose-tab active" data-tab="about">About Us</button>
+          <button class="stkChoose-tab" data-tab="mission">Our Mission</button>
+          <button class="stkChoose-tab" data-tab="vision">Our Vision</button>
+        </div>
+  
+        <!-- TAB CONTENT -->
+        <div class="stkChoose-content">
+  
+          <!-- ABOUT -->
+          <div class="stkChoose-pane active" id="about">
+            <p>
+              STACKLY integrates high-throughput research with AI-driven analytics
+              to accelerate life-changing therapies.
+            </p>
+  
+            <div class="stkChoose-list">
+              <ul>
+                <li>✔ Advanced Lab Automation</li>
+                <li>✔ Molecular Simulation</li>
+              </ul>
+              <ul>
+                <li>✔ Ethical Research Standards</li>
+                <li>✔ Global Scientific Collaboration</li>
+              </ul>
+            </div>
+  
+            <a href="./404.html" class="stkChoose-btn">Discover More</a>
+          </div>
+  
+          <!-- MISSION -->
+          <div class="stkChoose-pane" id="mission">
+            <p>
+              Unlocking biological systems to cure diseases and sustain ecosystems.
+            </p>
+  
+            <div class="stkChoose-list">
+              <ul>
+                <li>✔ Precision Therapeutics</li>
+                <li>✔ Sustainable Bio-Materials</li>
+              </ul>
+              <ul>
+                <li>✔ Eradicating Pathogens</li>
+                <li>✔ Food Security Innovation</li>
+              </ul>
+            </div>
+  
+            <a href="./404.html" class="stkChoose-btn">Discover More</a>
+          </div>
+  
+          <!-- VISION -->
+          <div class="stkChoose-pane" id="vision">
+            <p>
+              A future where biology and technology work together for a better world.
+            </p>
+  
+            <div class="stkChoose-list">
+              <ul>
+                <li>✔ Bio-Digital Synergy</li>
+                <li>✔ Regenerative Medicine</li>
+              </ul>
+              <ul>
+                <li>✔ Circular Bio-Economy</li>
+                <li>✔ Genomic Equity</li>
+              </ul>
+            </div>
+  
+            <a href="./404.html" class="stkChoose-btn">Discover More</a>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- RIGHT -->
+      <div class="stkChoose-right stkChoose-animate">
+  
+        <img src="./clinical.webp" class="stkChoose-img">
+  
+        <!-- GLASS STATS -->
+        <div class="stkChoose-stats">
+  
+          <div class="stkChoose-card">
+            <div class="stkChoose-circle" data-percent="95">0%</div>
+            <h5>Clinical Trials</h5>
+          </div>
+  
+          <div class="stkChoose-card">
+            <div class="stkChoose-circle" data-percent="50">0%</div>
+            <h5>Completed Projects</h5>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  <style>
+  /* ===== SECTION ===== */
+  .stkAbtX-section{
+    padding:90px 20px;
+    background:#f4f7fb;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+  }
+  
+  .stkAbtX-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  
+  /* ===== LEFT ===== */
+  .stkAbtX-badge{
+    display:inline-block;
+    background:#0b2a5c;
+    color:#fff;
+    padding:10px 28px;
+    border-radius:50px;
+    font-size:15px;
+    margin-bottom:15px;
+  }
+  
+  .stkAbtX-title{
+    font-size:40px;
+    color:#0b2a5c;
+    margin-bottom:15px;
+  }
+  
+  .stkAbtX-desc{
+    color:#5d6a7a;
+    margin-bottom:20px;
+  }
+  
+  /* FEATURES */
+  .stkAbtX-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  
+  .stkAbtX-feature{
+    font-size:14px;
+    color:#2e3b4e;
+  }
+  
+  .stkAbtX-feature::before{
+    content:"✔";
+    color:#0b2a5c;
+    margin-right:6px;
+  }
+  
+  /* BUTTON */
+  .stkAbtX-btn{
+    padding:10px 22px;
+    border-radius:30px;
+    background:#e8edf5;
+    color:#0b2a5c;
+    text-decoration:none;
+    font-weight:600;
+  }
+  
+  /* ===== RIGHT IMAGE FIX ===== */
+  .stkAbtX-right{
+    position:relative;
+    max-width:500px;
+    margin:auto;
+  }
+  
+  .stkAbtX-image{
+    width:100%;
+    height:520px; /* ✅ FIXED HEIGHT */
+    object-fit:cover; /* crop clean */
+    border-radius:16px;
+    transition:transform 0.3s ease;
+  }
+  
+  /* GLASS CARD */
+  .stkAbtX-glass{
+    position:absolute;
+    bottom:-25px;
+    left:30px;
+    padding:18px 24px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.5);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    text-align:center;
+  }
+  
+  .stkAbtX-glass h4{
+    font-size:15px;
+    margin-bottom:8px;
+  }
+  
+  .stkAbtX-avatars{
+    display:flex;
+    justify-content:center;
+  }
+  
+  .stkAbtX-avatars img{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    margin-left:-8px;
+    border:2px solid #fff;
+  }
+  
+  /* ===== ANIMATION ===== */
+  .stkAbtX-anim{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s ease;
+  }
+  
+  .stkAbtX-show{
+    opacity:1;
+    transform:translateY(0);
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:992px){
+    .stkAbtX-container{
+      grid-template-columns:1fr;
+      text-align:center;
+    }
+  
+    .stkAbtX-title{
+      font-size:30px;
+    }
+  
+    .stkAbtX-image{
+      height:300px; /* smaller image */
+    }
+  
+    .stkAbtX-glass{
+      position:relative;
+      left:auto;
+      bottom:auto;
+      margin-top:15px;
+    }
+  }
+  
+  @media(max-width:600px){
+    .stkAbtX-title{
+      font-size:24px;
+    }
+  
+    .stkAbtX-features{
+      grid-template-columns:1fr;
+    }
+  
+    .stkAbtX-image{
+      height:240px;
+    }
+  }
+
+</style>
+
+<script>
+    (function(){
+    
+      const section = document.querySelector(".stkAbtX-section");
+    
+      if(!section) return;
+    
+      const items = section.querySelectorAll(".stkAbtX-anim");
+    
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+    
+            items.forEach((el,i)=>{
+              setTimeout(()=>{
+                el.classList.add("stkAbtX-show");
+              }, i*120);
+            });
+    
+          }
+        });
+      },{threshold:0.2});
+    
+      observer.observe(section);
+    
+      /* LIGHT PARALLAX */
+      const img = document.getElementById("stkAbtX-img");
+    
+      window.addEventListener("scroll",()=>{
+        if(!img) return;
+    
+        let y = window.scrollY * 0.03;
+        img.style.transform = `translateY(${y}px)`;
+      });
+    
+    })();
+    </script>
+  <section class="stkGrowth-section">
+
+    <div class="stkGrowth-container">
+  
+      <!-- HEADER -->
+      <div class="stkGrowth-header">
+  
+        <!-- CAPSULE -->
+        <div class="stkGrowth-badge stkGrowth-animate-top">
+          Research Velocity
+        </div>
+  
+        <h2 class="stkGrowth-title stkGrowth-animate-top">
+          Accelerating the pace of <br> Biological Discovery.
+        </h2>
+  
+        <a href="./404.html" class="stkGrowth-btn stkGrowth-animate-top">
+          Discover More
+        </a>
+  
+      </div>
+  
+      <!-- CARDS -->
+      <div class="stkGrowth-grid">
+  
+        <!-- CARD 1 -->
+        <div class="stkGrowth-card stkGrowth-left">
+          <div class="stkGrowth-circle" data-value="90">0%</div>
+          <h4>Scalable Research</h4>
+          <p>End to end genomic pathways for stable breakthroughs</p>
+        </div>
+  
+        <!-- CARD 2 -->
+        <div class="stkGrowth-card stkGrowth-bottom">
+          <div class="stkGrowth-circle" data-value="95">0%</div>
+          <h4>Lab Automation</h4>
+          <p>End to end automated sequencing for rapid testing</p>
+        </div>
+  
+        <!-- CARD 3 -->
+        <div class="stkGrowth-card stkGrowth-right">
+          <div class="stkGrowth-circle" data-value="75">0%</div>
+          <h4>Technical Support</h4>
+          <p>End to end research assistance for precision results</p>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  
+  <style>
+  
+  /* SECTION */
+  .stkGrowth-section{
+    padding:100px 20px;
+    background:url('./real\ time.webp') center/cover no-repeat;
+  }
+  
+  /* CONTAINER */
+  .stkGrowth-container{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+  }
+  
+  /* CAPSULE BADGE */
+  .stkGrowth-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:30px;
+    background:#0b2a5c;
+    color:#fff;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+  
+  /* TITLE */
+  .stkGrowth-title{
+    font-size:42px;
+    color:#fff;
+    margin-bottom:20px;
+  }
+  
+  /* BUTTON */
+  .stkGrowth-btn{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    background:#fff;
+    color:#0b2a5c;
+    font-weight:600;
+    text-decoration:none;
+    margin-bottom:60px;
+  }
+  
+  /* GRID */
+  .stkGrowth-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+  }
+  
+  /* CARD */
+  .stkGrowth-card{
+    padding:35px 25px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(12px);
+    color:black;
+    transition:.4s;
+  }
+  
+  .stkGrowth-card:hover{
+    transform:translateY(-10px);
+  }
+  
+  /* CIRCLE */
+  .stkGrowth-circle{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:6px solid #0b2a5c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:22px;
+    font-weight:bold;
+  }
+  
+  /* TEXT */
+  .stkGrowth-card h4{
+    margin-bottom:10px;
+  }
+  
+  .stkGrowth-card p{
+    font-size:14px;
+    opacity:.9;
+  }
+  
+  /* ANIMATION BASE */
+  .stkGrowth-left,
+  .stkGrowth-right,
+  .stkGrowth-bottom,
+  .stkGrowth-animate-top{
+    opacity:0;
+    transition:1s ease;
+  }
+  
+  .stkGrowth-left{transform:translateX(-60px);}
+  .stkGrowth-right{transform:translateX(60px);}
+  .stkGrowth-bottom{transform:translateY(60px);}
+  .stkGrowth-animate-top{transform:translateY(-60px);}
+  
+  .stkGrowth-show{
+    opacity:1;
+    transform:translate(0);
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width:992px){
+    .stkGrowth-grid{
+      grid-template-columns:1fr 1fr;
+    }
+    .stkGrowth-title{
+      font-size:32px;
+    }
+  }
+  
+  @media(max-width:600px){
+    .stkGrowth-grid{
+      grid-template-columns:1fr;
+    }
+    .stkGrowth-title{
+      font-size:24px;
+    }
+  }
+  
+  </style>
+  
+  
+  <script>
+  
+  /* SCROLL ANIMATION */
+  const stkGrowthSection = document.querySelector(".stkGrowth-section");
+  
+  const stkGrowthObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+  
+        const items = entry.target.querySelectorAll(
+          ".stkGrowth-left, .stkGrowth-right, .stkGrowth-bottom, .stkGrowth-animate-top"
+        );
+  
+        items.forEach((el,i)=>{
+          setTimeout(()=>{
+            el.classList.add("stkGrowth-show");
+          }, i * 200);
+        });
+  
+      }
+    });
+  });
+  
+  stkGrowthObserver.observe(stkGrowthSection);
+  
+  
+  /* COUNTER ANIMATION */
+  document.querySelectorAll(".stkGrowth-circle").forEach(circle=>{
+    let target = +circle.dataset.value;
+    let count = 0;
+  
+    const update = ()=>{
+      count++;
+      circle.innerText = count + "%";
+  
+      if(count < target){
+        requestAnimationFrame(update);
+      }
+    };
+  
+    update();
+  });
+  
+  </script>
+  
+  <style>
+  
+  /* SECTION */
+  .stkChoose-section{
+    padding:100px 20px;
+    /* background:url('./.webp') center/cover no-repeat; */
+  }
+  
+  /* CONTAINER */
+  .stkChoose-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  
+  /* CAPSULE BADGE */
+  .stkChoose-badge{
+    display:inline-block;
+    padding:8px 20px;
+    border-radius:30px;
+    background:#0b2a5c;
+    color:#fff;
+    font-weight:600;
+    margin-bottom:15px;
+    font-size:16px;
+  }
+  
+  /* TITLE */
+  .stkChoose-title{
+    font-size:40px;
+    color:#0b2a5c;
+    margin-bottom:25px;
+  }
+  
+  /* TABS */
+  .stkChoose-tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+  }
+  
+  .stkChoose-tab{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:#e7ecf2;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+  }
+  
+  .stkChoose-tab.active{
+    background:#0b2a5c;
+    color:#fff;
+  }
+  
+  /* CONTENT */
+  .stkChoose-pane{
+    display:none;
+    animation:fadeIn .6s ease;
+  }
+  
+  .stkChoose-pane.active{
+    display:block;
+  }
+  
+  /* LIST */
+  .stkChoose-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin:20px 0;
+  }
+  
+  .stkChoose-list li{
+    list-style:none;
+  }
+  
+  /* BUTTON */
+  .stkChoose-btn{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:30px;
+    background:#0b2a5c;
+    color:#fff;
+    text-decoration:none;
+  }
+  
+  /* IMAGE */
+  .stkChoose-right{
+    position:relative;
+  }
+  
+  .stkChoose-img{
+    width:100%;
+    border-radius:14px;
+  }
+  
+  /* GLASS STATS */
+  .stkChoose-stats{
+    position:absolute;
+    bottom:-40px;
+    left:30px;
+    display:flex;
+    gap:20px;
+  }
+  
+  .stkChoose-card{
+    padding:20px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.3);
+    backdrop-filter:blur(10px);
+    text-align:center;
+  }
+  
+  /* CIRCLE */
+  .stkChoose-circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:5px solid #0b2a5c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-weight:bold;
+  }
+  
+  /* ANIMATION */
+  .stkChoose-animate{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+  }
+  
+  .stkChoose-show{
+    opacity:1;
+    transform:translateY(0);
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width:992px){
+    .stkChoose-container{
+      grid-template-columns:1fr;
+    }
+  
+    .stkChoose-title{
+      font-size:30px;
+    }
+  
+    .stkChoose-stats{
+      position:relative;
+      bottom:auto;
+      left:auto;
+      margin-top:20px;
+    }
+  }
+  
+  @media(max-width:600px){
+    .stkChoose-title{
+      font-size:24px;
+    }
+  
+    .stkChoose-list{
+      grid-template-columns:1fr;
+    }
+  }
+  
+  </style>
+  
+  
+  <script>
+  
+  /* TAB SWITCH */
+  document.querySelectorAll(".stkChoose-tab").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+  
+      document.querySelectorAll(".stkChoose-tab").forEach(b=>b.classList.remove("active"))
+      btn.classList.add("active")
+  
+      const id=btn.getAttribute("data-tab")
+  
+      document.querySelectorAll(".stkChoose-pane").forEach(p=>p.classList.remove("active"))
+      document.getElementById(id).classList.add("active")
+  
+    })
+  })
+  
+  /* ANIMATION */
+  const chooseObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const items=entry.target.querySelectorAll(".stkChoose-animate")
+        items.forEach((el,i)=>{
+          setTimeout(()=>{
+            el.classList.add("stkChoose-show")
+          },i*150)
+        })
+      }
+    })
+  })
+  
+  chooseObserver.observe(document.querySelector(".stkChoose-section"))
+  
+  /* COUNTER */
+  document.querySelectorAll(".stkChoose-circle").forEach(el=>{
+    let target = +el.dataset.percent
+    let count = 0
+  
+    const update = ()=>{
+      count++
+      el.innerText = count + "%"
+  
+      if(count < target){
+        requestAnimationFrame(update)
+      }
+    }
+  
+    update()
+  })
+  
+  </script>
+
+
+
+<section class="pipe-section">
+    <div class="pipe-container">
+  
+      <!-- Heading -->
+      <div class="pipe-heading">
+        <span class="pipe-badge">OUR PIPELINE</span>
+        <h2>Research, Analyze & Innovate<br>The Biological Future.</h2>
+      </div>
+  
+      <!-- Pipeline Box -->
+      <div class="pipe-box">
+  
+        <div class="pipe-item">
+          <span class="pipe-num">01</span>
+          <h4>Genomic Analysis</h4>
+          <p>Source for Molecular Trends & Biological Intel</p>
+        </div>
+  
+        <div class="pipe-item">
+          <span class="pipe-num">02</span>
+          <h4>Molecular Logic</h4>
+          <p>Sparking Innovation, Shaping Future Success</p>
+        </div>
+  
+        <div class="pipe-item active">
+          <span class="pipe-num">03</span>
+          <h4>Bio-Synthesis</h4>
+          <p>Helping You Stay on Track with Lab Estimates</p>
+        </div>
+  
+        <div class="pipe-item">
+          <span class="pipe-num">04</span>
+          <h4>Sustainable Life</h4>
+          <p>Amazing Support with biological demos to choose</p>
+        </div>
+  
+      </div>
+  
+      <!-- Footer -->
+      <p class="pipe-footer">
+        Embrace Bio-Innovation, Adapt to Life, and Lead with Confidence.
+        <a href="./404.html">Partner Now</a>
+      </p>
+  
+    </div>
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.pipe-section {
+  padding: 100px 20px;
+  background: #f8fafc;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.pipe-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== HEADING ===== */
+.pipe-badge {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #0b2a5c;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.pipe-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+/* ===== BOX ===== */
+.pipe-box {
+  margin-top: 60px;
+  border: 1px dashed #d1d5db;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+
+/* ===== ITEM ===== */
+.pipe-item {
+  padding: 40px 25px;
+  position: relative;
+  text-align: left;
+  transition: 0.3s;
+}
+
+/* Vertical Divider */
+.pipe-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #e5e7eb;
+}
+
+/* NUMBER */
+.pipe-num {
+  font-size: 60px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #cbd5e1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ACTIVE */
+.pipe-item.active .pipe-num {
+  color: #0f172a;
+  -webkit-text-stroke: 0;
+}
+
+.pipe-item.active h4 {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* TEXT */
+.pipe-item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.pipe-item p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* HOVER */
+.pipe-item:hover {
+  background: #f1f5f9;
+}
+
+/* ===== FOOTER ===== */
+.pipe-footer {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.pipe-footer a {
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .pipe-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pipe-item::after {
+    display: none;
+  }
+
+  .pipe-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .pipe-box {
+    grid-template-columns: 1fr;
+  }
+
+  .pipe-heading h2 {
+    font-size: 24px;
+  }
+
+  .pipe-num {
+    font-size: 48px;
+  }
+}
+  </style>
+
+<script>
+    document.querySelectorAll(".pipe-item").forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        document.querySelectorAll(".pipe-item").forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+    </script>
+
+
+<section class="cs-section">
+    <div class="cs-container">
+  
+      <!-- Heading -->
+      <div class="cs-header">
+        <span class="cs-badge">CASE STUDY</span>
+        <h2 class="cs-title">
+          Showcasing Project & Solutions <br>
+          For Clients Case Study.
+        </h2>
+      </div>
+  
+      <!-- Slider -->
+      <div class="cs-slider" id="csSlider">
+        <div class="cs-track">
+  
+          <!-- CARD -->
+          <div class="cs-card">
+            <img src="./AI genomic.webp">
+            <div class="cs-content">
+              <span>Bio-Systems</span>
+              <h4>Synthetic Biology Applications</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./molecular.webp">
+            <div class="cs-content">
+              <span>Agri-tech</span>
+              <h4>Increase Yield by 30%</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./data security.webp">
+            <div class="cs-content">
+              <span>Digital Agency</span>
+              <h4>Transforming Systems</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./b1.webp">
+            <div class="cs-content">
+              <span>Oncology</span>
+              <h4>Precision Breakthroughs</h4>
+            </div>
+          </div>
+  
+          <!-- duplicate for smooth infinite scroll -->
+          <div class="cs-card">
+            <img src="./clinical.webp">
+            <div class="cs-content">
+              <span>Bio-Systems</span>
+              <h4>Synthetic Biology Applications</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./real time.webp">
+            <div class="cs-content">
+              <span>Agri-tech</span>
+              <h4>Increase Yield by 30%</h4>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.cs-section {
+  padding: 100px 20px;
+  background: #f5f7fb;
+  overflow: hidden;
+}
+
+.cs-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+.cs-badge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.cs-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+/* ===== SLIDER ===== */
+.cs-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: csScroll 20s linear infinite;
+}
+
+/* Pause on hover */
+.cs-slider:hover .cs-track {
+  animation-play-state: paused;
+}
+
+/* ===== CARD ===== */
+.cs-card {
+  min-width: 260px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.cs-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GLASS CARD */
+.cs-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  text-align: left;
+  transition: 0.3s;
+}
+
+.cs-content span {
+  font-size: 13px;
+  color: #666;
+}
+
+.cs-content h4 {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #111;
+}
+
+/* Hover effect */
+.cs-card:hover .cs-content {
+  transform: translateY(-10px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes csScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .cs-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-title {
+    font-size: 26px;
+  }
+
+  .cs-card {
+    min-width: 220px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-title {
+    font-size: 22px;
+  }
+
+  .cs-card {
+    min-width: 200px;
+    height: 260px;
+  }
+}
+  </style>
+
+<script>
+    // Optional: speed control dynamically
+    const track = document.querySelector('.cs-track');
+  
+    let speed = 20; // seconds
+    track.style.animationDuration = speed + 's';
+  </script>
+
+<section class="stk-strategy" id="stkStrategy">
+    <div class="stk-wrap">
+  
+      <!-- IMAGE -->
+      <div class="stk-left">
+        <img src="./b1.webp" alt="">
+        <div class="stk-float">
+          <img src="images/strategy/strategy-info.webp" alt="">
+        </div>
+      </div>
+  
+      <!-- CONTENT -->
+      <div class="stk-right">
+  
+        <span class="stk-badge">Research Strategy</span>
+  
+        <h2 class="stk-title">
+          Driving Innovation Through Advanced Lab Analytics and Expertise.
+        </h2>
+  
+        <div class="stk-accordion">
+  
+          <div class="stk-item">
+            <div class="stk-head">Precision Genomic Mapping</div>
+            <div class="stk-body">Drive innovation faster with world-class tech teams.</div>
+          </div>
+  
+          <div class="stk-item">
+            <div class="stk-head">Biosecurity & Data Protection</div>
+            <div class="stk-body">Secure and scalable infrastructure ensures safety.</div>
+          </div>
+  
+          <div class="stk-item">
+            <div class="stk-head">Cutting-Edge IT Solutions</div>
+            <div class="stk-body">Leveraging AI & automation for research workflows.</div>
+          </div>
+  
+          <div class="stk-item">
+            <div class="stk-head">Expert Guidance & Assistance</div>
+            <div class="stk-body">Experts help accelerate your innovation journey.</div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* ===== ROOT ===== */
+.stk-strategy {
+  padding: 100px 20px;
+  background: #f4f7ff;
+  overflow: hidden;
+}
+
+.stk-wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ===== LEFT ===== */
+.stk-left {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 0.8s ease;
+}
+
+.stk-left img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.stk-float {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 110px;
+}
+
+/* ===== RIGHT ===== */
+.stk-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 0.8s ease;
+}
+
+.stk-badge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #0b2a5c;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.stk-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* ===== ACCORDION ===== */
+.stk-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stk-item {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.stk-head {
+  padding: 18px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.stk-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: all 0.4s ease;
+  font-size: 14px;
+}
+
+/* active */
+.stk-item.active .stk-body {
+  max-height: 120px;
+  padding: 15px 20px;
+}
+
+/* hover */
+.stk-item:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== SHOW ANIMATION ===== */
+.stk-show .stk-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stk-show .stk-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .stk-wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .stk-float {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stk-title {
+    font-size: 26px;
+  }
+}
+    </style>
+
+<script>
+    (function() {
+    
+      const section = document.getElementById("stkStrategy");
+      const items = section.querySelectorAll(".stk-item");
+    
+      // CLICK ACCORDION
+      items.forEach(item => {
+        item.querySelector(".stk-head").addEventListener("click", () => {
+          items.forEach(i => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    
+      // SCROLL + AUTO OPEN
+      function handleScroll() {
+        const rect = section.getBoundingClientRect();
+        const trigger = window.innerHeight * 0.8;
+    
+        if (rect.top < trigger) {
+          section.classList.add("stk-show");
+    
+          // AUTO OPEN ONE BY ONE
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              items.forEach(i => i.classList.remove("active"));
+              item.classList.add("active");
+            }, index * 700);
+          });
+    
+          // run only once
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("load", handleScroll);
+    
+    })();
+    </script>
+
+<section class="stkT9_section">
+
+    <div class="stkT9_wrap">
+  
+      <div class="stkT9_head">
+        <span class="stkT9_badge">Our Scientists</span>
+        <h2 class="stkT9_title">
+          Enhance Research with <br> Expert Bio-Analysts
+        </h2>
+      </div>
+  
+      <div class="stkT9_grid">
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+  
+            <img src="./sana.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+  
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Dr. Guy Hawkins</h4>
+              <p>Lead Geneticist</p>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+            <img src="./nithiya.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Jacob Jones</h4>
+              <p>Manager</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+            <img src="./arjun.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Dr. Kristin Watson</h4>
+              <p>Bio-Scientist</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+            <img src="./joe.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Dr. Bessie Cooper</h4>
+              <p>Chief Scientist</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <style>
+  
+  /* ICON HOVER COLOR */
+  .stkT9_links a:hover{
+    background:#0b2a5c;
+    color:#fff;
+    transform:scale(1.1);
+  }
+  
+  /* SMOOTH ICON TRANSITION */
+  .stkT9_links a{
+    transition:0.3s;
+  }
+  
+  
+
+/* ===== SECTION ===== */
+.stkT9_section{
+  padding:90px 20px;
+  background:#f3f6fb;
+  font-family:Poppins, sans-serif;
+}
+
+.stkT9_wrap{
   max-width:1200px;
   margin:auto;
 }
 
-/* TITLE */
-.bioteam-title{
-  color:white;
-  font-size:38px;
-  margin-bottom:10px;
+/* HEADER */
+.stkT9_head{
+  text-align:center;
+  margin-bottom:50px;
 }
-.bioteam-sub{
-  color:#9bb7d3;
-  margin-bottom:60px;
-  max-width:650px;
-  margin:auto;
-  opacity:0;
-  transform:translateY(30px);
-  transition:0.6s ease-out;
+
+.stkT9_badge{
+  background:#0b2a5c;
+  color:#fff;
+  padding:10px 26px;
+  border-radius:50px;
+  display:inline-block;
+  margin-bottom:15px;
 }
-.bioteam-sub.bioteam-show{
-  opacity:1;
-  transform:translateY(0);
+
+.stkT9_title{
+  font-size:34px;
+  color:#0b2a5c;
 }
 
 /* GRID */
-.bioteam-grid{
+.stkT9_grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:30px;
+  gap:25px;
 }
 
 /* CARD */
-.bioteam-card{
-  position: relative;
-  transition:0.5s;
-  opacity:0;
-  transform:translateY(30px);
+.stkT9_box{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  transition:.4s;
 }
-.bioteam-card.bioteam-show{
+
+/* IMAGE */
+.stkT9_img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.stkT9_box:hover .stkT9_img{
+  transform:scale(1.1);
+}
+
+/* ===== GLASS GLOW ===== */
+.stkT9_box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  padding:1px;
+  background:linear-gradient(120deg,#00c6ff,#0072ff,#00c6ff);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+
+  opacity:0;
+  transition:.4s;
+}
+
+.stkT9_box:hover::before{
+  opacity:1;
+}
+
+.stkT9_box:hover{
+  box-shadow:
+    0 0 25px rgba(0,198,255,0.3),
+    0 10px 40px rgba(0,0,0,0.2);
+  transform:translateY(-8px);
+}
+
+/* SHINE EFFECT */
+.stkT9_box::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transform:skewX(-25deg);
+}
+
+.stkT9_box:hover::after{
+  animation:stkT9_shine 1s;
+}
+
+@keyframes stkT9_shine{
+  100%{left:150%;}
+}
+
+/* SOCIAL */
+.stkT9_social{
+  position:absolute;
+  top:12px;
+  right:12px;
+}
+
+.stkT9_btn{
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:50%;
+  background:#0b2a5c;
+  color:#fff;
+  cursor:pointer;
+}
+
+.stkT9_links{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-top:8px;
+  opacity:0;
+  transform:translateY(-10px);
+  transition:.3s;
+}
+
+.stkT9_social.stkT9_active .stkT9_links{
   opacity:1;
   transform:translateY(0);
 }
 
-/* IMAGE WRAP WITH CIRCLE */
-.bioteam-img-wrap{
-  position: relative;
-  width:220px;
-  height:220px;
-  margin:auto;
-  border-radius:50%;
-  overflow:hidden;
-  transition:0.5s;
-}
-.bioteam-img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* OVERLAY WITH ICONS */
-.bioteam-overlay{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  border-radius:50%;
+.stkT9_links a{
+  background:#fff;
+  color:#0b2a5c;
+  width:32px;
+  height:32px;
   display:flex;
-  justify-content:center;
   align-items:center;
-  gap:15px;
-  opacity:0;
-}
-.bioteam-img-wrap:hover .bioteam-overlay{
-  opacity:1;
-}
-
-/* ICONS ANIMATION FROM DIFFERENT DIRECTIONS */
-.bioteam-icon{
-  color:white;
-  font-size:18px;
-  background:rgba(0,0,0,0.3);
-  width:40px;
-  height:40px;
-  display:flex;
   justify-content:center;
-  align-items:center;
   border-radius:50%;
   text-decoration:none;
-  transition:0.4s, transform 0.4s ease-out, opacity 0.4s ease-out;
-  opacity:0;
-  transform:translateY(20px);
-}
-.bioteam-img-wrap:hover .bioteam-icon1{
-  transition-delay:0.1s;
-  opacity:1;
-  transform:translateY(0) rotate(0deg);
-}
-.bioteam-img-wrap:hover .bioteam-icon2{
-  transition-delay:0.2s;
-  opacity:1;
-  transform:translateX(-5px) rotate(-10deg);
-}
-.bioteam-img-wrap:hover .bioteam-icon3{
-  transition-delay:0.3s;
-  opacity:1;
-  transform:translateX(5px) rotate(10deg);
+  font-size:13px;
 }
 
 /* INFO */
-.bioteam-info{
-  margin-top:15px;
-  color:white;
-  opacity:0;
-  transform:translateY(20px);
-  transition:0.6s ease-out;
-}
-.bioteam-info.bioteam-show{
-  opacity:1;
-  transform:translateY(0);
-}
-.bioteam-info h3{
-  font-size:20px;
-  margin-bottom:5px;
-}
-.bioteam-info p{
-  font-size:15px;
-  color:#9bb7d3;
+.stkT9_info{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:18px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(8px);
 }
 
 /* RESPONSIVE */
-@media(max-width:1024px){
-  .bioteam-grid{
+@media(max-width:992px){
+  .stkT9_grid{
     grid-template-columns:repeat(2,1fr);
   }
 }
+
 @media(max-width:600px){
-  .bioteam-grid{
+  .stkT9_grid{
     grid-template-columns:1fr;
   }
-  .bioteam-title{
-    font-size:28px;
-  }
-  .bioteam-img-wrap{
-    width:180px;
-    height:180px;
+
+  .stkT9_title{
+    font-size:24px;
   }
 }
+
+/* MOBILE TOUCH EFFECT */
+@media (hover:none){
+  .stkT9_box:active{
+    transform:scale(0.97);
+  }
+}
+
+/* ICON HOVER COLOR */
+.stkT9_links a:hover{
+  background:#0b2a5c;
+  color:#fff;
+  transform:scale(1.1);
+}
+
+/* SMOOTH ICON TRANSITION */
+.stkT9_links a{
+  transition:0.3s;
+}
+
+
 </style>
 
 <script>
-// Scroll-trigger animations for cards and info
-const bioteamCards = document.querySelectorAll('.bioteam-card');
-const bioteamSub = document.querySelector('.bioteam-sub');
 
-const bioteamObserver = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      if(entry.target.classList.contains('bioteam-card')){
-        entry.target.classList.add('bioteam-show');
-        entry.target.querySelector('.bioteam-info').classList.add('bioteam-show');
-      }
-      if(entry.target.classList.contains('bioteam-sub')){
-        entry.target.classList.add('bioteam-show');
-      }
-    }
+(function(){
+
+  const root = document.querySelector(".stkT9_section");
+  if(!root) return;
+
+  const socials = root.querySelectorAll(".stkT9_social");
+
+  socials.forEach(s=>{
+    const btn = s.querySelector(".stkT9_btn");
+
+    btn.addEventListener("click", function(e){
+      e.stopPropagation();
+
+      socials.forEach(el=>{
+        if(el!==s) el.classList.remove("stkT9_active");
+      });
+
+      s.classList.toggle("stkT9_active");
+    });
   });
-},{threshold:0.3});
 
-bioteamCards.forEach(card => bioteamObserver.observe(card));
-bioteamObserver.observe(bioteamSub);
+  root.addEventListener("click", ()=>{
+    socials.forEach(el=>el.classList.remove("stkT9_active"));
+  });
+
+})();
 </script>
 
+<section class="stkFaq-section">
+
+    <div class="stkFaq-container">
+  
+      <!-- LEFT IMAGE -->
+      <div class="stkFaq-imageWrap">
+        <img src="./clinical.webp" class="stkFaq-image">
+      </div>
+  
+      <!-- RIGHT CONTENT -->
+      <div class="stkFaq-content">
+  
+        <div class="stkFaq-head">
+          <span class="stkFaq-badge">FAQ’S</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            STACKLY is the hub for scientific pioneers and innovation enthusiasts,
+            offering breakthrough molecular technology before it reaches clinical practice.
+          </p>
+  
+          <a href="./404.html" class="stkFaq-btn">Get a Quote</a>
+        </div>
+  
+        <!-- ACCORDION -->
+        <div class="stkFaq-accordion">
+  
+          <div class="stkFaq-item active">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              How Can Biotechnology Benefit My Health?
+            </button>
+            <div class="stkFaq-answer">
+              Biotechnology enables personalized medicine, faster diagnostics, and improved treatments.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              What Are the Costs of Your Genomic Sequencing?
+            </button>
+            <div class="stkFaq-answer">
+              Costs vary depending on the complexity, but we provide flexible pricing models.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              How Do You Measure Project Success?
+            </button>
+            <div class="stkFaq-answer">
+              We track efficiency, accuracy, and clinical impact across all research outputs.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              Do You Provide Remote Consultations?
+            </button>
+            <div class="stkFaq-answer">
+              Yes, we provide fully remote consultations globally with expert teams.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              What Research Areas Do You Specialize In?
+            </button>
+            <div class="stkFaq-answer">
+              Genomics, AI-driven biology, drug discovery, and sustainable biotech solutions.
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.stkFaq-section{
+  padding:100px 20px;
+  background:linear-gradient(135deg,#0b2a5c,#020617);
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+}
+
+.stkFaq-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* ===== IMAGE ===== */
+.stkFaq-imageWrap{
+  height:100%;
+}
+
+.stkFaq-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* ===== CONTENT ===== */
+.stkFaq-head h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.stkFaq-head p{
+  color:#cbd5e1;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+/* CAPSULE */
+.stkFaq-badge{
+  display:inline-block;
+  padding:10px 26px;
+  border-radius:50px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+/* BUTTON */
+.stkFaq-btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:50px;
+  background:#020617;
+  color: white;
+  font-weight:600;
+  text-decoration:none;
+  margin-bottom:30px;
+}
+
+/* ===== ACCORDION ===== */
+.stkFaq-accordion{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.stkFaq-item{
+  background:rgba(255,255,255,0.08);
+  border-radius:14px;
+  overflow:hidden;
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+/* ACTIVE */
+.stkFaq-item.active{
+  background:rgba(255,255,255,0.15);
+}
+
+/* QUESTION */
+.stkFaq-question{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  padding:18px 20px;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* ICON */
+.stkFaq-icon{
+  min-width:28px;
+  height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(8px);
+  font-weight:bold;
+  transition:0.3s;
+}
+
+/* ICON ACTIVE */
+.stkFaq-item.active .stkFaq-icon{
+  transform:rotate(45deg);
+  background:#020617;
+  color:white;
+}
+
+/* ANSWER */
+.stkFaq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 20px;
+  font-size:14px;
+  color:#cbd5e1;
+  transition:0.4s ease;
+}
+
+.stkFaq-item.active .stkFaq-answer{
+  max-height:200px;
+  padding:15px 20px;
+}
+
+/* ===== ANIMATION ===== */
+.stkFaq-item{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s;
+}
+
+.stkFaq-item.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .stkFaq-container{
+    grid-template-columns:1fr;
+  }
+
+  .stkFaq-head{
+    text-align:center;
+  }
+
+  .stkFaq-head h2{
+    font-size:30px;
+  }
+}
+
+@media(max-width:600px){
+  .stkFaq-head h2{
+    font-size:24px;
+  }
+
+  .stkFaq-question{
+    font-size:14px;
+  }
+}
+  </style>
+
+<script>
+
+    /* ===== ACCORDION ===== */
+    const stkFaqItems = document.querySelectorAll(".stkFaq-item");
+    
+    stkFaqItems.forEach(item=>{
+      const btn = item.querySelector(".stkFaq-question");
+    
+      btn.addEventListener("click",()=>{
+    
+        stkFaqItems.forEach(i=>i.classList.remove("active"));
+    
+        item.classList.add("active");
+    
+      });
+    });
+    
+    
+    /* ===== SCROLL ANIMATION ===== */
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+    
+          const items = entry.target.querySelectorAll(".stkFaq-item");
+    
+          items.forEach((el,i)=>{
+            setTimeout(()=>{
+              el.classList.add("show");
+            }, i*150);
+          });
+    
+        }
+      });
+    },{threshold:0.2});
+    
+    observer.observe(document.querySelector(".stkFaq-accordion"));
+    
+    </script>
 
 
+
+<section class="stkT3-section">
+
+    <!-- BACKGROUND WAVES -->
+    <div class="stkT3-wave"></div>
+  
+    <div class="stkT3-container">
+  
+      <!-- HEADER -->
+      <div class="stkT3-header">
+        <span class="stkT3-badge">Client Testimonials</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+  
+      <!-- SLIDER -->
+      <div class="stkT3-slider" id="stkT3Slider">
+  
+        <!-- SLIDE 1 -->
+        <div class="stkT3-slide active">
+  
+          <div class="stkT3-left">
+            <div class="stkT3-imgWrap">
+              <img src="./joe.webp">
+              <div class="stkT3-quote">❝</div>
+            </div>
+            <div class="stkT3-stars">★★★★★</div>
+          </div>
+  
+          <div class="stkT3-right">
+            <p>
+              Ascend the mountain not to plant your flag, but to embrace the challenge,
+              savour the journey, and marvel at the view. Climb to experience the world,
+              not for the world to notice you.
+            </p>
+            <h4>Dr. Jacob Jones <span>/ Lab Director</span></h4>
+          </div>
+  
+        </div>
+  
+        <!-- SLIDE 2 -->
+        <div class="stkT3-slide">
+  
+          <div class="stkT3-left">
+            <div class="stkT3-imgWrap">
+              <img src="./arjun.webp">
+              <div class="stkT3-quote">❝</div>
+            </div>
+            <div class="stkT3-stars">★★★★★</div>
+          </div>
+  
+          <div class="stkT3-right">
+            <p>
+              Innovation is not just about discovery but about impact. Their solutions
+              transformed our workflow and boosted research accuracy significantly.
+            </p>
+            <h4>Dr. Dianne Russell <span>/ Research Founder</span></h4>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <!-- NAV -->
+      <!-- <div class="stkT3-nav">
+        <button id="stkT3Prev">←</button>
+        <button id="stkT3Next">→</button>
+      </div>  -->
+   
+    </div>
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.stkT3-section{
+  position:relative;
+  padding:120px 20px;
+  background:#f5f7fa;
+  overflow:hidden;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ===== WAVE BACKGROUND ===== */
+.stkT3-wave{
+  position:absolute;
+  width:200%;
+  height:200%;
+  top:-50%;
+  left:-50%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size:20px 20px;
+  animation:stkWaveMove 20s linear infinite;
+  opacity:0.5;
+}
+
+@keyframes stkWaveMove{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(80px,80px);}
+}
+
+/* ===== CONTAINER ===== */
+.stkT3-container{
+  max-width:1200px;
+  margin:auto;
+  position:relative;
+}
+
+/* ===== HEADER ===== */
+.stkT3-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.stkT3-badge{
+  display:inline-block;
+  padding:10px 30px;
+  border-radius:50px;
+  background:#020617;
+  color:#fff;
+  margin-bottom:15px;
+}
+
+.stkT3-header h2{
+  font-size:38px;
+  color:#0b2a5c;
+}
+
+/* ===== SLIDER ===== */
+.stkT3-slide{
+  display:none;
+  align-items:center;
+  gap:60px;
+}
+
+.stkT3-slide.active{
+  display:flex;
+  animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== LEFT ===== */
+.stkT3-left{
+  text-align:center;
+  min-width:260px;
+}
+
+.stkT3-imgWrap{
+  position:relative;
+  width:220px;
+  height:220px;
+  margin:auto;
+}
+
+.stkT3-imgWrap img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* QUOTE */
+.stkT3-quote{
+  position:absolute;
+  top:-10px;
+  right:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#020617;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+}
+
+/* STARS */
+.stkT3-stars{
+  margin-top:20px;
+  color:#ff9800;
+}
+
+/* ===== RIGHT ===== */
+.stkT3-right{
+  flex:1;
+}
+
+.stkT3-right p{
+  font-size:22px;
+  color:#555;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.stkT3-right h4{
+  font-size:20px;
+  color:#020617;
+}
+
+.stkT3-right span{
+  color:#777;
+}
+
+/* ===== NAV ===== */
+.stkT3-nav{
+  position:absolute;
+  right:20px;
+  bottom:10px;
+}
+
+.stkT3-nav button{
+  margin-left:10px;
+  padding:10px 16px;
+  border:none;
+  border-radius:50%;
+  background:#e0e0e0;
+  cursor:pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .stkT3-slide{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .stkT3-right p{
+    font-size:18px;
+  }
+}
+
+@media(max-width:600px){
+  .stkT3-imgWrap{
+    width:160px;
+    height:160px;
+  }
+
+  .stkT3-header h2{
+    font-size:26px;
+  }
+
+  .stkT3-right p{
+    font-size:16px;
+  }
+}
+  </style>
+
+  <script>
+    
+
+const slides = document.querySelectorAll(".stkT3-slide");
+let index = 0;
+let autoSlide;
+
+/* SHOW */
+function showSlide(i){
+  slides.forEach(s => s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+/* NEXT */
+document.getElementById("stkT3Next").onclick = ()=>{
+  index = (index + 1) % slides.length;
+  showSlide(index);
+};
+
+/* PREV */
+document.getElementById("stkT3Prev").onclick = ()=>{
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+};
+
+/* AUTO */
+function startAuto(){
+  autoSlide = setInterval(()=>{
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  },4000);
+}
+
+function stopAuto(){
+  clearInterval(autoSlide);
+}
+
+/* HOVER STOP */
+const slider = document.getElementById("stkT3Slider");
+slider.addEventListener("mouseenter", stopAuto);
+slider.addEventListener("mouseleave", startAuto);
+
+/* INIT */
+showSlide(0);
+startAuto();
+
+</script>
+  
 
 
 <section class="bio-price-section">
@@ -3327,7 +3863,8 @@ bioteamObserver.observe(bioteamSub);
     }
     
     .bio-price-subtitle{
-    color:#00f7ff;
+    color: white;
+
     max-width:650px;
     margin:auto;
     margin-bottom:60px;
@@ -3358,7 +3895,7 @@ bioteamObserver.observe(bioteamSub);
     /* POPULAR PLAN */
     
     .bio-price-popular{
-    border:1px solid #00ffff;
+    border:1px solid #0b2a5c;
     box-shadow:0 0 25px rgba(0,255,255,0.3);
     }
     
@@ -3374,7 +3911,7 @@ bioteamObserver.observe(bioteamSub);
     .bio-price-cost{
     font-size:38px;
     margin-bottom:20px;
-    color:#00ffff;
+    color: white;
     }
     
     .bio-price-cost span{
@@ -3401,8 +3938,8 @@ bioteamObserver.observe(bioteamSub);
     .bio-price-btn{
     display:inline-block;
     padding:12px 28px;
-    background:#00eaff;
-    color:#000;
+    background:#0b2a5c;
+    color: white;
     border-radius:30px;
     text-decoration:none;
     font-weight:bold;
@@ -3410,8 +3947,8 @@ bioteamObserver.observe(bioteamSub);
     }
     
     .bio-price-btn:hover{
-    background:#00ffff;
-    box-shadow:0 0 20px #00ffff;
+    background:#0b2a5c;
+    box-shadow:0 0 20px #0b2a5c;
     }
     
     /* HOVER */
@@ -3488,218 +4025,6 @@ bioteamObserver.observe(bioteamSub);
 
 
 
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-    <!-- BIOTECH 3D DNA HELIX SECTION -->
-
-<section id="bio3d-dna-section">
-
-    <div class="bio3d-canvas-wrap">
-    <canvas id="bio3d-dna-canvas"></canvas>
-    </div>
-    
-    <div class="bio3d-content">
-    
-    <h2 class="bio3d-title">Ready to transform AI Powered Biotechnology</h2>
-    
-    <p class="bio3d-text">
-    Advanced biotechnology research powered by artificial intelligence,
-    genomic sequencing, and high-performance computing systems.
-    </p>
-    
-    <a href="./404.html" class="bio3d-btn">Explore your free trial today </a>
-    
-    </div>
-    
-    </section>
-    
-    
-    
-    <style>
-    
-    /* SECTION */
-    
-    #bio3d-dna-section{
-    
-    position:relative;
-    height:600px;
-    overflow:hidden;
-    
-    /* background:linear-gradient(135deg,#0b1026,#0f1b46); */
-    
-    font-family:Arial;
-    
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    
-    }
-    
-    
-    /* CANVAS */
-    
-    #bio3d-dna-section .bio3d-canvas-wrap{
-    
-    position:absolute;
-    top:0;
-    left:0;
-    
-    width:100%;
-    height:100%;
-    
-    z-index:1;
-    
-    }
-    
-    #bio3d-dna-section canvas{
-    
-    width:100%;
-    height:100%;
-    
-    display:block;
-    
-    }
-    
-    
-    /* CONTENT */
-    
-    #bio3d-dna-section .bio3d-content{
-    
-    position:relative;
-    z-index:2;
-    
-    max-width:700px;
-    
-    text-align:center;
-    
-    padding:40px;
-    
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(12px);
-    
-    border-radius:18px;
-    
-    border:1px solid rgba(255,255,255,.15);
-    
-    }
-    
-    
-    /* TITLE */
-    
-    #bio3d-dna-section .bio3d-title{
-    
-    color:white;
-    font-size:40px;
-    margin-bottom:20px;
-    
-    }
-    
-    
-    /* TEXT */
-    
-    #bio3d-dna-section .bio3d-text{
-    
-    color:#d7ddff;
-    font-size:17px;
-    line-height:1.7;
-    margin-bottom:30px;
-    
-    }
-    
-    
-    /* BUTTON */
-    
-    #bio3d-dna-section .bio3d-btn{
-    
-    display:inline-block;
-    
-    padding:12px 28px;
-    
-    border-radius:30px;
-    
-    background:linear-gradient(135deg,#7c6cff,#00d4ff);
-    
-    color:white;
-    text-decoration:none;
-    
-    font-size:15px;
-    
-    transition:.3s;
-    
-    }
-    
-    #bio3d-dna-section .bio3d-btn:hover{
-    
-    transform:translateY(-3px);
-    
-    box-shadow:0 10px 20px rgba(0,0,0,.4),
-    0 0 15px rgba(100,120,255,.7);
-    
-    }
-    
-    
-    /* RESPONSIVE */
-    
-    @media(max-width:900px){
-    
-    #bio3d-dna-section{
-    height:520px;
-    }
-    
-    #bio3d-dna-section .bio3d-title{
-    font-size:32px;
-    }
-    
-    }
-    
-    @media(max-width:600px){
-    
-    #bio3d-dna-section{
-    
-    height:auto;
-    padding:80px 20px;
-    
-    }
-    
-    #bio3d-dna-section .bio3d-title{
-    font-size:26px;
-    }
-    
-    #bio3d-dna-section .bio3d-text{
-    font-size:15px;
-    }
-    
-    }
-    
-    </style>
-    
-
-<!-- ================= PRE-FOOTER ================= -->
-<section class="pre-footer">
-  <div class="pre-container">
-
-    <div class="pre-box">
-      <i class="ri-map-pin-2-fill"></i>
-      <h4>Research Facility</h4>
-      <p>BioGen Research Institute,<br>Chennai, India</p>
-    </div>
-
-    <div class="pre-box">
-      <i class="ri-mail-send-fill"></i>
-      <h4>Laboratory Email</h4>
-      <p>research@biogenlab.com</p>
-    </div>
-
-    <div class="pre-box">
-      <i class="ri-flask-fill"></i>
-      <h4>Scientific Support</h4>
-      <p>Advanced biotech & lab assistance</p>
-    </div>
-
-  </div>
-</section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="bio-footer">
@@ -3789,7 +4114,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #00f7ff;
+  color: white;
 }
 
 /* SOCIAL ICONS */
@@ -3818,7 +4143,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   /* background: #00f7ff; */
   color: #000;
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 0 15px #00f7ff;
+  box-shadow: 0 0 15px white;
 }
 
 /* MOBILE CENTER ALIGN */
@@ -3853,7 +4178,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 .pre-box i {
   font-size: 30px;
-  color: #00f7ff;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -3885,7 +4210,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 /* LINKS */
 .footer-col h4 {
   margin-bottom: 15px;
-  color: #00f7ff;
+  color: white;
 }
 
 .footer-col ul {
@@ -3902,7 +4227,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 }
 
 .footer-col ul li a:hover {
-  color: #00f7ff;
+  color: white;
 }
 
 /* SOCIAL */
@@ -3913,7 +4238,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 }
 
 .social-icons a:hover {
-  color: #00f7ff;
+  color: white;
 }
 
 /* MAP */
@@ -3938,7 +4263,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 .subscribe button {
   padding: 10px;
-  background: #00f7ff;
+  background: white;
   border: none;
   cursor: pointer;
 }
@@ -3960,7 +4285,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 }
 
 .footer-bottom a {
-  color: #00f7ff;
+  color: white;
   text-decoration: none;
 }
 
