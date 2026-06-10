@@ -35,8 +35,13 @@ display:flex;
 align-items:center;
 justify-content:center;
 background:linear-gradient(135deg,#020817,#041028);
-overflow:hidden;
+overflow:auto   ;
+
+    
+    width:100%;
+    
 }
+
 
 /* ===== BACK BUTTON ===== */
 .bio-back-home{
@@ -268,11 +273,199 @@ padding:6px 10px;
 
 }
 
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Large Desktop */
+@media screen and (min-width: 1400px){
+
+.bio-auth-wrapper{
+    max-width: 500px;
+}
+
+.bio-auth-card{
+    padding: 45px 40px;
+}
+
+.bio-title{
+    font-size: 30px;
+}
+
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px){
+
+.bio-auth-wrapper{
+    max-width: 450px;
+}
+
+}
+
+/* Tablet */
+@media screen and (max-width: 768px){
+
+body{
+    padding: 20px;
+}
+
+.bio-auth-wrapper{
+    max-width: 100%;
+    padding: 15px;
+}
+
+.bio-auth-card{
+    padding: 30px 24px;
+}
+
+.bio-title{
+    font-size: 24px;
+}
+
+.bio-sub{
+    font-size: 12px;
+}
+
+.bio-btn{
+    height: 46px;
+}
+
+}
+
+/* Mobile */
+@media screen and (max-width: 576px){
+
+body{
+    body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#020817,#041028);
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding:20px 0;
+}
+}
+
+.bio-auth-wrapper{
+    width:100%;
+    padding:0;
+}
+
+.bio-auth-card{
+    padding:25px 18px;
+    border-radius:16px;
+}
+
+.bio-logo i{
+    font-size:24px;
+}
+
+.bio-title{
+    font-size:22px;
+}
+
+.bio-sub{
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.bio-input{
+    margin-bottom:15px;
+}
+
+.bio-input input,
+.bio-input select{
+    height:42px;
+    font-size:14px;
+}
+
+.bio-btn{
+    height:44px;
+    font-size:14px;
+}
+
+.bio-row{
+    font-size:11px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.bio-demo-box{
+    font-size:11px;
+    padding:12px;
+}
+
+.bio-back-home{
+    top:12px;
+    left:12px;
+    font-size:12px;
+    padding:7px 12px;
+}
+
+}
+
+/* Small Mobile */
+@media screen and (max-width: 400px){
+
+.bio-auth-card{
+    padding:20px 15px;
+}
+
+.bio-title{
+    font-size:20px;
+}
+
+.bio-input label{
+    font-size:12px;
+}
+
+.bio-input input,
+.bio-input select{
+    height:40px;
+    font-size:13px;
+}
+
+.bio-btn{
+    height:42px;
+    font-size:13px;
+}
+
+.bio-demo-box{
+    font-size:10px;
+}
+
+.bio-back-home{
+    font-size:11px;
+    padding:6px 10px;
+}
+
+}
+
+/* Landscape Mobile */
+@media screen and (max-height: 700px){
+
+body{
+    padding:20px 0;
+    height:auto;
+    
+}
+
+.bio-auth-wrapper{
+    margin:20px 0;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+  
+        
 <!-- BACK BUTTON -->
 <a href="index.html" class="bio-back-home">
 <i class="fa fa-arrow-left"></i> Back
