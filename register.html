@@ -8,9 +8,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-
 /* ===== ROOT ===== */
 :root{
 --bio-primary:#00eaff;
@@ -29,22 +27,35 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 min-height:100vh;
+background:linear-gradient(135deg,#020817,#041028);
+
 display:flex;
 align-items:center;
 justify-content:center;
-background:linear-gradient(135deg,#020817,#041028);
-overflow:hidden;
+
+overflow-x:hidden;
+overflow-y:auto;
+
+padding:40px 15px;
+position:relative;
 }
 
 /* ===== DNA BACKGROUND ===== */
 .bio-reg-dna{
-position:absolute;
+position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
 overflow:hidden;
 z-index:0;
+pointer-events:none;
 }
 
 .bio-reg-dna span{
@@ -57,9 +68,15 @@ animation:bioDNA 8s linear infinite;
 }
 
 @keyframes bioDNA{
-0%{transform:translateY(0) translateX(0)}
-50%{transform:translateY(50vh) translateX(30px)}
-100%{transform:translateY(100vh) translateX(0)}
+0%{
+transform:translateY(-50px) translateX(0);
+}
+50%{
+transform:translateY(50vh) translateX(30px);
+}
+100%{
+transform:translateY(110vh) translateX(0);
+}
 }
 
 /* ===== WRAPPER ===== */
@@ -68,6 +85,7 @@ width:100%;
 max-width:780px;
 padding:20px;
 z-index:2;
+position:relative;
 }
 
 /* BACK BUTTON */
@@ -104,8 +122,10 @@ margin-bottom:10px;
 
 .bio-reg-logo img{
 height:55px;
+max-width:100%;
 }
 
+/* ICON */
 .bio-reg-icon{
 width:70px;
 height:70px;
@@ -171,6 +191,12 @@ outline:none;
 background:transparent;
 color:#fff;
 width:100%;
+font-size:14px;
+}
+
+.bio-reg-input select option{
+background:#041028;
+color:#fff;
 }
 
 /* PASSWORD */
@@ -210,6 +236,7 @@ background:linear-gradient(90deg,#00eaff,#9333ea);
 color:#fff;
 font-weight:600;
 cursor:pointer;
+transition:.3s;
 }
 
 .bio-reg-btn:hover{
@@ -229,28 +256,132 @@ color:var(--bio-primary);
 text-decoration:none;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================
+   RESPONSIVE
+========================= */
 
 /* Tablet */
 @media(max-width:900px){
+
 .bio-reg-grid{
 grid-template-columns:1fr;
+gap:0;
 }
+
+.bio-reg-card{
+padding:30px 25px;
+}
+
 }
 
 /* Mobile */
 @media(max-width:600px){
 
+body{
+display:block;
+padding:80px 12px 30px;
+}
+
+.bio-reg-wrapper{
+padding:0;
+}
+
 .bio-reg-card{
-padding:25px 20px;
+padding:22px 16px;
+border-radius:16px;
+}
+
+.bio-reg-logo img{
+height:45px;
+}
+
+.bio-reg-icon{
+width:60px;
+height:60px;
+font-size:22px;
 }
 
 .bio-reg-title{
 font-size:22px;
 }
 
+.bio-reg-sub{
+font-size:12px;
+margin-bottom:20px;
 }
 
+.bio-reg-group{
+margin-bottom:15px;
+}
+
+.bio-reg-group label{
+font-size:12px;
+}
+
+.bio-reg-input{
+height:42px;
+}
+
+.bio-reg-input input,
+.bio-reg-input select{
+font-size:14px;
+}
+
+.bio-reg-btn{
+padding:12px;
+font-size:14px;
+}
+
+.bio-reg-terms{
+font-size:12px;
+}
+
+}
+
+/* Small Mobile */
+@media(max-width:400px){
+
+body{
+padding:70px 10px 20px;
+}
+
+.bio-reg-card{
+padding:18px 14px;
+}
+
+.bio-reg-title{
+font-size:20px;
+}
+
+.bio-reg-icon{
+width:55px;
+height:55px;
+font-size:20px;
+}
+
+.bio-reg-input{
+height:40px;
+}
+
+.bio-reg-btn{
+font-size:13px;
+}
+
+}
+
+/* Short Height Devices */
+@media(max-height:700px){
+
+body{
+display:block;
+padding:30px 15px;
+}
+
+.bio-reg-wrapper{
+margin:auto;
+}
+
+}
 </style>
 </head>
 
@@ -274,7 +405,7 @@ font-size:22px;
 <div class="bio-reg-card">
 
 <div class="bio-reg-logo">
-<img src="assets/images/logo/stackly_logo.webp">
+<img src="./logo.webp">
 </div>
 
 <div class="bio-reg-icon">
