@@ -3,321 +3,456 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stackly Biotech </title>
-
+<title>Stackly Biotech</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
-body{height:2000px;background:linear-gradient(120deg,#e0f2fe,#f5f9ff);}
-
-/* PRELOADER WRAPPER */
-#preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #05070d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
-/* CONTENT */
-.loader-content {
-  position: relative;
-  text-align: center;
+/* HEADER */
+header{
+  width:100%;
+  height:70px;
+  background:#0f172a;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 /* LOGO */
-.loader-logo {
-  width: 120px;
-  animation: pulse 2s infinite;
-  z-index: 2;
-  position: relative;
+.logo{
+  font-size:22px;
+  font-weight:bold;
 }
 
-/* GLOW RING */
-.loader-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 160px;
-  height: 160px;
-  border: 2px solid rgba(0, 247, 255, 0.2);
-  border-top: 2px solid white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 1.5s linear infinite;
+/* NAV */
+nav{
+  display:flex;
+  align-items:center;
 }
 
-/* PULSE */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 5px white);
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:16px;
+  padding:6px 0;
+  position:relative;
+  transition:0.3s;
+}
+
+/* ACTIVE + UNDERLINE */
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#38bdf8;
+  transition:0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+  width:100%;
+}
+
+nav ul li a.active{
+  color:#38bdf8;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger{
+  display:none;
+  width:30px;
+  height:22px;
+  cursor:pointer;
+  position:relative;
+  z-index:1100;
+}
+
+/* LINES */
+.hamburger span{
+  position:absolute;
+  width:100%;
+  height:3px;
+  background:#fff;
+  border-radius:3px;
+  transition:0.3s ease;
+}
+
+/* TOP */
+.hamburger span:nth-child(1){
+  top:0;
+}
+
+/* MIDDLE */
+.hamburger span:nth-child(2){
+  top:9px;
+}
+
+/* BOTTOM */
+.hamburger span:nth-child(3){
+  top:18px;
+}
+
+/* ACTIVE → X ANIMATION */
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg);
+  top:9px;
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg);
+  top:9px;
+}
+
+/* MOBILE MENU */
+@media(max-width:992px){
+
+  .hamburger{
+    display:block;
   }
-  50% {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 20px white);
+
+  nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:260px;
+    height:100vh;
+    background:#111827;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:60px 20px;
+    transition:0.3s;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  nav ul{
+    flex-direction:column;
+    gap:20px;
   }
 }
 
-/* SPIN */
-@keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
+/* SMALL DEVICES */
+@media(max-width:480px){
+  header{
+    padding:0 15px;
+  }
 
-/* HIDE PRELOADER */
-#preloader.hide {
-  opacity: 0;
-  visibility: hidden;
+  .logo{
+    font-size:18px;
+  }
 }
-
-/* ================= RESPONSIVE ================= */
+/* LOGO CONTAINER */
+.logo img{
+  height:45px;
+  width:auto;
+  object-fit:contain;
+  display:block;
+}
 
 /* TABLET */
-@media (max-width: 1024px) {
-  .loader-logo {
-    width: 100px;
-  }
-  .loader-ring {
-    width: 140px;
-    height: 140px;
+@media(max-width:992px){
+  .logo img{
+    height:40px;
   }
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .loader-logo {
-    width: 80px;
-  }
-  .loader-ring {
-    width: 120px;
-    height: 120px;
+@media(max-width:480px){
+  .logo img{
+    height:32px;
   }
 }
-
-/* SMALL MOBILE */
-@media (max-width: 480px) {
-  .loader-logo {
-    width: 70px;
-  }
-  .loader-ring {
-    width: 100px;
-    height: 100px;
-  }
-}
-/* HEADER */
-header{
-position:fixed;
-top:0;left:0;width:100%;
-background:rgba(255,255,255,0.6);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,0.3);
-box-shadow:0 8px 30px rgba(0,0,0,0.05);
-transition:0.3s;
-z-index:1000;
-}
-
-/* SHRINK */
-header.shrink{
-padding:5px 0;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-}
-
-.navbar{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:18px 40px;
-position:relative;
-}
-
-/* LEFT LOGO */
-.logo img{height:40px;}
-
-/* CENTER NAV */
-.nav-links{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#0f172a;
-font-weight:500;
-position:relative;
-}
-
-/* ACTIVE */
-.nav-links a.active,
-.nav-links a:hover{color:black;}
-
-.nav-links a.active::after,
-.nav-links a:hover::after{
-content:"";
-position:absolute;
-bottom:-6px;left:0;
-width:100%;height:2px;
-background:white;
-}
-
-/* RIGHT */
-.right{display:flex;gap:12px;}
-
-.btn{
-padding:8px 18px;
-border-radius:30px;
-border:none;
-cursor:pointer;
-font-size:14px;
-transition:0.3s;
-}
-
-.login{background:transparent;border:1px solid #0b2a5c;color:black;}
-.login:hover{background:#0b2a5c;color:white;}
-
-.register{background:#0b2a5c;color:white;}
-.register:hover{background:#0b2a5c;}
-
-/* MENU */
-.menu-toggle{display:none;font-size:22px;cursor:pointer;}
-
-/* MOBILE MENU */
-.mobile-menu{
-position:fixed;
-top:0;left:-100%;
-width:260px;height:100vh;
-background:white;
-padding:20px;
-transition:0.3s;
-box-shadow:10px 0 25px rgba(0,0,0,0.1);
-z-index:2000;
-}
-.mobile-menu.active{left:0;}
-.mobile-menu a{display:block;margin:15px 0;text-decoration:none;color:#0f172a;}
-
-/* OVERLAY */
-.overlay{
-position:fixed;top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,0.4);display:none;z-index:1500;
-}
-.overlay.active{display:block;}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-.nav-links{display:none;}
-.right{display:none;}
-.menu-toggle{display:block;}
-}
-
 </style>
 </head>
 
 <body>
 
-  <!-- PRELOADER -->
-<!-- <div id="preloader">
-  <div class="loader-content">
-    <img src="./logo.webp" alt="Stackly Logo" class="loader-logo">
-    <div class="loader-ring"></div>
+<header>
+  <div class="logo">
+    <a href="./index.html">
+    <img src="./white.webp" alt="My Logo"></a>
   </div>
-</div> -->
 
-<div class="overlay" id="overlay"></div>
+  <!-- HAMBURGER -->
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-<header id="header">
-
-<div class="navbar">
-
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fa fa-bars"></i>
-</div>
-
-<div class="logo">
-  <a href="./index.html">
-<img src="./logo.webp" alt="Stackly">
-  </a>
-</div>
-
-<div class="nav-links" id="navLinks">
-<a href="./index.html">Home</a>
-<a href="./research.html">About</a>
-<a href="./services.html">Services</a>
-<a href="./contact.html">Contact</a>
-</div>
-
-
-<div class="right">
-  <button class="btn login" onclick="location.href='login.html'">Login</button>
-  <button class="btn register" onclick="location.href='register.html'">Register</button>
-</div>
-
-</div>
-
+  <nav id="navMenu">
+    <ul>
+      <li><a href="./index.html"  onclick="setActive(this)">Home</a></li>
+      <li><a href="./research.html" class="active" onclick="setActive(this)">About</a></li>
+      <li><a href="./services.html" onclick="setActive(this)">Services</a></li>
+      <li><a href="./contact.html" onclick="setActive(this)">Contact</a></li>
+      <li><a href="./login.html" onclick="setActive(this)">Login</a></li>
+      <li><a href="./register.html" onclick="setActive(this)">Register</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-<a href="./index.html">Home</a>
-<a href="./research.html">About</a>
-<a href="./services.html">Services</a>
-<a href="./contact.html">Contact</a>
-<hr>
-<a href="./login.html">Login</a>
-<a href="./register.html">Register</a>
-</div>
-
 <script>
-// MENU
 function toggleMenu(){
-const menu=document.getElementById("mobileMenu");
-const overlay=document.getElementById("overlay");
-menu.classList.toggle("active");
-overlay.classList.toggle("active");
+  document.getElementById("navMenu").classList.toggle("active");
+  document.getElementById("hamburger").classList.toggle("active");
 }
 
-overlay.onclick=()=>{
-document.getElementById("mobileMenu").classList.remove("active");
-overlay.classList.remove("active");
-};
+/* ACTIVE LINK */
+function setActive(element){
+  let links = document.querySelectorAll("nav ul li a");
+  links.forEach(link => link.classList.remove("active"));
+  element.classList.add("active");
 
-// SHRINK HEADER
-window.addEventListener("scroll",()=>{
-const header=document.getElementById("header");
-header.classList.toggle("shrink",window.scrollY>50);
-});
-
-// ACTIVE LINK
-const links=document.querySelectorAll(".nav-links a");
-links.forEach(link=>{
-link.addEventListener("click",()=>{
-links.forEach(l=>l.classList.remove("active"));
-link.classList.add("active");
-});
-});
+  // close menu on mobile
+  document.getElementById("navMenu").classList.remove("active");
+  document.getElementById("hamburger").classList.remove("active");
+}
 </script>
 
-<script>
-  window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-  
-    setTimeout(() => {
-      preloader.classList.add("hide");
-    }, 1000); // delay for smooth UX
-  });
-  </script>
-
-</body>
 
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+/* HERO */
+
+.bio-hero{
+height:100vh;
+width:100%;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+/* BACKGROUND SLIDER */
+
+.bio-slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 1.5s ease;
+}
+
+.bio-slide.active{
+opacity:1;
+}
+
+.bio-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* THREE DNA CANVAS */
+
+#dnaCanvas{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:1;
+pointer-events:none;
+}
+
+/* CONTENT */
+
+.bio-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+text-align:center;
+padding:40px;
+}
+
+/* GLASS */
+
+.bio-glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:20px;
+padding:40px;
+}
+
+/* TESTIMONIAL */
+
+.bio-testimonial{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-bottom:25px;
+}
+
+.bio-avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+border:3px solid white;
+}
+
+.bio-review{
+font-size:14px;
+max-width:350px;
+}
+
+/* TITLE */
+
+.bio-title{
+font-size:48px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.bio-type{
+color:#00f7ff;
+}
+
+/* DESC */
+
+.bio-desc{
+opacity:0.9;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.bio-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.bio-btn{
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+border:none;
+}
+
+.bio-explore{
+background:#00d1a7;
+color:white;
+}
+
+.bio-watch{
+background:rgba(255,255,255,0.2);
+color:white;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* VIDEO MODAL */
+
+.bio-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.bio-modal video{
+width:80%;
+max-width:800px;
+border-radius:10px;
+}
+
+.bio-close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.bio-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:600px){
+
+.bio-title{
+font-size:28px;
+}
+
+.bio-glass{
+padding:25px;
+}
+
+.bio-desc{
+font-size:14px;
+}
+
+.bio-testimonial{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
@@ -3748,7 +3883,7 @@ startAuto();
     <!-- LOGO + ABOUT -->
 <div class="footer-col">
   <a href="./index.html">
-  <img src="./logo.webp" class="footer-logo"></a>
+    <img src="./white.webp" class="footer-logo"></a>
 
   <p>
     Advancing biotechnology through innovation and research.
