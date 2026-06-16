@@ -391,36 +391,107 @@ align-items:center;
 gap:10px;
 }
 
-/* VIDEO MODAL */
+/* ================= VIDEO MODAL ================= */
 
 .bio-modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:999;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.9);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+    z-index:9999;
 }
+
+/* VIDEO */
 
 .bio-modal video{
-width:80%;
-max-width:800px;
-border-radius:10px;
+    width:100%;
+    max-width:900px;
+    max-height:85vh;
+    border-radius:12px;
+    background:#000;
+    display:block;
 }
+
+/* CLOSE BUTTON */
 
 .bio-close{
-position:absolute;
-top:30px;
-right:40px;
-font-size:30px;
-color:white;
-cursor:pointer;
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+
+    color:#fff;
+    font-size:32px;
+    font-weight:bold;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+    z-index:10000;
+
+    transition:0.3s;
 }
 
+.bio-close:hover{
+    background:#ff3b3b;
+    transform:scale(1.1);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px){
+
+    .bio-modal video{
+        max-width:95%;
+        max-height:80vh;
+    }
+
+    .bio-close{
+        top:15px;
+        right:15px;
+        width:42px;
+        height:42px;
+        font-size:28px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px){
+
+    .bio-modal{
+        padding:10px;
+    }
+
+    .bio-modal video{
+        width:100%;
+        max-height:70vh;
+        border-radius:10px;
+    }
+
+    .bio-close{
+        top:10px;
+        right:10px;
+        width:38px;
+        height:38px;
+        font-size:24px;
+    }
+}
 /* RESPONSIVE */
 
 @media(max-width:900px){
@@ -536,7 +607,39 @@ Explore Biotechnology
 </div>
 
 
-
+<script>
+  function openVideo() {
+  
+      const modal = document.getElementById("videoModal");
+      const video = modal.querySelector("video");
+  
+      modal.style.display = "flex";
+  
+      video.currentTime = 0;
+      video.play();
+  }
+  
+  function closeVideo() {
+  
+      const modal = document.getElementById("videoModal");
+      const video = modal.querySelector("video");
+  
+      video.pause();
+      video.currentTime = 0;
+  
+      modal.style.display = "none";
+  }
+  
+  /* Optional: Close when clicking outside video */
+  
+  document.getElementById("videoModal").addEventListener("click", function(e){
+  
+      if(e.target === this){
+          closeVideo();
+      }
+  
+  });
+  </script>
 <script>
 
 /* TYPEWRITER */
