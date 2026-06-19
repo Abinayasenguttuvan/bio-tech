@@ -1,531 +1,1162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Technology</title>
-    <link rel="icon" href="./Assets/icon.webp" />
-    <link rel="stylesheet" href="./contact.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Biotech</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <!-- <div class="header1">
-        <div class="container1">
-          <h3>Welcome To Stackly Daily News Technologies</h3>
-        </div>
-        <div class="container2">
-          <div>
-            <i class="fa-solid fa-phone-volume"></i>
-            <p>(123)456-7890</p>
-          </div>
-          <div>
-            <i class="fa-regular fa-envelope"></i>
-            <p>Support@stackly.com</p>
-          </div>
-        </div>
-      </div> -->
-      <div class="header2">
-        <div class="logo">
-          <a href="./index.html">
-            <img src="./Assets/logo.webp" alt="Stackly Logo"
-              style="height:60px;
-              filter: brightness(0) saturate(100%)
-              invert(12%) sepia(92%) saturate(2950%)
-              hue-rotate(350deg) brightness(70%) contrast(120%);">
-            </a>
-        </div>
+/* HEADER */
+header{
+  width:100%;
+  height:70px;
+  background:#0f172a;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-        <nav>
-          <ul>
-            <li class="dropdown">
-              <a href="./index.html">Home</a>
+/* LOGO */
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
 
-              <span class="drop-toggle">
-                <i class="fa-solid fa-caret-down"></i>
-              </span>
+/* NAV */
+nav{
+  display:flex;
+  align-items:center;
+}
 
-              <ul class="dropdown-menu">
-                <li><a href="./index2.html">Home 2</a></li>
-              </ul>
-            </li>
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
 
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./service.html">Services</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-            <li><a href="./dashboard.html">Dashboard</a></li>
-          </ul>
-        </nav>
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:16px;
+  padding:6px 0;
+  position:relative;
+  transition:0.3s;
+}
 
-        <div class="icons">
-          <div class="login">
-            <!-- <a class="btn" href="./app.html">Buy Now</a> -->
+/* ACTIVE + UNDERLINE */
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#38bdf8;
+  transition:0.3s;
+}
 
-            <a href="./login.html">
-              <i class="fa-regular fa-circle-user"></i>
-            </a>
-          </div>
+nav ul li a:hover::after,
+nav ul li a.active::after{
+  width:100%;
+}
 
-          <div class="mobilebar">
-            <div class="hamburger-box">
-              <div class="hamburger">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+nav ul li a.active{
+  color:#38bdf8;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger{
+  display:none;
+  width:30px;
+  height:22px;
+  cursor:pointer;
+  position:relative;
+  z-index:1100;
+}
+
+/* LINES */
+.hamburger span{
+  position:absolute;
+  width:100%;
+  height:3px;
+  background:#fff;
+  border-radius:3px;
+  transition:0.3s ease;
+}
+
+/* TOP */
+.hamburger span:nth-child(1){
+  top:0;
+}
+
+/* MIDDLE */
+.hamburger span:nth-child(2){
+  top:9px;
+}
+
+/* BOTTOM */
+.hamburger span:nth-child(3){
+  top:18px;
+}
+
+/* ACTIVE → X ANIMATION */
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg);
+  top:9px;
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg);
+  top:9px;
+}
+
+/* MOBILE MENU */
+@media(max-width:992px){
+
+  .hamburger{
+    display:block;
+  }
+
+  nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:260px;
+    height:100vh;
+    background:#111827;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:60px 20px;
+    transition:0.3s;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  nav ul{
+    flex-direction:column;
+    gap:20px;
+  }
+}
+
+/* SMALL DEVICES */
+@media(max-width:480px){
+  header{
+    padding:0 15px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+}
+/* LOGO CONTAINER */
+.logo img{
+  height:45px;
+  width:auto;
+  object-fit:contain;
+  display:block;
+}
+
+/* TABLET */
+@media(max-width:992px){
+  .logo img{
+    height:40px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .logo img{
+    height:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="./index.html">
+    <img src="./white.webp" alt="My Logo"></a>
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="./index.html"  onclick="setActive(this)">Home</a></li>
+      <li><a href="./research.html" onclick="setActive(this)">About</a></li>
+      <li><a href="./services.html" onclick="setActive(this)">Services</a></li>
+      <li><a href="./contact.html" class="active" onclick="setActive(this)">Contact</a></li>
+      <li><a href="./login.html" onclick="setActive(this)">Login</a></li>
+      <li><a href="./register.html" onclick="setActive(this)">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+  document.getElementById("hamburger").classList.toggle("active");
+}
+
+/* ACTIVE LINK */
+function setActive(element){
+  let links = document.querySelectorAll("nav ul li a");
+  links.forEach(link => link.classList.remove("active"));
+  element.classList.add("active");
+
+  // close menu on mobile
+  document.getElementById("navMenu").classList.remove("active");
+  document.getElementById("hamburger").classList.remove("active");
+}
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+/* HERO */
+
+.bio-hero{
+height:100vh;
+width:100%;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+/* BACKGROUND SLIDER */
+
+.bio-slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 1.5s ease;
+}
+
+.bio-slide.active{
+opacity:1;
+}
+
+.bio-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* THREE DNA CANVAS */
+
+#dnaCanvas{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:1;
+pointer-events:none;
+}
+
+/* CONTENT */
+
+.bio-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+text-align:center;
+padding:40px;
+}
+
+/* GLASS */
+
+.bio-glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:20px;
+padding:40px;
+}
+
+/* TESTIMONIAL */
+
+.bio-testimonial{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-bottom:25px;
+}
+
+.bio-avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+border:3px solid white;
+}
+
+.bio-review{
+font-size:14px;
+max-width:350px;
+}
+
+/* TITLE */
+
+.bio-title{
+font-size:48px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.bio-type{
+color:#00f7ff;
+}
+
+/* DESC */
+
+.bio-desc{
+opacity:0.9;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.bio-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.bio-btn{
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+border:none;
+}
+
+.bio-explore{
+background:#00d1a7;
+color:white;
+}
+
+.bio-watch{
+background:rgba(255,255,255,0.2);
+color:white;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* VIDEO MODAL */
+
+.bio-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.bio-modal video{
+width:80%;
+max-width:800px;
+border-radius:10px;
+}
+
+.bio-close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.bio-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:600px){
+
+.bio-title{
+font-size:28px;
+}
+
+.bio-glass{
+padding:25px;
+}
+
+.bio-desc{
+font-size:14px;
+}
+
+.bio-testimonial{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+</body>
+
+
+<!-- GLASSMORPHISM BIOTECH CONTACT -->
+
+<section class="bio-glass-contact-hero">
+
+    <div class="bio-glass-contact-hero-inner">
+    
+    <h1 class="bio-glass-contact-title">
+    Talk to Our <span>Biotechnology Team</span>
+    </h1>
+    
+    <p class="bio-glass-contact-sub">
+    Research collaborations, instrument demos, CRO enquiries and scientific discussions.
+    </p>
+    
+    </div>
+    
+    </section>
+    
+    
+    <section class="bio-glass-contact-section">
+    
+    <div class="bio-glass-contact-container">
+    
+    <div class="bio-glass-contact-grid">
+    
+    <!-- INFO SIDE -->
+    
+    <div class="bio-glass-contact-info">
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">📍</div>
+    <h3>Stackly Biotechnology Lab</h3>
+    <p>Biotech Park, SIDCO Industrial Estate</p>
+    <p>Salem – 636016, Tamil Nadu</p>
+    </div>
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">📞</div>
+    <h3>Call / WhatsApp</h3>
+    <p>+91-427-234-5678</p>
+    <p>+91-98765-43210</p>
+    </div>
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">📧</div>
+    <h3>Email</h3>
+    <p>research@stackly.in</p>
+    <p>support@stackly.in</p>
+    </div>
+    
+    <div class="bio-glass-contact-card">
+    <div class="bio-glass-contact-icon">⏰</div>
+    <h3>Working Hours</h3>
+    <p>Mon-Fri : 8AM – 6PM</p>
+    <p>Saturday : 9AM – 1PM</p>
+    </div>
+    
+    </div>
+    
+    
+    <!-- FORM SIDE -->
+    
+    <div class="bio-glass-contact-form-card">
+    
+    <h3 class="bio-glass-contact-form-title">
+    Send a Biotechnology Enquiry
+    </h3>
+    
+    <form id="bioGlassContactForm">
+    
+    <div class="bio-glass-contact-row">
+    <input type="text" id="bioGlassFirst" placeholder="First Name *">
+    <input type="text" id="bioGlassLast" placeholder="Last Name *">
+    </div>
+    
+    <input type="email" id="bioGlassEmail" placeholder="Email *">
+    
+    <input type="text" id="bioGlassInstitute" placeholder="Institution / Organisation">
+    
+    <select id="bioGlassService">
+    <option value="">Select Service</option>
+    <option>Genomic Sequencing</option>
+    <option>CRISPR Screening</option>
+    <option>Proteomics</option>
+    <option>Bioinformatics</option>
+    <option>Research Collaboration</option>
+    <option>Other</option>
+    </select>
+    
+    <textarea id="bioGlassMessage" rows="5" placeholder="Describe your project"></textarea>
+    
+    <div class="bio-glass-contact-error" id="bioGlassError">
+    Please fill the required fields correctly
+    </div>
+    
+    <button type="submit" class="bio-glass-contact-btn">
+    Send Enquiry →
+    </button>
+    
+    </form>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* HERO */
+    
+    .bio-glass-contact-hero{
+    padding:110px 20px;
+    background:linear-gradient(120deg,#020617,#071428);
+    text-align:center;
+    }
+    
+    .bio-glass-contact-title{
+    font-size:42px;
+    color:white;
+    }
+    
+    .bio-glass-contact-title span{
+    color:#00eaff;
+    }
+    
+    .bio-glass-contact-sub{
+    color:#cbd5e1;
+    max-width:650px;
+    margin:auto;
+    margin-top:12px;
+    }
+    
+    
+    /* SECTION */
+    
+    .bio-glass-contact-section{
+    padding:80px 20px;
+    background:#020817;
+    }
+    
+    .bio-glass-contact-container{
+    max-width:1200px;
+    margin:auto;
+    }
+    
+    
+    /* GRID */
+    
+    .bio-glass-contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    }
+    
+    
+    /* GLASS CARD */
+    
+    .bio-glass-contact-card,
+    .bio-glass-contact-form-card{
+    
+    background:rgba(255,255,255,0.06);
+    
+    backdrop-filter:blur(18px);
+    
+    border:1px solid rgba(255,255,255,0.15);
+    
+    border-radius:16px;
+    
+    padding:28px;
+    
+    color:white;
+    
+    box-shadow:0 0 25px rgba(0,255,255,0.05);
+    
+    transition:0.4s;
+    
+    margin-bottom:20px;
+    
+    }
+    
+    .bio-glass-contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 40px rgba(0,255,255,0.15);
+    }
+    
+    .bio-glass-contact-card h3{
+    color:#00eaff;
+    margin-bottom:8px;
+    }
+    
+    
+    /* FORM */
+    
+    #bioGlassContactForm{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    }
+    
+    .bio-glass-contact-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    }
+    
+    #bioGlassContactForm input,
+    #bioGlassContactForm select,
+    #bioGlassContactForm textarea{
+    
+    padding:12px;
+    
+    border-radius:8px;
+    
+    border:1px solid rgba(255,255,255,0.15);
+    
+    background:rgba(255,255,255,0.05);
+    
+    color:white;
+    
+    outline:none;
+    
+    transition:0.3s;
+    
+    }
+    
+    #bioGlassContactForm input:focus,
+    #bioGlassContactForm textarea:focus{
+    
+    border-color:#00eaff;
+    box-shadow:0 0 8px #00eaff;
+    
+    }
+    
+    .bio-glass-contact-btn{
+    
+    padding:14px;
+    
+    border:none;
+    
+    border-radius:10px;
+    
+    background:linear-gradient(90deg,#00eaff,#4ade80);
+    
+    color:#021018;
+    
+    font-weight:bold;
+    
+    cursor:pointer;
+    
+    transition:0.3s;
+    
+    }
+    
+    .bio-glass-contact-btn:hover{
+    transform:scale(1.05);
+    }
+    
+    
+    /* ERROR */
+    
+    .bio-glass-contact-error{
+    display:none;
+    color:#ff6b6b;
+    font-size:14px;
+    }
+    
+    
+    /* RESPONSIVE */
+    
+    
+    /* LAPTOP */
+    
+    @media (max-width:1200px){
+    
+    .bio-glass-contact-container{
+    max-width:1000px;
+    }
+    
+    }
+    
+    
+    /* TABLET */
+    
+    @media (max-width:992px){
+    
+    .bio-glass-contact-grid{
+    grid-template-columns:1fr;
+    }
+    
+    }
+    
+    
+    /* MOBILE */
+    
+    @media (max-width:600px){
+    
+    .bio-glass-contact-title{
+    font-size:28px;
+    }
+    
+    .bio-glass-contact-row{
+    grid-template-columns:1fr;
+    }
+    
+    .bio-glass-contact-section{
+    padding:60px 15px;
+    }
+    
+    .bio-glass-contact-card,
+    .bio-glass-contact-form-card{
+    padding:22px;
+    }
+    
+    }
+    
+    </style>
+    
+    
+    <script>
+    
+    /* FORM VALIDATION */
+    
+    document.getElementById("bioGlassContactForm")
+    .addEventListener("submit",function(e){
+    
+    e.preventDefault();
+    
+    let first=document.getElementById("bioGlassFirst").value.trim();
+    let last=document.getElementById("bioGlassLast").value.trim();
+    let email=document.getElementById("bioGlassEmail").value.trim();
+    let message=document.getElementById("bioGlassMessage").value.trim();
+    
+    let error=document.getElementById("bioGlassError");
+    
+    let emailCheck=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    
+    if(first==="" || last==="" || message==="" || !email.match(emailCheck)){
+    
+    error.style.display="block";
+    
+    return;
+    
+    }
+    
+    error.style.display="none";
+    
+    /* redirect if valid */
+    
+    window.location.href="404.html";
+    
+    });
+    
+    </script>
+
+<!-- ================= PRE-FOOTER ================= -->
+<section class="pre-footer">
+    <div class="pre-container">
+  
+      <div class="pre-box">
+        <i class="ri-map-pin-2-fill"></i>
+        <h4>Research Facility</h4>
+        <p>BioGen Research Institute,<br>Chennai, India</p>
       </div>
-    </header>
+  
+      <div class="pre-box">
+        <i class="ri-mail-send-fill"></i>
+        <h4>Laboratory Email</h4>
+        <p>research@biogenlab.com</p>
+      </div>
+  
+      <div class="pre-box">
+        <i class="ri-flask-fill"></i>
+        <h4>Scientific Support</h4>
+        <p>Advanced biotech & lab assistance</p>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+<!-- ================= FOOTER ================= -->
+<footer class="bio-footer">
 
-    <div class="sidebar" id="sidebar">
+  <div class="footer-container">
+
+    <!-- LOGO + ABOUT -->
+<div class="footer-col">
+  <a href="./index.html">
+    <img src="./white.webp" class="footer-logo"></a>
+
+  <p>
+    Advancing biotechnology through innovation and research.
+    Transforming healthcare and life sciences globally.
+  </p>
+
+  <!-- FOLLOW US -->
+  <h4 class="follow-title">Follow Us</h4>
+
+  <div class="social-icons">
+    <a href="404.html"><i class="ri-facebook-fill"></i></a>
+    <a href="404.html"><i class="ri-twitter-x-line"></i></a>
+    <a href="404.html"><i class="ri-instagram-line"></i></a>
+    <a href="404.html"><i class="ri-linkedin-fill"></i></a>
+   
+  </div>
+</div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
       <ul>
-        <li
-          class="has-dropdown menu-item"
-          
-        >
-          <div class="dropdown-header">
-            <a href="./index.html">Home</a>
-            <span class="drop-caret" id="home-caret">▾</span>
-          </div>
-          <ul class="submenu" id="home-dropdown">
-            <li><a href="./index2.html">Home 2</a></li>
-          </ul>
-        </li>
-
-        <li class="menu-item">
-          <a href="./about.html">About</a>
-        </li>
-        <li class="menu-item">
-          <a href="./service.html">Services</a>
-        </li>
-        <li class="menu-item">
-          <a href="./blog.html">Blog</a>
-        </li>
-        <li class="menu-item" >
-          <a href="./contact.html">Contact Us</a>
-        </li>
-        <li class="menu-item">
-          <a href="./dashboard.html">Dashboard</a>
-        </li>
-        <li class="menu-item">
-          <a href="./login.html">Login</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+    </div>
 
-      <div class="sidebar-login">
-        <!-- <a href="./app.html">
-            <button class="login-btn">Buy Now</button>
-          </a> -->
+    <!-- LAB SERVICES -->
+    <div class="footer-col">
+      <h4>Laboratory Services</h4>
+      <ul>
+        <li><a href="404.html">Genetic Testing</a></li>
+        <li><a href="404.html">DNA Sequencing</a></li>
+        <li><a href="404.html">Cell Analysis</a></li>
+        <li><a href="404.html">Bioinformatics</a></li>
+        <li><a href="404.html">Clinical Trials</a></li>
+      </ul>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="footer-col">
+      <h4>Location</h4>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"></iframe>
       </div>
     </div>
 
-    <div class="overlay" id="overlay"></div>
+    <!-- SUBSCRIBE -->
+    <div class="footer-col">
+      <h4>Research Updates</h4>
 
-<main></main>
-
-    <section class="contact-hero">
-      <div class="hero-noise"></div>
-      <div class="container">
-        <div class="hero-content">
-          <span class="hub-badge">Secure Channel</span>
-          <h1 class="gsap-title">
-            Get in Touch <br /><span class="text-red">With Us</span>
-          </h1>
-          <p class="gsap-subtext">
-            We’re here to answer your questions and hear your feedback. Our
-            specialized communications team typically responds within 2 business
-            hours for high-priority technology ensuring that your data-driven
-            projects never lose momentum. exploring a strategic partnership in
-            digital healthcare, or providing editorial feedback on our latest
-            intelligence reports.
-          </p>
-        </div>
+      <div class="subscribe">
+        <input type="email" id="email" placeholder="Enter Email">
+        <button onclick="subscribe()">Subscribe</button>
       </div>
-    </section>
 
-    <section class="contact-main">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="form-wrapper gsap-reveal-left">
-            <form id="contactForm" class="tech-form" action="./error.html">
-              <div class="input-group">
-                <label>Full Name / Lead Investigator</label>
-                <input type="text" placeholder="Dr. Julian Vane" required />
-              </div>
-              <div class="input-group">
-                <label>Organization / Press Email</label>
-                <input
-                  type="email"
-                  placeholder="vane@medtech-labs.com"
-                  required
-                />
-              </div>
-              <div class="input-group">
-                <label>Intelligence Inquiry</label>
-                <select>
-                  <option>Data Licensing & API Access</option>
-                  <option>Medical Device Performance Specs</option>
-                  <option>Software Security Vulnerability Report</option>
-                  <option>Editorial Interview Request</option>
-                  <option>Clinical Trial Analysis Partnership</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <label>Briefing Details</label>
-                <textarea
-                  rows="5"
-                  placeholder="Outline your technical requirements or press inquiry here..."
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-submit">
-                Transmit Data Packet <span>→</span>
-              </button>
-            </form>
-          </div>
+      <span id="msg"></span>
+    </div>
 
-          <div class="info-sidebar gsap-reveal-right">
-            <div class="info-card">
-              <h2 class="section-label">Intelligence Bureau</h2>
-              <p>
-                Building 7, Innovation Square<br />Biomedical Park, San
-                Francisco, CA 94103
-              </p>
-            </div>
+  </div>
 
-            <div class="info-card">
-              <h2 class="section-label">Encrypted Channels</h2>
-              <p>Data Desk: +1 (800) TECH-INTEL</p>
-              <p>Medical Research: +1 (800) MED-DEVICES</p>
-              <p>Secure Fax: +1 (800) 444-FILES</p>
-            </div>
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>
+      © 2026 BioGen | All Rights Reserved |
+      <a href="404.html">Privacy Policy</a> |
+      <a href="404.html">Terms & Conditions</a>
+    </p>
+  </div>
 
-            <div class="contact-visual">
-              <img
-                src="./Assets/High-Tech Microchips and Circuits_11zon.webp"
-                alt="High-Tech Microchips and Circuits"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+</footer>
 
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="section-header gsap-reveal">
-          Frequently Asked <span class="text-red">Questions</span>
-        </h2>
+<style>
+  /* FOLLOW TITLE */
+.follow-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: white;
+}
 
-        <div class="faq-accordion">
-          <div class="faq-item gsap-reveal-up">
-            <div class="faq-question">
-              <h3>How do you verify the accuracy of your technology news?</h3>
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                We utilize a triple-layer verification protocol involving
-                primary source cross-referencing, metadata analysis of digital
-                assets, and secondary peer review by subject matter experts in
-                our Intelligence Bureau.
-              </p>
-            </div>
-          </div>
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-          <div class="faq-item gsap-reveal-up">
-            <div class="faq-question">
-              <h3>Are the medical device insights compliant with HIPAA?</h3>
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Yes. All clinical data analysis and hardware specifications
-                provided on our platform are stripped of PII (Personally
-                Identifiable Information) and strictly adhere to global HIPAA
-                and GDPR compliance standards.
-              </p>
-            </div>
-          </div>
+/* ICON STYLE */
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s ease;
+}
 
-          <div class="faq-item gsap-reveal-up">
-            <div class="faq-question">
-              <h3>Can businesses request a deep-packet software analysis?</h3>
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Absolutely. Our Software Analysis division offers on-demand
-                stress testing and security auditing. You can initiate a request
-                through our Contact Hub under the "Technical Consulting"
-                category.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+/* HOVER EFFECT (BIO GLOW) */
+.social-icons a:hover {
+  /* background: #00f7ff; */
+  color: #000;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px white;
+}
 
-    <section class="social-section">
-      <div class="container">
-        <div class="social-grid">
-          <div class="social-text gsap-reveal-left">
-            <h2 class="section-label">Stay Synced</h2>
-            <h3>
-              Join our Global <br /><span class="text-red"
-                >Intelligence Network</span
-              >
-            </h3>
-            <p>
-              Follow our encrypted channels for real-time alerts on medical
-              breakthroughs and software security vulnerabilities.
-            </p>
-          </div>
-
-          <div class="social-links gsap-reveal-right">
-            <a href="./error.html" class="social-card">
-              <div class="social-img">
-                <img
-                  src="./Assets/linkedin_11zon.webp"
-                  alt="Social Feed"
-                />
-              </div>
-              <span class="platform">LinkedIn</span>
-            </a>
-            <a href="./error.html" class="social-card">
-              <div class="social-img">
-                <img
-                  src="./Assets/Twitter_11zon.webp"
-                  alt="Social Feed"
-                />
-              </div>
-              <span class="platform">X / Twitter</span>
-            </a>
-            <a href="./error.html" class="social-card">
-              <div class="social-img">
-                <img
-                  src="./Assets/GitHub_11zon.webp"
-                  alt="Social Feed"
-                />
-              </div>
-              <span class="platform">GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="main-footer">
-      <div class="footer-grid">
-        <div class="footer-brand gsap-contact">
-          <div class="logo" style="margin-bottom: 20px">
-            <a href="./index.html">
-              <img src="./Assets/logo.webp" alt="Stackly Logo"
-              style="height:60px;
-              filter: brightness(0) saturate(100%)
-              invert(12%) sepia(92%) saturate(2950%)
-              hue-rotate(350deg) brightness(70%) contrast(120%);">
-            </a>
-          </div>
-          <!-- <h2 class="footer-logo">MED<span>DEVICE</span></h2> -->
-          <p>
-            Covering the latest breakthroughs in artificial intelligence,
-            consumer electronics, and digital innovation. Our platform delivers
-            real-time updates, expert insights, and in-depth analysis of the
-            technologies shaping the future.
-          </p>
-        <!-- Social Icons -->
-        <div class="footer-social">
-          <a href="./error.html" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        
-          <a href="./error.html" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        
-          <a href="./error.html" aria-label="Twitter">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-        
-          <a href="./error.html" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        </div>
-
-        <div class="footer-links gsap-contact">
-          <h4>Quick Links</h4>
-
-          <a href="./about.html">About</a>
-          <a href="./service.html">Services</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./contact.html">Contact Us</a>
-          <a href="./dashboard.html">Dashboard</a>
-          <a href="./login.html">Login</a>
-        </div>
-        <div class="footer-links">
-          <h4>Navigation</h4>
-          <a href="./about.html">About</a>
-          <a href="./service.html">Services</a>
-          <a href="./blog.html">Blog</a>
-        </div>
-        <div class="footer-newsletter">
-          <h4>Newsletter</h4>
-          <p>
-            Stay updated with the latest technology news, trends, and
-            innovations.
-          </p>
-          <form action="./error.html">
-            <div class="news-input">
-              <input type="email" placeholder="Email Address" required />
-              <button type="submit">→</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Updates & Innovations. All Rights Reserved.</p>
-        <div class="legal-links">
-          <a href="./error.html">Privacy Policy</a>
-          <a href="./error.html">ISO Compliance</a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./script.js"></script>
-<script>
-  AOS.init({
-    once: true,
-    duration: 1000,
-    easing: "ease-out-cubic",
-    startEvent: "aos:ready", // manual trigger
-  });
-</script>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  const tl = gsap.timeline();
-
-  // Hero Entry
-  tl.from(".gsap-title", {
-    y: 50,
-    opacity: 1,
-    duration: 1,
-    ease: "power4.out",
-  }).from(
-    ".hub-badge, .gsap-subtext",
-    {
-      opacity: 1,
-      y: 20,
-      stagger: 0.2,
-      duration: 0.8,
-    },
-    "-=0.5",
-  );
-
-  // Form & Sidebar Side-by-Side Reveal
-  gsap.from(".gsap-reveal-left", {
-    scrollTrigger: {
-      trigger: ".contact-grid",
-      start: "top 80%",
-    },
-    x: -100,
-    opacity: 1,
-    duration: 1.2,
-    ease: "expo.out",
-  });
-
-  gsap.from(".gsap-reveal-right", {
-    scrollTrigger: {
-      trigger: ".contact-grid",
-      start: "top 80%",
-    },
-    x: 100,
-    opacity: 1,
-    duration: 1.2,
-    ease: "expo.out",
-  });
-
-  // Subtle "Breathing" noise effect for background
-  gsap.to(".hero-noise", {
-    opacity: 1,
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-  });
-</script>
-
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-// 1. FAQ Accordion Logic (Vanilla JS)
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const item = question.parentElement;
-    item.classList.toggle('active');
-  });
-});
-
-// 2. GSAP Entrance Animations
-const revealTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".faq-section",
-    start: "top 80%"
+/* MOBILE CENTER ALIGN */
+@media (max-width: 480px) {
+  .social-icons {
+    justify-content: center;
   }
-});
 
-revealTl.from(".section-header", {
-  y: 30,
-  opacity: 1,
-  duration: 1
-})
-.from(".faq-item", {
-  opacity: 1,
-  y: 20,
-  stagger: 0.15,
-  duration: 0.8
-}, "-=0.5");
+  .follow-title {
+    text-align: center;
+  }
+}
+  /* PRE FOOTER */
+.pre-footer {
+  background: #0a0f1a;
+  padding: 40px 20px;
+}
 
-// 3. Social Grid Reveal
-gsap.from(".gsap-reveal-left", {
-  scrollTrigger: {
-    trigger: ".social-section",
-    start: "top 85%"
-  },
-  opacity: 1,
-  duration: 1.2,
-  ease: "power3.out"
-});
+.pre-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-gsap.from(".social-card", {
-  scrollTrigger: {
-    trigger: ".social-links",
-    start: "top 85%"
-  },
-  opacity: 1,
-  stagger: 0.2,
-  duration: 1,
-  ease: "back.out(1.7)"
-});
-</script>
+.pre-box {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+.pre-box i {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.bio-footer {
+  background: #05070d;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+/* LOGO */
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* LINKS */
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+/* SOCIAL */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* MAP */
+.map iframe {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* SUBSCRIBE */
+.subscribe {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.subscribe button {
+  padding: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* MESSAGE */
+#msg {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+  </style>
+
+<script>
+  function subscribe() {
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("msg");
+  
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  
+    if (email === "" || !email.match(pattern)) {
+      msg.style.color = "red";
+      msg.innerText = "Please fill correct mail id";
+      return;
+    }
+  
+    msg.style.color = "lightgreen";
+    msg.innerText = "Subscribed successfully!";
+  
+    setTimeout(() => {
+      window.location.href = "404.html";
+    }, 1200);
+  }
+  </script>
+</body>
+</html>

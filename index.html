@@ -1,1197 +1,4372 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Technology</title>
-    <link rel="icon" href="./Assets/icon.webp" />
-    <link rel="stylesheet" href="./index.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <!-- <div class="header1">
-        <div class="container1">
-          <h3>Welcome To Stackly Daily News Technologies</h3>
-        </div>
-        <div class="container2">
-          <div>
-            <i class="fa-solid fa-phone-volume"></i>
-            <p>(123)456-7890</p>
-          </div>
-          <div>
-            <i class="fa-regular fa-envelope"></i>
-            <p>Support@stackly.com</p>
-          </div>
-        </div> -->
-      </div>
-      <div class="header2">
-        <div class="logo">
-          <a href="./index.html">
-            <img src="./Assets/logo.webp" alt="Stackly Logo"
-     style="height:60px;
-     filter: brightness(0) saturate(100%)
-     invert(12%) sepia(92%) saturate(2950%)
-     hue-rotate(350deg) brightness(70%) contrast(120%);">
-            <!-- <img src="./Assets/logo.webp" alt="Logo" /> -->
-          </a>
-        </div>
-
-        <nav>
-          <ul>
-            <li class="dropdown">
-              <a href="./index.html">Home</a>
-
-              <span class="drop-toggle">
-                <i class="fa-solid fa-caret-down"></i>
-              </span>
-
-              <ul class="dropdown-menu">
-                <li><a href="./index2.html">Home 2</a></li>
-              </ul>
-            </li>
-
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./service.html">Services</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-            <li><a href="./dashboard.html">Dashboard</a></li>
-          </ul>
-        </nav>
-
-        <div class="icons">
-          <div class="login">
-            <!-- <a class="btn" href="./app.html">Buy Now</a> -->
-
-            <a href="./login.html">
-              <i class="fa-regular fa-circle-user"></i>
-            </a>
-          </div>
-
-          <div class="mobilebar">
-            <div class="hamburger-box">
-              <div class="hamburger">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="sidebar" id="sidebar">
-      <ul>
-        <li
-          class="has-dropdown menu-item"
-          
-        >
-          <div class="dropdown-header">
-            <a href="./index.html">Home</a>
-            <span class="drop-caret" id="home-caret">▾</span>
-          </div>
-          <ul class="submenu" id="home-dropdown">
-            <li><a href="./index2.html">Home 2</a></li>
-          </ul>
-        </li>
-
-        <li class="menu-item" >
-          <a href="./about.html">About</a>
-        </li>
-        <li class="menu-item">
-          <a href="./service.html">Services</a>
-        </li>
-        <li class="menu-item">
-          <a href="./blog.html">Blog</a>
-        </li>
-        <li class="menu-item">
-          <a href="./contact.html">Contact Us</a>
-        </li>
-        <li class="menu-item">
-          <a href="./dashboard.html">Dashboard</a>
-        </li>
-        <li class="menu-item">
-          <a href="./login.html">Login</a>
-        </li>
-      </ul>
-
-      <div class="sidebar-login">
-        <!-- <a href="./app.html">
-            <button class="login-btn">Buy Now</button>
-          </a> -->
-      </div>
-    </div>
-
-    <div class="overlay" id="overlay"></div>
-
-<main></main>
-
-      <section class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <span class="badge">Advanced Medical Systems</span>
-            <h1 class="headline" style="color:white;">
-              Latest Technology News & <br /><span class="highlight"
-                >Digital Innovations</span
-              >
-            </h1>
-            <p class="subtext">
-              Explore the frontier of healthcare. From robotic surgical
-              precision to AI-driven diagnostics, we track the emerging trends
-              shaping the future of medical devices.
-            </p>
-            <div class="cta-group">
-              <a href="./error.html" class="btn btn-primary"
-                >Read Latest News</a
-              >
-              <a href="./error.html" class="btn btn-secondary"
-                >Clinical Insights</a
-              >
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="image-wrapper">
-              <img
-                src="./Assets/newshero1_11zon.webp"
-                alt="Medical Technology Interface"
-                class="main-img"
-              />
-              <div class="floating-card card-1">
-                <span>Precision Engineering</span>
-              </div>
-              <div class="floating-card card-2"><span>2026 Roadmap</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-bg-accent"></div>
-      </section>
-
-    <!-- Featured News Section -->
-    <section class="featured-news">
-      <div class="news-container">
-        <div class="news-header">
-          <h2 class="news-title">Featured Technology News</h2>
-          <p class="news-subtitle">
-            Latest updates from the world of innovation
-          </p>
-        </div>
-
-        <!-- Featured Main Article -->
-        <div class="featured-main">
-          <div class="featured-image">
-            <img
-              src="./Assets/ai tech_11zon.webp"
-              alt="AI Technology"
-            />
-            <div class="featured-overlay"></div>
-            <div class="featured-badge">Featured</div>
-          </div>
-          <div class="featured-content">
-            <div class="news-meta">
-              <span class="category">Artificial Intelligence</span>
-              <span class="date">March 7, 2026</span>
-            </div>
-            <h3>Revolutionary AI Model Reshapes Industry Standards</h3>
-            <p>
-              Breakthrough in machine learning technology promises unprecedented
-              accuracy and efficiency. Scientists have developed a new AI
-              framework that processes information 10x faster than previous
-              generations, offering transformative solutions across healthcare,
-              finance, and education sectors.
-            </p>
-            <div class="featured-footer">
-              <div class="author-info">
-                <img
-                  src="./Assets/sara_11zon.webp"
-                  alt="Author"
-                />
-                <div>
-                  <p class="author-name">Sarah Johnson</p>
-                  <p class="author-role">Tech Correspondent</p>
-                </div>
-              </div>
-              <a href="./error.html" class="read-more">Read Full Article →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- News Grid -->
-        <div class="news-grid">
-          <!-- News Card 1 -->
-          <article class="news-card">
-            <div class="card-image">
-              <img
-                src="./Assets/Quantum Computing_11zon (1).webp"
-                alt="Quantum Computing"
-              />
-              <div class="card-overlay"></div>
-              <span class="read-time">5 min read</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category cat-quantum">Quantum Computing</span>
-                <span class="date">March 6, 2026</span>
-              </div>
-              <h4>Quantum Computers Achieve Major Milestone</h4>
-              <p>
-                Major tech companies announce successful quantum computing
-                breakthrough with practical applications in drug discovery and
-                financial modeling.
-              </p>
-              <div class="card-footer">
-                <a href="./error.html" class="author-link">By Michael Chen</a>
-                <span class="views">2.4K views</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- News Card 2 -->
-          <article class="news-card">
-            <div class="card-image">
-              <img
-                src="./Assets/cybersecurity_11zon.webp"
-                alt="Cybersecurity"
-              />
-              <div class="card-overlay"></div>
-              <span class="read-time">7 min read</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category cat-security">Cybersecurity</span>
-                <span class="date">March 5, 2026</span>
-              </div>
-              <h4>Next-Gen Encryption Standards Released</h4>
-              <p>
-                Global security experts unveil new encryption protocols designed
-                to protect against quantum computing threats and contemporary
-                cyber attacks.
-              </p>
-              <div class="card-footer">
-                <a href="./error.html" class="author-link">By Emma Rodriguez</a>
-                <span class="views">1.8K views</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- News Card 3 -->
-          <article class="news-card">
-            <div class="card-image">
-              <img
-                src="./Assets/5g_11zon.webp"
-                alt="5G Network"
-              />
-              <div class="card-overlay"></div>
-              <span class="read-time">6 min read</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category cat-network">5G & Connectivity</span>
-                <span class="date">March 4, 2026</span>
-              </div>
-              <h4>Global 5G Network Expansion Accelerates</h4>
-              <p>
-                Telecommunications leaders report rapid deployment of 5G
-                infrastructure, enabling faster internet speeds and improved IoT
-                device connectivity worldwide.
-              </p>
-              <div class="card-footer">
-                <a href="./error.html" class="author-link">By David Park</a>
-                <span class="views">3.2K views</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- News Card 4 -->
-          <article class="news-card">
-            <div class="card-image">
-              <img
-                src="./Assets/robotics_11zon.webp"
-                alt="Robotics"
-              />
-              <div class="card-overlay"></div>
-              <span class="read-time">8 min read</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category cat-robotics">Robotics</span>
-                <span class="date">March 3, 2026</span>
-              </div>
-              <h4>Humanoid Robots Enter Manufacturing Sector</h4>
-              <p>
-                Advanced robotics showcase human-like dexterity and
-                adaptability, revolutionizing assembly line operations and
-                skilled labor processes across industries.
-              </p>
-              <div class="card-footer">
-                <a href="./error.html" class="author-link">By Lisa Wright</a>
-                <span class="views">2.9K views</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- News Card 5 -->
-          <article class="news-card">
-            <div class="card-image">
-              <img
-                src="./Assets/virtual reality_11zon.webp"
-                alt="Virtual Reality"
-              />
-              <div class="card-overlay"></div>
-              <span class="read-time">6 min read</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category cat-vr">Virtual Reality</span>
-                <span class="date">March 2, 2026</span>
-              </div>
-              <h4>VR Technology Transforms Education Systems</h4>
-              <p>
-                Educational institutions worldwide adopt immersive virtual
-                reality platforms for interactive learning experiences,
-                improving student engagement and retention rates.
-              </p>
-              <div class="card-footer">
-                <a href="./error.html" class="author-link">By James Matthews</a>
-                <span class="views">2.1K views</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- News Card 6 -->
-          <article class="news-card">
-            <div class="card-image">
-              <img
-                src="./Assets/Green Technology_11zon.webp"
-                alt="Green Technology"
-              />
-              <div class="card-overlay"></div>
-              <span class="read-time">7 min read</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="category cat-green">Green Tech</span>
-                <span class="date">March 1, 2026</span>
-              </div>
-              <h4>Sustainable Energy Solutions Gain Momentum</h4>
-              <p>
-                Renewable energy breakthroughs promise significant reductions in
-                carbon footprint, with new solar and wind technologies achieving
-                record efficiency rates.
-              </p>
-              <div class="card-footer">
-                <a href="./error.html" class="author-link">By Rachel Green</a>
-                <span class="views">3.5K views</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-       
-      </div>
-    </section>
-
-    <!-- ======== Additional News Sections ======== -->
-
-    <!-- Trending Technology -->
-    <section class="trending-technology section-block">
-      <div class="container">
-        <h2 class="section-title">Trending Technology</h2>
-        <div class="card-grid">
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/AI Integration in Mobile Devices_11zon_11zon.webp" alt="Smartphone AI">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>AI Integration in Mobile Devices</h3>
-              <p>Leading smartphone manufacturers now ship devices with on-device AI processing to protect user privacy and accelerate performance.</p>
-              <a href="./error.html" class="read-more">Read More</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Wearables Track_11zon.webp" alt="Wearable Tech">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Wearables Track Health Like Never Before</h3>
-              <p>New sensors embedded in wearables can detect early signs of illness using machine learning models trained on millions of records.</p>
-              <a href="./error.html" class="read-more">Read More</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Autonomous Vehicles_11zon_11zon.webp" alt="Autonomous Vehicles">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Autonomous Vehicles Enter Public Roads</h3>
-              <p>Pilot programs for self-driving cars expand to major cities, promising reduced congestion and improved safety.</p>
-              <a href="./error.html" class="read-more">Read More</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Breaking News -->
-    <section class="breaking-news section-block">
-      <div class="container">
-        <h2 class="section-title">Breaking News</h2>
-        <div class="headline-card">
-          <div class="card-img">
-            <img src="./Assets/Cyber Attack Disrupts Global Infrastructure_11zon.webp" alt="Cyber Attack">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-body">
-            <h3>Major Cyber Attack Disrupts Global Infrastructure</h3>
-            <p>Unprecedented ransomware attack affects banks, hospitals, and governments worldwide, experts warn of long-term consequences.</p>
-            <a href="./error.html" class="read-more">Full Story</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Articles -->
-    <section class="featured-articles section-block">
-      <div class="container">
-        <h2 class="section-title">Featured Articles</h2>
-        <div class="card-grid">
-          <!-- reuse feature-card markup above with different content -->
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Cloud Computing_11zon.webp" alt="Cloud Computing">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Cloud Computing Costs Drop 40%</h3>
-              <p>Providers compete to offer cheaper storage and compute, benefiting startups and enterprises alike.</p>
-              <a href="./error.html" class="read-more">Explore</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Blockchain Adoption_11zon_11zon.webp" alt="Blockchain">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Blockchain Adoption Grows in Supply Chain</h3>
-              <p>Major retailers implement blockchain for transparent tracking of goods from factory to store.</p>
-              <a href="./error.html" class="read-more">Explore</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Quantum Research_11zon_11zon.webp" alt="Quantum Research">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Quantum Research Receives Record Funding</h3>
-              <p>Governments pledge billions to accelerate quantum computing breakthroughs in the next decade.</p>
-              <a href="./error.html" class="read-more">Explore</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Startup Spotlight -->
-    <section class="startup-spotlight section-block">
-      <div class="container">
-        <h2 class="section-title">Startup Spotlight</h2>
-        <div class="card-grid">
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/AI-Driven Health_11zon.webp" alt="Startup Team">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>AI-Driven Health Startup Raises $50M</h3>
-              <p>Company uses deep learning to detect early-stage diseases from blood samples.</p>
-              <a href="./error.html" class="read-more">Learn More</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Remote Work_11zon.webp" alt="Tech Workspace">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Remote Work Platform Gains Momentum</h3>
-              <p>New tool simplifies collaboration across continents and time zones with VR meeting rooms.</p>
-              <a href="./error.html" class="read-more">Learn More</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/Biotech_11zon.webp" alt="Biotech Lab">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Biotech Startup Develops Synthetic Organs</h3>
-              <p>Breakthrough could solve transplant shortages within five years.</p>
-              <a href="./error.html" class="read-more">Learn More</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Videos -->
-    <section class="tech-videos section-block">
-      <div class="container">
-        <h2 class="section-title">Tech Videos</h2>
-        <div class="video-grid">
-          <article class="video-card" data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <div class="card-img">
-              <img src="./Assets/Future of Virtual Reality_11zon.webp" alt="VR Demo">
-              <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-            </div>
-            <div class="card-body">
-              <h3>Future of Virtual Reality</h3>
-            </div>
-          </article>
-          <article class="video-card" data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <div class="card-img">
-              <img src="./Assets/Quantum Computing_11zon.webp" alt="Quantum Talk">
-              <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-            </div>
-            <div class="card-body">
-              <h3>Quantum Computing Explained</h3>
-            </div>
-          </article>
-          <article class="video-card" data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <div class="card-img">
-              <img src="./Assets/AI Meets Humans_11zon (1).webp" alt="AI Conversation">
-              <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
-            </div>
-            <div class="card-body">
-              <h3>AI Meets Humans</h3>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Editor’s Picks -->
-    <section class="editors-picks section-block">
-      <div class="container">
-        <h2 class="section-title">Editor’s Picks</h2>
-        <div class="card-grid">
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/gadgets_11zon.webp" alt="Gadget Review">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Top 10 Gadgets of 2026</h3>
-              <p>A comprehensive review of the most innovative gadgets released this year.</p>
-              <a href="./error.html" class="read-more">Check It Out</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/data center_11zon_11zon.webp" alt="Data Center">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Inside the World's Largest Data Center</h3>
-              <p>Take a tour of the massive facility powering the cloud.</p>
-              <a href="./error.html" class="read-more">Check It Out</a>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="card-img">
-              <img src="./Assets/home robots_11zon.webp" alt="Robot Assistant">
-              <div class="card-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h3>Home Robots We Love</h3>
-              <p>An editor-curated list of helper robots that are changing domestic life.</p>
-              <a href="./error.html" class="read-more">Check It Out</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-     <!-- Newsletter Subscription -->
-        <div class="news-newsletter">
-          <h3>Stay Updated with Latest Technology News</h3>
-          <p>
-            Subscribe to receive curated articles, exclusive insights, and
-            breaking news directly in your inbox
-          </p>
-          <form class="newsletter-form" action="./error.html">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <button type="submit" class="btn-subscribe">Subscribe Now</button>
-          </form>
-        </div>
-
-    <footer class="main-footer">
-      <div class="footer-grid">
-        <div class="footer-brand gsap-contact">
-          <div class="logo" style="margin-bottom: 20px">
-            <a href="./index.html">
-              <img src="./Assets/logo.webp" alt="Stackly Logo"
-              style="height:60px;
-              filter: brightness(0) saturate(100%)
-              invert(12%) sepia(92%) saturate(2950%)
-              hue-rotate(350deg) brightness(70%) contrast(120%);">
-            </a>
-          </div>
-          <!-- <h2 class="footer-logo">MED<span>DEVICE</span></h2> -->
-          <p>
-            Covering the latest breakthroughs in artificial intelligence,
-            consumer electronics, and digital innovation. Our platform delivers
-            real-time updates, expert insights, and in-depth analysis of the
-            technologies shaping the future.
-          </p>
-          
-          <!-- Social Icons -->
-          <div class="footer-social">
-            <a href="./error.html" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          
-            <a href="./error.html" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          
-            <a href="./error.html" aria-label="Twitter">
-              <i class="fab fa-x-twitter"></i>
-            </a>
-          
-            <a href="./error.html" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-          </div>
-
-        <div class="footer-links gsap-contact">
-          <h4>Quick Links</h4>
-
-          <a href="./about.html">About</a>
-          <a href="./service.html">Services</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./contact.html">Contact Us</a>
-          <a href="./dashboard.html">Dashboard</a>
-          <a href="./login.html">Login</a>
-        </div>
-        <div class="footer-links">
-          <h4>Navigation</h4>
-          <a href="./about.html">About</a>
-          <a href="./service.html">Services</a>
-          <a href="./blog.html">Blog</a>
-        </div>
-        <div class="footer-newsletter">
-          <h4>Newsletter</h4>
-          <p>
-            Stay updated with the latest technology news, trends, and
-            innovations.
-          </p>
-          <form action="./error.html">
-            <div class="news-input">
-              <input type="email" placeholder="Email Address" required />
-              <button type="submit">→</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Updates & Innovations. All Rights Reserved.</p>
-        <div class="legal-links">
-          <a href="./error.html">Privacy Policy</a>
-          <a href="./error.html">ISO Compliance</a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./script.js"></script>
-<script>
-  AOS.init({
-    once: true,
-    duration: 1000,
-    easing: "ease-out-cubic",
-    startEvent: "aos:ready", // manual trigger
-  });
-</script>
-<Style>
-  /* ==========================
-   FOOTER SOCIAL ICONS
-========================== */
-
-.footer-social{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-top:20px;
-    flex-wrap:wrap;
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Biotech</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
-.footer-social a{
-    width:42px;
-    height:42px;
+/* HEADER */
+header{
+  width:100%;
+  height:70px;
+  background:#0f172a;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+/* LOGO */
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  align-items:center;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:16px;
+  padding:6px 0;
+  position:relative;
+  transition:0.3s;
+}
+
+/* ACTIVE + UNDERLINE */
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#38bdf8;
+  transition:0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+  width:100%;
+}
+
+nav ul li a.active{
+  color:#38bdf8;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger{
+  display:none;
+  width:30px;
+  height:22px;
+  cursor:pointer;
+  position:relative;
+  z-index:1100;
+}
+
+/* LINES */
+.hamburger span{
+  position:absolute;
+  width:100%;
+  height:3px;
+  background:#fff;
+  border-radius:3px;
+  transition:0.3s ease;
+}
+
+/* TOP */
+.hamburger span:nth-child(1){
+  top:0;
+}
+
+/* MIDDLE */
+.hamburger span:nth-child(2){
+  top:9px;
+}
+
+/* BOTTOM */
+.hamburger span:nth-child(3){
+  top:18px;
+}
+
+/* ACTIVE → X ANIMATION */
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg);
+  top:9px;
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg);
+  top:9px;
+}
+
+/* MOBILE MENU */
+@media(max-width:992px){
+
+  .hamburger{
+    display:block;
+  }
+
+  nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:260px;
+    height:100vh;
+    background:#111827;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:60px 20px;
+    transition:0.3s;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  nav ul{
+    flex-direction:column;
+    gap:20px;
+  }
+}
+
+/* SMALL DEVICES */
+@media(max-width:480px){
+  header{
+    padding:0 15px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+}
+/* LOGO CONTAINER */
+.logo img{
+  height:45px;
+  width:auto;
+  object-fit:contain;
+  display:block;
+}
+
+/* TABLET */
+@media(max-width:992px){
+  .logo img{
+    height:40px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .logo img{
+    height:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <a href="./index.html">
+    <img src="./white.webp" alt="My Logo"></a>
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="./index.html" class="active" onclick="setActive(this)">Home</a></li>
+      <li><a href="./research.html" onclick="setActive(this)">About</a></li>
+      <li><a href="./services.html" onclick="setActive(this)">Services</a></li>
+      <li><a href="./contact.html" onclick="setActive(this)">Contact</a></li>
+      <li><a href="./login.html" onclick="setActive(this)">Login</a></li>
+      <li><a href="./register.html" onclick="setActive(this)">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+  document.getElementById("hamburger").classList.toggle("active");
+}
+
+/* ACTIVE LINK */
+function setActive(element){
+  let links = document.querySelectorAll("nav ul li a");
+  links.forEach(link => link.classList.remove("active"));
+  element.classList.add("active");
+
+  // close menu on mobile
+  document.getElementById("navMenu").classList.remove("active");
+  document.getElementById("hamburger").classList.remove("active");
+}
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+/* HERO */
+
+.bio-hero{
+height:100vh;
+width:100%;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+/* BACKGROUND SLIDER */
+
+.bio-slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 1.5s ease;
+}
+
+.bio-slide.active{
+opacity:1;
+}
+
+.bio-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* THREE DNA CANVAS */
+
+#dnaCanvas{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:1;
+pointer-events:none;
+}
+
+/* CONTENT */
+
+.bio-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+text-align:center;
+padding:40px;
+}
+
+/* GLASS */
+
+.bio-glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:20px;
+padding:40px;
+}
+
+/* TESTIMONIAL */
+
+.bio-testimonial{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+margin-bottom:25px;
+}
+
+.bio-avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+border:3px solid white;
+}
+
+.bio-review{
+font-size:14px;
+max-width:350px;
+}
+
+/* TITLE */
+
+.bio-title{
+font-size:48px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.bio-type{
+color:#00f7ff;
+}
+
+/* DESC */
+
+.bio-desc{
+opacity:0.9;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.bio-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.bio-btn{
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+border:none;
+}
+
+.bio-explore{
+background:#00d1a7;
+color:white;
+}
+
+.bio-watch{
+background:rgba(255,255,255,0.2);
+color:white;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* ================= VIDEO MODAL ================= */
+
+.bio-modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.9);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+    z-index:9999;
+}
+
+/* VIDEO */
+
+.bio-modal video{
+    width:100%;
+    max-width:900px;
+    max-height:85vh;
+    border-radius:12px;
+    background:#000;
+    display:block;
+}
+
+/* CLOSE BUTTON */
+
+.bio-close{
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+
+    color:#fff;
+    font-size:32px;
+    font-weight:bold;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:50%;
+
+    cursor:pointer;
+    z-index:10000;
+
+    transition:0.3s;
+}
+
+.bio-close:hover{
+    background:#ff3b3b;
+    transform:scale(1.1);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px){
+
+    .bio-modal video{
+        max-width:95%;
+        max-height:80vh;
+    }
+
+    .bio-close{
+        top:15px;
+        right:15px;
+        width:42px;
+        height:42px;
+        font-size:28px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px){
+
+    .bio-modal{
+        padding:10px;
+    }
+
+    .bio-modal video{
+        width:100%;
+        max-height:70vh;
+        border-radius:10px;
+    }
+
+    .bio-close{
+        top:10px;
+        right:10px;
+        width:38px;
+        height:38px;
+        font-size:24px;
+    }
+}
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.bio-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:600px){
+
+.bio-title{
+font-size:28px;
+}
+
+.bio-glass{
+padding:25px;
+}
+
+.bio-desc{
+font-size:14px;
+}
+
+.bio-testimonial{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<section class="bio-hero">
+
+<!-- SLIDER -->
+
+<div class="bio-slide active" style="background-image:url('./bio1.webp');"></div>
+<div class="bio-slide" style="background-image:url('./bio2.webp');"></div>
+<div class="bio-slide" style="background-image:url('./bio3.webp');"></div>
+
+<div class="bio-overlay"></div>
+
+<canvas id="dnaCanvas"></canvas>
+
+<div class="bio-content">
+
+<div class="bio-glass">
+
+<!-- TESTIMONIAL -->
+
+<div class="bio-testimonial">
+
+<img id="avatar" class="bio-avatar">
+
+<div class="bio-review">
+
+<div id="reviewText"></div>
+<div id="stars">⭐⭐⭐⭐⭐</div>
+
+</div>
+
+</div>
+
+<h1 class="bio-title">
+
+Future of <span class="bio-type"></span>
+
+</h1>
+
+<p class="bio-desc">
+
+Advancing life sciences through AI powered biotechnology, genetic discovery,
+and next-generation medical research solutions.
+
+</p>
+
+<div class="bio-buttons">
+
+<a href="404.html" class="bio-btn bio-explore">
+Explore Biotechnology
+</a>
+
+<button class="bio-btn bio-watch" onclick="openVideo()">
+<i class="fa fa-play"></i> Watch Video
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VIDEO POPUP -->
+
+<div class="bio-modal" id="videoModal">
+
+<span class="bio-close" onclick="closeVideo()">×</span>
+
+<video controls>
+
+<source src="./bio.mp4">
+
+</video>
+
+</div>
+
+
+<script>
+  function openVideo() {
+  
+      const modal = document.getElementById("videoModal");
+      const video = modal.querySelector("video");
+  
+      modal.style.display = "flex";
+  
+      video.currentTime = 0;
+      video.play();
+  }
+  
+  function closeVideo() {
+  
+      const modal = document.getElementById("videoModal");
+      const video = modal.querySelector("video");
+  
+      video.pause();
+      video.currentTime = 0;
+  
+      modal.style.display = "none";
+  }
+  
+  /* Optional: Close when clicking outside video */
+  
+  document.getElementById("videoModal").addEventListener("click", function(e){
+  
+      if(e.target === this){
+          closeVideo();
+      }
+  
+  });
+  </script>
+<script>
+
+/* TYPEWRITER */
+
+const words=["Biotechnology","DNA Engineering","Genetic Innovation","Medical Research"]
+
+let i=0
+let j=0
+let currentWord=""
+let deleting=false
+
+function type(){
+
+currentWord=words[i]
+
+document.querySelector(".bio-type").textContent=currentWord.substring(0,j)
+
+if(!deleting && j<currentWord.length){
+j++
+setTimeout(type,100)
+}
+
+else if(deleting && j>0){
+j--
+setTimeout(type,60)
+}
+
+else{
+
+deleting=!deleting
+
+if(!deleting){
+i=(i+1)%words.length
+}
+
+setTimeout(type,1200)
+
+}
+
+}
+
+type()
+
+
+/* IMAGE SLIDER */
+
+let slides=document.querySelectorAll(".bio-slide")
+let index=0
+
+setInterval(()=>{
+
+slides[index].classList.remove("active")
+
+index=(index+1)%slides.length
+
+slides[index].classList.add("active")
+
+},5000)
+
+
+
+/* TESTIMONIAL SLIDER */
+
+const testimonials=[
+
+{
+img:"./sana.webp",
+text:"Outstanding biotech innovation platform. Our research improved significantly."
+},
+
+{
+img:"./nithiya.webp",
+text:"Advanced laboratory technology with impressive accuracy and performance."
+},
+
+{
+img:"./sana.webp",
+text:"A revolutionary biotech solution for modern healthcare research labs."
+}
+
+]
+
+let t=0
+
+function changeReview(){
+
+document.getElementById("avatar").src=testimonials[t].img
+document.getElementById("reviewText").textContent=testimonials[t].text
+
+t=(t+1)%testimonials.length
+
+}
+
+changeReview()
+
+setInterval(changeReview,4000)
+
+
+
+/* VIDEO MODAL */
+
+function openVideo(){
+document.getElementById("videoModal").style.display="flex"
+}
+
+function closeVideo(){
+document.getElementById("videoModal").style.display="none"
+}
+
+
+
+/* THREE JS DNA HELIX */
+
+const scene=new THREE.Scene()
+
+const camera=new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+)
+
+const renderer=new THREE.WebGLRenderer({
+canvas:document.getElementById("dnaCanvas"),
+alpha:true
+})
+
+renderer.setSize(window.innerWidth,window.innerHeight)
+
+camera.position.z=20
+
+const material=new THREE.MeshBasicMaterial({color:0x00ffd0})
+
+let dna=[]
+
+for(let i=0;i<50;i++){
+
+const geometry=new THREE.SphereGeometry(0.15,8,8)
+const sphere=new THREE.Mesh(geometry,material)
+
+const angle=i*0.3
+
+sphere.position.x=Math.sin(angle)*4
+sphere.position.y=i*0.3-7
+sphere.position.z=Math.cos(angle)*4
+
+scene.add(sphere)
+
+dna.push(sphere)
+
+}
+
+function animate(){
+
+requestAnimationFrame(animate)
+
+dna.forEach((s,i)=>{
+
+s.rotation.y+=0.02
+
+})
+
+renderer.render(scene,camera)
+
+}
+
+animate()
+
+window.addEventListener("resize",()=>{
+
+renderer.setSize(window.innerWidth,window.innerHeight)
+
+camera.aspect=window.innerWidth/window.innerHeight
+camera.updateProjectionMatrix()
+
+})
+
+</script>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <section class="stkAbtX-section">
+
+        <div class="stkAbtX-container">
+      
+          <!-- LEFT -->
+          <div class="stkAbtX-left">
+      
+            <h5 class="stkAbtX-badge stkAbtX-anim">About Us</h5>
+      
+            <h2 class="stkAbtX-title stkAbtX-anim">
+              Innovative Medical Devices Engineered for Precision
+            </h2>
+      
+            <p class="stkAbtX-desc stkAbtX-anim">
+              We deliver advanced medical equipment that improves diagnostics,
+              efficiency, and patient safety.
+            </p>
+      
+            <div class="stkAbtX-features">
+              <div class="stkAbtX-feature stkAbtX-anim">Advanced Diagnostic Equipment</div>
+              <div class="stkAbtX-feature stkAbtX-anim">ICU & Monitoring Devices</div>
+              <div class="stkAbtX-feature stkAbtX-anim">Certified Products</div>
+              <div class="stkAbtX-feature stkAbtX-anim">Nationwide Support</div>
+            </div>
+      
+            <a href="./404.html" class="stkAbtX-btn stkAbtX-anim">More About Us</a>
+      
+          </div>
+      
+          <!-- RIGHT -->
+          <div class="stkAbtX-right stkAbtX-anim">
+      
+            <img src="./b1.webp" class="stkAbtX-image" id="stkAbtX-img">
+      
+            <div class="stkAbtX-glass">
+              <h4>Medical Innovation Excellence</h4>
+      
+              <div class="stkAbtX-avatars">
+                <img src="./pro1.webp">
+                <img src="./pro2.webp">
+                <img src="./pro3.webp">
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+
+      <style>
+        /* ===== SECTION ===== */
+.stkAbtX-section{
+  padding:90px 20px;
+  background:#f4f7fb;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+
+.stkAbtX-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* ===== LEFT ===== */
+.stkAbtX-badge{
+  display:inline-block;
+  background:#0b2a5c;
+  color:#fff;
+  padding:10px 28px;
+  border-radius:50px;
+  font-size:15px;
+  margin-bottom:15px;
+}
+
+.stkAbtX-title{
+  font-size:40px;
+  color:#0b2a5c;
+  margin-bottom:15px;
+}
+
+.stkAbtX-desc{
+  color:#5d6a7a;
+  margin-bottom:20px;
+}
+
+/* FEATURES */
+.stkAbtX-features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.stkAbtX-feature{
+  font-size:14px;
+  color:#2e3b4e;
+}
+
+.stkAbtX-feature::before{
+  content:"✔";
+  color:#00c6ff;
+  margin-right:6px;
+}
+
+/* BUTTON */
+.stkAbtX-btn{
+  padding:10px 22px;
+  border-radius:30px;
+  background:#e8edf5;
+  color:#0b2a5c;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== RIGHT IMAGE FIX ===== */
+.stkAbtX-right{
+  position:relative;
+  max-width:500px;
+  margin:auto;
+}
+
+.stkAbtX-image{
+  width:100%;
+  height:420px; /* ✅ FIXED HEIGHT */
+  object-fit:cover; /* crop clean */
+  border-radius:16px;
+  transition:transform 0.3s ease;
+}
+
+/* GLASS CARD */
+.stkAbtX-glass{
+  position:absolute;
+  bottom:-25px;
+  left:30px;
+  padding:18px 24px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.35);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.5);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+.stkAbtX-glass h4{
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+.stkAbtX-avatars{
+  display:flex;
+  justify-content:center;
+}
+
+.stkAbtX-avatars img{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  margin-left:-8px;
+  border:2px solid #fff;
+}
+
+/* ===== ANIMATION ===== */
+.stkAbtX-anim{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s ease;
+}
+
+.stkAbtX-show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .stkAbtX-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .stkAbtX-title{
+    font-size:30px;
+  }
+
+  .stkAbtX-image{
+    height:300px; /* smaller image */
+  }
+
+  .stkAbtX-glass{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    margin-top:15px;
+  }
+}
+
+@media(max-width:600px){
+  .stkAbtX-title{
+    font-size:24px;
+  }
+
+  .stkAbtX-features{
+    grid-template-columns:1fr;
+  }
+
+  .stkAbtX-image{
+    height:240px;
+  }
+}
+        </style>
+
+        <script>
+            
+(function(){
+
+  const section = document.querySelector(".stkAbtX-section");
+
+  if(!section) return;
+
+  const items = section.querySelectorAll(".stkAbtX-anim");
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+
+        items.forEach((el,i)=>{
+          setTimeout(()=>{
+            el.classList.add("stkAbtX-show");
+          }, i*120);
+        });
+
+      }
+    });
+  },{threshold:0.2});
+
+  observer.observe(section);
+
+  /* LIGHT PARALLAX */
+  const img = document.getElementById("stkAbtX-img");
+
+  window.addEventListener("scroll",()=>{
+    if(!img) return;
+
+    let y = window.scrollY * 0.03;
+    img.style.transform = `translateY(${y}px)`;
+  });
+
+})();
+</script>
+    <section id="xSrvPro">
+
+        <div class="xSrvPro-container">
+      
+          <!-- HEADER -->
+          <div class="xSrvPro-header">
+      
+            <!-- <span class="xSrvPro-pill">Service Area</span> -->
+      
+            <div class="xSrvPro-flex">
+              <h2 class="xSrvPro-title">
+                Biological breakthroughs <br> for a better tomorrow
+              </h2>
+      
+              <a href="./404.html" class="xSrvPro-btn">All Services</a>
+            </div>
+      
+          </div>
+      
+          <!-- SLIDER -->
+          <div class="xSrvPro-slider">
+      
+            <div class="xSrvPro-track">
+      
+              <!-- CARD -->
+              <div class="xSrvPro-card">
+                <img src="./AI genomic.webp">
+                <div class="xSrvPro-content">
+                  <span>01</span>
+                  <h4>Genomic Sequencing</h4>
+                  <p>Advanced DNA mapping for medical insights.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./bio1.webp">
+                <div class="xSrvPro-content">
+                  <span>02</span>
+                  <h4>Bioinformatics</h4>
+                  <p>AI-driven biological data analysis.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./molecular.webp">
+                <div class="xSrvPro-content">
+                  <span>03</span>
+                  <h4>Bioprocess Eng</h4>
+                  <p>Scaling lab research to production.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./clinical.webp">
+                <div class="xSrvPro-content">
+                  <span>04</span>
+                  <h4>Clinical Research</h4>
+                  <p>Precision-driven medical trials.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./data security.webp">
+                <div class="xSrvPro-content">
+                  <span>05</span>
+                  <h4>Medical AI</h4>
+                  <p>Smart diagnosis with AI systems.</p>
+                </div>
+              </div>
+      
+              <div class="xSrvPro-card">
+                <img src="./bio3.webp">
+                <div class="xSrvPro-content">
+                  <span>06</span>
+                  <h4>Healthcare Analytics</h4>
+                  <p>Data-driven patient insights.</p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- NAV -->
+            <div class="xSrvPro-nav">
+              <button class="xPrev">‹</button>
+              <button class="xNext">›</button>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+      
+      <style>
+      
+      /* SECTION */
+      #xSrvPro{
+        padding:100px 20px;
+      
+        background:url("./AI\ genomic.webp") center/cover no-repeat;
+        position:relative;
+      }
+      
+      #xSrvPro::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,0.65);
+      }
+      
+      #xSrvPro .xSrvPro-container{
+        position:relative;
+        max-width:1200px;
+        margin:auto;
+      }
+      
+      /* HEADER */
+      #xSrvPro .xSrvPro-header{
+        margin-bottom:60px;
+      }
+      
+      /* CAPSULE */
+      #xSrvPro .xSrvPro-pill{
+        display:inline-block;
+        padding:10px 26px;
+        border-radius:40px;
+        background:rgba(255,255,255,0.15);
+        backdrop-filter:blur(10px);
+        color:#0b2a5c;
+        font-weight:600;
+        font-size:18px; /* BIGGER */
+      }
+      
+      /* TITLE */
+      #xSrvPro .xSrvPro-title{
+        font-size:48px;
+        color:#fff;
+        margin-top:15px;
+      }
+      
+      /* FLEX */
+      #xSrvPro .xSrvPro-flex{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:20px;
+      }
+      
+      /* BUTTON CAPSULE */
+      #xSrvPro .xSrvPro-btn{
+        padding:12px 28px;
+        border-radius:40px;
+        background:rgba(255,255,255,0.2);
+        backdrop-filter:blur(10px);
+        color:#fff;
+        text-decoration:none;
+        border:1px solid rgba(255,255,255,0.3);
+      }
+      
+      /* SLIDER */
+      #xSrvPro .xSrvPro-slider{
+        overflow:hidden;
+      }
+      
+      #xSrvPro .xSrvPro-track{
+        display:flex;
+        gap:25px;
+        transition:0.5s;
+      }
+      
+      /* CARD */
+      #xSrvPro .xSrvPro-card{
+        min-width:320px;
+        border-radius:18px;
+        overflow:hidden;
+      
+        background:rgba(255,255,255,0.08);
+        backdrop-filter:blur(14px);
+        border:1px solid rgba(255,255,255,0.2);
+      
+        transform:translateY(50px);
+        opacity:0;
+        transition:0.7s;
+      }
+      
+      #xSrvPro .xSrvPro-card.show{
+        transform:translateY(0);
+        opacity:1;
+      }
+      
+      #xSrvPro .xSrvPro-card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+      }
+      
+      #xSrvPro .xSrvPro-content{
+        padding:20px;
+        color:#fff;
+      }
+      
+      #xSrvPro .xSrvPro-content span{
+        color: white;
+      }
+      
+      /* NAV */
+      #xSrvPro .xSrvPro-nav{
+        text-align:center;
+        margin-top:25px;
+      }
+      
+      #xSrvPro button{
+        padding:10px 16px;
+        margin:5px;
+        border:none;
+        border-radius:6px;
+        background:rgba(255,255,255,0.2);
+        color:#fff;
+        cursor:pointer;
+      }
+      
+      /* RESPONSIVE */
+      @media(max-width:992px){
+        #xSrvPro .xSrvPro-title{font-size:34px;}
+      }
+      
+      @media(max-width:600px){
+        #xSrvPro .xSrvPro-title{font-size:26px;}
+        #xSrvPro .xSrvPro-card{min-width:260px;}
+        #xSrvPro .xSrvPro-flex{
+          flex-direction:column;
+          align-items:flex-start;
+        }
+      }
+      
+      </style>
+      
+      <script>
+      (function(){
+      
+      const section = document.getElementById("xSrvPro");
+      if(!section) return;
+      
+      const track = section.querySelector(".xSrvPro-track");
+      const cards = section.querySelectorAll(".xSrvPro-card");
+      const next = section.querySelector(".xNext");
+      const prev = section.querySelector(".xPrev");
+      
+      let index = 0;
+      
+      /* SLIDE */
+      function update(){
+        const w = cards[0].offsetWidth + 25;
+        track.style.transform = `translateX(-${index * w}px)`;
+      }
+      
+      next.onclick = ()=>{
+        index = (index + 1) % cards.length;
+        update();
+      };
+      
+      prev.onclick = ()=>{
+        index = (index - 1 + cards.length) % cards.length;
+        update();
+      };
+      
+      /* AUTO */
+      let auto = setInterval(()=>{
+        index = (index + 1) % cards.length;
+        update();
+      },4000);
+      
+      section.addEventListener("mouseenter",()=>clearInterval(auto));
+      section.addEventListener("mouseleave",()=>{
+        auto = setInterval(()=>{
+          index = (index + 1) % cards.length;
+          update();
+        },4000);
+      });
+      
+      /* ANIMATION */
+      const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            cards.forEach((el,i)=>{
+              setTimeout(()=>el.classList.add("show"), i*150);
+            });
+          }
+        });
+      },{threshold:0.3});
+      
+      observer.observe(section);
+      
+      })();
+      </script>
+
+
+<section class="stkChoose-section">
+
+    <div class="stkChoose-container">
+  
+      <!-- LEFT -->
+      <div class="stkChoose-left">
+  
+        <!-- CAPSULE SUBTITLE -->
+        <div class="stkChoose-badge stkChoose-animate">Mission & Vision</div>
+  
+        <h2 class="stkChoose-title stkChoose-animate">
+          Solving biological complexities to improve global life quality.
+        </h2>
+  
+        <!-- TABS -->
+        <div class="stkChoose-tabs stkChoose-animate">
+          <button class="stkChoose-tab active" data-tab="about">About Us</button>
+          <button class="stkChoose-tab" data-tab="mission">Our Mission</button>
+          <button class="stkChoose-tab" data-tab="vision">Our Vision</button>
+        </div>
+  
+        <!-- TAB CONTENT -->
+        <div class="stkChoose-content">
+  
+          <!-- ABOUT -->
+          <div class="stkChoose-pane active" id="about">
+            <p>
+              STACKLY integrates high-throughput research with AI-driven analytics
+              to accelerate life-changing therapies.
+            </p>
+  
+            <div class="stkChoose-list">
+              <ul>
+                <li>✔ Advanced Lab Automation</li>
+                <li>✔ Molecular Simulation</li>
+              </ul>
+              <ul>
+                <li>✔ Ethical Research Standards</li>
+                <li>✔ Global Scientific Collaboration</li>
+              </ul>
+            </div>
+  
+            <a href="./404.html" class="stkChoose-btn">Discover More</a>
+          </div>
+  
+          <!-- MISSION -->
+          <div class="stkChoose-pane" id="mission">
+            <p>
+              Unlocking biological systems to cure diseases and sustain ecosystems.
+            </p>
+  
+            <div class="stkChoose-list">
+              <ul>
+                <li>✔ Precision Therapeutics</li>
+                <li>✔ Sustainable Bio-Materials</li>
+              </ul>
+              <ul>
+                <li>✔ Eradicating Pathogens</li>
+                <li>✔ Food Security Innovation</li>
+              </ul>
+            </div>
+  
+            <a href="./404.html" class="stkChoose-btn">Discover More</a>
+          </div>
+  
+          <!-- VISION -->
+          <div class="stkChoose-pane" id="vision">
+            <p>
+              A future where biology and technology work together for a better world.
+            </p>
+  
+            <div class="stkChoose-list">
+              <ul>
+                <li>✔ Bio-Digital Synergy</li>
+                <li>✔ Regenerative Medicine</li>
+              </ul>
+              <ul>
+                <li>✔ Circular Bio-Economy</li>
+                <li>✔ Genomic Equity</li>
+              </ul>
+            </div>
+  
+            <a href="./404.html" class="stkChoose-btn">Discover More</a>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- RIGHT -->
+      <div class="stkChoose-right stkChoose-animate">
+  
+        <img src="./clinical.webp" class="stkChoose-img">
+  
+        <!-- GLASS STATS -->
+        <div class="stkChoose-stats">
+  
+          <div class="stkChoose-card">
+            <div class="stkChoose-circle" data-percent="95">0%</div>
+            <h5>Clinical Trials</h5>
+          </div>
+  
+          <div class="stkChoose-card">
+            <div class="stkChoose-circle" data-percent="50">0%</div>
+            <h5>Completed Projects</h5>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  <style>
+  /* ===== SECTION ===== */
+  .stkAbtX-section{
+    padding:90px 20px;
+    background:#f4f7fb;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+  }
+  
+  .stkAbtX-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  
+  /* ===== LEFT ===== */
+  .stkAbtX-badge{
+    display:inline-block;
+    background:#0b2a5c;
+    color:#fff;
+    padding:10px 28px;
+    border-radius:50px;
+    font-size:15px;
+    margin-bottom:15px;
+  }
+  
+  .stkAbtX-title{
+    font-size:40px;
+    color:#0b2a5c;
+    margin-bottom:15px;
+  }
+  
+  .stkAbtX-desc{
+    color:#5d6a7a;
+    margin-bottom:20px;
+  }
+  
+  /* FEATURES */
+  .stkAbtX-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  
+  .stkAbtX-feature{
+    font-size:14px;
+    color:#2e3b4e;
+  }
+  
+  .stkAbtX-feature::before{
+    content:"✔";
+    color:#0b2a5c;
+    margin-right:6px;
+  }
+  
+  /* BUTTON */
+  .stkAbtX-btn{
+    padding:10px 22px;
+    border-radius:30px;
+    background:#e8edf5;
+    color:#0b2a5c;
     text-decoration:none;
-    color:#ffffff;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    transition:all 0.3s ease;
+    font-weight:600;
+  }
+  
+  /* ===== RIGHT IMAGE FIX ===== */
+  .stkAbtX-right{
+    position:relative;
+    max-width:500px;
+    margin:auto;
+  }
+  
+  .stkAbtX-image{
+    width:100%;
+    height:520px; /* ✅ FIXED HEIGHT */
+    object-fit:cover; /* crop clean */
+    border-radius:16px;
+    transition:transform 0.3s ease;
+  }
+  
+  /* GLASS CARD */
+  .stkAbtX-glass{
+    position:absolute;
+    bottom:-25px;
+    left:30px;
+    padding:18px 24px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.5);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    text-align:center;
+  }
+  
+  .stkAbtX-glass h4{
+    font-size:15px;
+    margin-bottom:8px;
+  }
+  
+  .stkAbtX-avatars{
+    display:flex;
+    justify-content:center;
+  }
+  
+  .stkAbtX-avatars img{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    margin-left:-8px;
+    border:2px solid #fff;
+  }
+  
+  /* ===== ANIMATION ===== */
+  .stkAbtX-anim{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s ease;
+  }
+  
+  .stkAbtX-show{
+    opacity:1;
+    transform:translateY(0);
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:992px){
+    .stkAbtX-container{
+      grid-template-columns:1fr;
+      text-align:center;
+    }
+  
+    .stkAbtX-title{
+      font-size:30px;
+    }
+  
+    .stkAbtX-image{
+      height:300px; /* smaller image */
+    }
+  
+    .stkAbtX-glass{
+      position:relative;
+      left:auto;
+      bottom:auto;
+      margin-top:15px;
+    }
+  }
+  
+  @media(max-width:600px){
+    .stkAbtX-title{
+      font-size:24px;
+    }
+  
+    .stkAbtX-features{
+      grid-template-columns:1fr;
+    }
+  
+    .stkAbtX-image{
+      height:240px;
+    }
+  }
+
+</style>
+
+<script>
+    (function(){
+    
+      const section = document.querySelector(".stkAbtX-section");
+    
+      if(!section) return;
+    
+      const items = section.querySelectorAll(".stkAbtX-anim");
+    
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+    
+            items.forEach((el,i)=>{
+              setTimeout(()=>{
+                el.classList.add("stkAbtX-show");
+              }, i*120);
+            });
+    
+          }
+        });
+      },{threshold:0.2});
+    
+      observer.observe(section);
+    
+      /* LIGHT PARALLAX */
+      const img = document.getElementById("stkAbtX-img");
+    
+      window.addEventListener("scroll",()=>{
+        if(!img) return;
+    
+        let y = window.scrollY * 0.03;
+        img.style.transform = `translateY(${y}px)`;
+      });
+    
+    })();
+    </script>
+  <section class="stkGrowth-section">
+
+    <div class="stkGrowth-container">
+  
+      <!-- HEADER -->
+      <div class="stkGrowth-header">
+  
+        <!-- CAPSULE -->
+        <div class="stkGrowth-badge stkGrowth-animate-top">
+          Research Velocity
+        </div>
+  
+        <h2 class="stkGrowth-title stkGrowth-animate-top">
+          Accelerating the pace of <br> Biological Discovery.
+        </h2>
+  
+        <a href="./404.html" class="stkGrowth-btn stkGrowth-animate-top">
+          Discover More
+        </a>
+  
+      </div>
+  
+      <!-- CARDS -->
+      <div class="stkGrowth-grid">
+  
+        <!-- CARD 1 -->
+        <div class="stkGrowth-card stkGrowth-left">
+          <div class="stkGrowth-circle" data-value="90">0%</div>
+          <h4>Scalable Research</h4>
+          <p>End to end genomic pathways for stable breakthroughs</p>
+        </div>
+  
+        <!-- CARD 2 -->
+        <div class="stkGrowth-card stkGrowth-bottom">
+          <div class="stkGrowth-circle" data-value="95">0%</div>
+          <h4>Lab Automation</h4>
+          <p>End to end automated sequencing for rapid testing</p>
+        </div>
+  
+        <!-- CARD 3 -->
+        <div class="stkGrowth-card stkGrowth-right">
+          <div class="stkGrowth-circle" data-value="75">0%</div>
+          <h4>Technical Support</h4>
+          <p>End to end research assistance for precision results</p>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  
+  <style>
+  
+  /* SECTION */
+  .stkGrowth-section{
+    padding:100px 20px;
+    background:url('./real\ time.webp') center/cover no-repeat;
+  }
+  
+  /* CONTAINER */
+  .stkGrowth-container{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+  }
+  
+  /* CAPSULE BADGE */
+  .stkGrowth-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:30px;
+    background:#0b2a5c;
+    color:#fff;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+  
+  /* TITLE */
+  .stkGrowth-title{
+    font-size:42px;
+    color:#fff;
+    margin-bottom:20px;
+  }
+  
+  /* BUTTON */
+  .stkGrowth-btn{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    background:#fff;
+    color:#0b2a5c;
+    font-weight:600;
+    text-decoration:none;
+    margin-bottom:60px;
+  }
+  
+  /* GRID */
+  .stkGrowth-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+  }
+  
+  /* CARD */
+  .stkGrowth-card{
+    padding:35px 25px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(12px);
+    color:black;
+    transition:.4s;
+  }
+  
+  .stkGrowth-card:hover{
+    transform:translateY(-10px);
+  }
+  
+  /* CIRCLE */
+  .stkGrowth-circle{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:6px solid #0b2a5c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:22px;
+    font-weight:bold;
+  }
+  
+  /* TEXT */
+  .stkGrowth-card h4{
+    margin-bottom:10px;
+  }
+  
+  .stkGrowth-card p{
+    font-size:14px;
+    opacity:.9;
+  }
+  
+  /* ANIMATION BASE */
+  .stkGrowth-left,
+  .stkGrowth-right,
+  .stkGrowth-bottom,
+  .stkGrowth-animate-top{
+    opacity:0;
+    transition:1s ease;
+  }
+  
+  .stkGrowth-left{transform:translateX(-60px);}
+  .stkGrowth-right{transform:translateX(60px);}
+  .stkGrowth-bottom{transform:translateY(60px);}
+  .stkGrowth-animate-top{transform:translateY(-60px);}
+  
+  .stkGrowth-show{
+    opacity:1;
+    transform:translate(0);
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width:992px){
+    .stkGrowth-grid{
+      grid-template-columns:1fr 1fr;
+    }
+    .stkGrowth-title{
+      font-size:32px;
+    }
+  }
+  
+  @media(max-width:600px){
+    .stkGrowth-grid{
+      grid-template-columns:1fr;
+    }
+    .stkGrowth-title{
+      font-size:24px;
+    }
+  }
+  
+  </style>
+  
+  
+  <script>
+  
+  /* SCROLL ANIMATION */
+  const stkGrowthSection = document.querySelector(".stkGrowth-section");
+  
+  const stkGrowthObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+  
+        const items = entry.target.querySelectorAll(
+          ".stkGrowth-left, .stkGrowth-right, .stkGrowth-bottom, .stkGrowth-animate-top"
+        );
+  
+        items.forEach((el,i)=>{
+          setTimeout(()=>{
+            el.classList.add("stkGrowth-show");
+          }, i * 200);
+        });
+  
+      }
+    });
+  });
+  
+  stkGrowthObserver.observe(stkGrowthSection);
+  
+  
+  /* COUNTER ANIMATION */
+  document.querySelectorAll(".stkGrowth-circle").forEach(circle=>{
+    let target = +circle.dataset.value;
+    let count = 0;
+  
+    const update = ()=>{
+      count++;
+      circle.innerText = count + "%";
+  
+      if(count < target){
+        requestAnimationFrame(update);
+      }
+    };
+  
+    update();
+  });
+  
+  </script>
+  
+  <style>
+  
+  /* SECTION */
+  .stkChoose-section{
+    padding:100px 20px;
+    /* background:url('./.webp') center/cover no-repeat; */
+  }
+  
+  /* CONTAINER */
+  .stkChoose-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  
+  /* CAPSULE BADGE */
+  .stkChoose-badge{
+    display:inline-block;
+    padding:8px 20px;
+    border-radius:30px;
+    background:#0b2a5c;
+    color:#fff;
+    font-weight:600;
+    margin-bottom:15px;
+    font-size:16px;
+  }
+  
+  /* TITLE */
+  .stkChoose-title{
+    font-size:40px;
+    color:#0b2a5c;
+    margin-bottom:25px;
+  }
+  
+  /* TABS */
+  .stkChoose-tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+  }
+  
+  .stkChoose-tab{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:#e7ecf2;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+  }
+  
+  .stkChoose-tab.active{
+    background:#0b2a5c;
+    color:#fff;
+  }
+  
+  /* CONTENT */
+  .stkChoose-pane{
+    display:none;
+    animation:fadeIn .6s ease;
+  }
+  
+  .stkChoose-pane.active{
+    display:block;
+  }
+  
+  /* LIST */
+  .stkChoose-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin:20px 0;
+  }
+  
+  .stkChoose-list li{
+    list-style:none;
+  }
+  
+  /* BUTTON */
+  .stkChoose-btn{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:30px;
+    background:#0b2a5c;
+    color:#fff;
+    text-decoration:none;
+  }
+  
+  /* IMAGE */
+  .stkChoose-right{
+    position:relative;
+  }
+  
+  .stkChoose-img{
+    width:100%;
+    border-radius:14px;
+  }
+  
+  /* GLASS STATS */
+  .stkChoose-stats{
+    position:absolute;
+    bottom:-40px;
+    left:30px;
+    display:flex;
+    gap:20px;
+  }
+  
+  .stkChoose-card{
+    padding:20px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.3);
+    backdrop-filter:blur(10px);
+    text-align:center;
+  }
+  
+  /* CIRCLE */
+  .stkChoose-circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:5px solid #0b2a5c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-weight:bold;
+  }
+  
+  /* ANIMATION */
+  .stkChoose-animate{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+  }
+  
+  .stkChoose-show{
+    opacity:1;
+    transform:translateY(0);
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width:992px){
+    .stkChoose-container{
+      grid-template-columns:1fr;
+    }
+  
+    .stkChoose-title{
+      font-size:30px;
+    }
+  
+    .stkChoose-stats{
+      position:relative;
+      bottom:auto;
+      left:auto;
+      margin-top:20px;
+    }
+  }
+  
+  @media(max-width:600px){
+    .stkChoose-title{
+      font-size:24px;
+    }
+  
+    .stkChoose-list{
+      grid-template-columns:1fr;
+    }
+  }
+  
+  </style>
+  
+  
+  <script>
+  
+  /* TAB SWITCH */
+  document.querySelectorAll(".stkChoose-tab").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+  
+      document.querySelectorAll(".stkChoose-tab").forEach(b=>b.classList.remove("active"))
+      btn.classList.add("active")
+  
+      const id=btn.getAttribute("data-tab")
+  
+      document.querySelectorAll(".stkChoose-pane").forEach(p=>p.classList.remove("active"))
+      document.getElementById(id).classList.add("active")
+  
+    })
+  })
+  
+  /* ANIMATION */
+  const chooseObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const items=entry.target.querySelectorAll(".stkChoose-animate")
+        items.forEach((el,i)=>{
+          setTimeout(()=>{
+            el.classList.add("stkChoose-show")
+          },i*150)
+        })
+      }
+    })
+  })
+  
+  chooseObserver.observe(document.querySelector(".stkChoose-section"))
+  
+  /* COUNTER */
+  document.querySelectorAll(".stkChoose-circle").forEach(el=>{
+    let target = +el.dataset.percent
+    let count = 0
+  
+    const update = ()=>{
+      count++
+      el.innerText = count + "%"
+  
+      if(count < target){
+        requestAnimationFrame(update)
+      }
+    }
+  
+    update()
+  })
+  
+  </script>
+
+
+
+<section class="pipe-section">
+    <div class="pipe-container">
+  
+      <!-- Heading -->
+      <div class="pipe-heading">
+        <span class="pipe-badge">OUR PIPELINE</span>
+        <h2>Research, Analyze & Innovate<br>The Biological Future.</h2>
+      </div>
+  
+      <!-- Pipeline Box -->
+      <div class="pipe-box">
+  
+        <div class="pipe-item">
+          <span class="pipe-num">01</span>
+          <h4>Genomic Analysis</h4>
+          <p>Source for Molecular Trends & Biological Intel</p>
+        </div>
+  
+        <div class="pipe-item">
+          <span class="pipe-num">02</span>
+          <h4>Molecular Logic</h4>
+          <p>Sparking Innovation, Shaping Future Success</p>
+        </div>
+  
+        <div class="pipe-item active">
+          <span class="pipe-num">03</span>
+          <h4>Bio-Synthesis</h4>
+          <p>Helping You Stay on Track with Lab Estimates</p>
+        </div>
+  
+        <div class="pipe-item">
+          <span class="pipe-num">04</span>
+          <h4>Sustainable Life</h4>
+          <p>Amazing Support with biological demos to choose</p>
+        </div>
+  
+      </div>
+  
+      <!-- Footer -->
+      <p class="pipe-footer">
+        Embrace Bio-Innovation, Adapt to Life, and Lead with Confidence.
+        <a href="./404.html">Partner Now</a>
+      </p>
+  
+    </div>
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.pipe-section {
+  padding: 100px 20px;
+  background: #f8fafc;
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer-social a:hover{
-    transform:translateY(-4px);
-    background:#8B0000;
-    border-color:#8B0000;
-    box-shadow:0 8px 20px rgba(139,0,0,0.35);
+/* ===== CONTAINER ===== */
+.pipe-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
-.footer-social i{
-    font-size:18px;
+/* ===== HEADING ===== */
+.pipe-badge {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #0b2a5c;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
+
+.pipe-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+/* ===== BOX ===== */
+.pipe-box {
+  margin-top: 60px;
+  border: 1px dashed #d1d5db;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+
+/* ===== ITEM ===== */
+.pipe-item {
+  padding: 40px 25px;
+  position: relative;
+  text-align: left;
+  transition: 0.3s;
+}
+
+/* Vertical Divider */
+.pipe-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #e5e7eb;
+}
+
+/* NUMBER */
+.pipe-num {
+  font-size: 60px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #cbd5e1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ACTIVE */
+.pipe-item.active .pipe-num {
+  color: #0f172a;
+  -webkit-text-stroke: 0;
+}
+
+.pipe-item.active h4 {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* TEXT */
+.pipe-item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.pipe-item p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* HOVER */
+.pipe-item:hover {
+  background: #f1f5f9;
+}
+
+/* ===== FOOTER ===== */
+.pipe-footer {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.pipe-footer a {
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
 
 /* Tablet */
-@media (max-width:768px){
+@media (max-width: 992px) {
+  .pipe-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .footer-social{
-        justify-content:center;
-        gap:10px;
-    }
+  .pipe-item::after {
+    display: none;
+  }
 
-    .footer-social a{
-        width:40px;
-        height:40px;
-    }
-
-    .footer-social i{
-        font-size:16px;
-    }
+  .pipe-heading h2 {
+    font-size: 32px;
+  }
 }
 
 /* Mobile */
-@media (max-width:480px){
+@media (max-width: 576px) {
+  .pipe-box {
+    grid-template-columns: 1fr;
+  }
 
-    .footer-social{
-        margin-top:15px;
-        gap:8px;
-    }
+  .pipe-heading h2 {
+    font-size: 24px;
+  }
 
-    .footer-social a{
-        width:38px;
-        height:38px;
-    }
-
-    .footer-social i{
-        font-size:15px;
-    }
+  .pipe-num {
+    font-size: 48px;
+  }
 }
-</Style>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+  </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    // Staggered reveal of text elements
-    tl.from(".badge", {
-      y: 20,
-      opacity: 1,
-      duration: 0.6,
-    })
-      .from(
-        ".headline",
-        {
-          y: 40,
-          opacity: 1,
-          duration: 0.8,
-        },
-        "-=0.3",
-      )
-      .from(
-        ".subtext",
-        {
-          y: 20,
-          opacity: 1,
-          duration: 0.8,
-        },
-        "-=0.5",
-      )
-      .from(
-        ".btn",
-        {
-          y: 20,
-          opacity: 1,
-          stagger: 0.15,
-          duration: 0.6,
-        },
-        "-=0.5",
-      )
-      .from(
-        ".image-wrapper",
-        {
-          scale: 0.95,
-          opacity: 1,
-          duration: 1.2,
-        },
-        "-=1",
-      )
-      .from(
-        ".floating-card",
-        {
-          x: 30,
-          opacity: 1,
-          stagger: 0.2,
-          duration: 0.8,
-        },
-        "-=0.4",
-      );
-
-    // Continuous subtle floating effect
-    gsap.to(".floating-card", {
-      y: -10,
-      duration: 2.5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
+    document.querySelectorAll(".pipe-item").forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        document.querySelectorAll(".pipe-item").forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
     });
-  });
-</script>
+    </script>
+
+
+<section class="cs-section">
+    <div class="cs-container">
+  
+      <!-- Heading -->
+      <div class="cs-header">
+        <span class="cs-badge">CASE STUDY</span>
+        <h2 class="cs-title">
+          Showcasing Project & Solutions <br>
+          For Clients Case Study.
+        </h2>
+      </div>
+  
+      <!-- Slider -->
+      <div class="cs-slider" id="csSlider">
+        <div class="cs-track">
+  
+          <!-- CARD -->
+          <div class="cs-card">
+            <img src="./AI genomic.webp">
+            <div class="cs-content">
+              <span>Bio-Systems</span>
+              <h4>Synthetic Biology Applications</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./molecular.webp">
+            <div class="cs-content">
+              <span>Agri-tech</span>
+              <h4>Increase Yield by 30%</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./data security.webp">
+            <div class="cs-content">
+              <span>Digital Agency</span>
+              <h4>Transforming Systems</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./b1.webp">
+            <div class="cs-content">
+              <span>Oncology</span>
+              <h4>Precision Breakthroughs</h4>
+            </div>
+          </div>
+  
+          <!-- duplicate for smooth infinite scroll -->
+          <div class="cs-card">
+            <img src="./clinical.webp">
+            <div class="cs-content">
+              <span>Bio-Systems</span>
+              <h4>Synthetic Biology Applications</h4>
+            </div>
+          </div>
+  
+          <div class="cs-card">
+            <img src="./real time.webp">
+            <div class="cs-content">
+              <span>Agri-tech</span>
+              <h4>Increase Yield by 30%</h4>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.cs-section {
+  padding: 100px 20px;
+  background: #f5f7fb;
+  overflow: hidden;
+}
+
+.cs-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+.cs-badge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.cs-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+/* ===== SLIDER ===== */
+.cs-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: csScroll 20s linear infinite;
+}
+
+/* Pause on hover */
+.cs-slider:hover .cs-track {
+  animation-play-state: paused;
+}
+
+/* ===== CARD ===== */
+.cs-card {
+  min-width: 260px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.cs-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GLASS CARD */
+.cs-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  text-align: left;
+  transition: 0.3s;
+}
+
+.cs-content span {
+  font-size: 13px;
+  color: #666;
+}
+
+.cs-content h4 {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #111;
+}
+
+/* Hover effect */
+.cs-card:hover .cs-content {
+  transform: translateY(-10px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes csScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .cs-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-title {
+    font-size: 26px;
+  }
+
+  .cs-card {
+    min-width: 220px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-title {
+    font-size: 22px;
+  }
+
+  .cs-card {
+    min-width: 200px;
+    height: 260px;
+  }
+}
+  </style>
 
 <script>
-  // ==================== GSAP ANIMATIONS FOR FEATURED NEWS ==================== //
+    // Optional: speed control dynamically
+    const track = document.querySelector('.cs-track');
+  
+    let speed = 20; // seconds
+    track.style.animationDuration = speed + 's';
+  </script>
 
-  // Register ScrollTrigger
-  gsap.registerPlugin(ScrollTrigger);
+<section class="stk-strategy" id="stkStrategy">
+    <div class="stk-wrap">
+  
+      <!-- IMAGE -->
+      <div class="stk-left">
+        <img src="./b1.webp" alt="">
+        <div class="stk-float">
+          <img src="images/strategy/strategy-info.webp" alt="">
+        </div>
+      </div>
+  
+      <!-- CONTENT -->
+      <div class="stk-right">
+  
+        <span class="stk-badge">Research Strategy</span>
+  
+        <h2 class="stk-title">
+          Driving Innovation Through Advanced Lab Analytics and Expertise.
+        </h2>
+  
+        <div class="stk-accordion">
+  
+          <div class="stk-item">
+            <div class="stk-head">Precision Genomic Mapping</div>
+            <div class="stk-body">Drive innovation faster with world-class tech teams.</div>
+          </div>
+  
+          <div class="stk-item">
+            <div class="stk-head">Biosecurity & Data Protection</div>
+            <div class="stk-body">Secure and scalable infrastructure ensures safety.</div>
+          </div>
+  
+          <div class="stk-item">
+            <div class="stk-head">Cutting-Edge IT Solutions</div>
+            <div class="stk-body">Leveraging AI & automation for research workflows.</div>
+          </div>
+  
+          <div class="stk-item">
+            <div class="stk-head">Expert Guidance & Assistance</div>
+            <div class="stk-body">Experts help accelerate your innovation journey.</div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>
 
-  // Featured Main Article Animation
-  gsap.from(".featured-main", {
-    scrollTrigger: {
-      trigger: ".featured-main",
-      scrub: false,
-      markers: false,
-    },
-    opacity: 1,
-    duration: 1,
-    ease: "power3.out",
-  });
+  <style>
+    /* ===== ROOT ===== */
+.stk-strategy {
+  padding: 100px 20px;
+  background: #f4f7ff;
+  overflow: hidden;
+}
 
-  // Featured Image Slide-in Animation
-  gsap.from(".featured-image", {
-    scrollTrigger: {
-      trigger: ".featured-main",
-      start: "top 80%",
-    },
-    opacity: 1,
-    duration: 0.8,
-    delay: 0.1,
-    ease: "power2.out",
-  });
+.stk-wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 
-  // Featured Content Slide-in Animation
-  gsap.from(".featured-content", {
-    scrollTrigger: {
-      trigger: ".featured-main",
-      start: "top 80%",
-    },
-    opacity: 1,
-    x: 50,
-    duration: 0.8,
-    delay: 0.2,
-    ease: "power2.out",
-  });
+/* ===== LEFT ===== */
+.stk-left {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 0.8s ease;
+}
 
-  // News Title Animation
-  gsap.from(".news-title", {
-    scrollTrigger: {
-      trigger: ".news-header",
-      start: "top 85%",
-    },
-    opacity: 1,
-    y: 40,
-    duration: 0.8,
-    ease: "back.out",
-  });
+.stk-left img {
+  width: 100%;
+  border-radius: 20px;
+}
 
-  // News Subtitle Animation
-  gsap.from(".news-subtitle", {
-    scrollTrigger: {
-      trigger: ".news-header",
-      start: "top 85%",
-    },
-    opacity: 1,
-    y: 30,
-    duration: 0.8,
-    delay: 0.1,
-    ease: "power2.out",
-  });
+.stk-float {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 110px;
+}
 
-  // News Card Stagger Animation
-  gsap.from(".news-card", {
-    scrollTrigger: {
-      trigger: ".news-grid",
-      start: "top 75%",
-    },
-    opacity: 1,
-    y: 50,
-    duration: 0.6,
-    stagger: 0.15,
-    ease: "power2.out",
-  });
+/* ===== RIGHT ===== */
+.stk-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 0.8s ease;
+}
 
-  // News Card Hover Animation
-  document.querySelectorAll(".news-card").forEach((card) => {
-    const image = card.querySelector(".card-image img");
+.stk-badge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #0b2a5c;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
 
-    card.addEventListener("mouseenter", () => {
-      gsap.to(image, {
-        scale: 1.1,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-    });
+.stk-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 
-    card.addEventListener("mouseleave", () => {
-      gsap.to(image, {
-        scale: 1,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-    });
-  });
+/* ===== ACCORDION ===== */
+.stk-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-  // Featured Image Hover Animation
-  const featuredImg = document.querySelector(".featured-image img");
-  if (featuredImg) {
-    const featuredImageContainer = document.querySelector(".featured-image");
+.stk-item {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
 
-    featuredImageContainer.addEventListener("mouseenter", () => {
-      gsap.to(featuredImg, {
-        scale: 1.08,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-    });
+.stk-head {
+  padding: 18px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
 
-    featuredImageContainer.addEventListener("mouseleave", () => {
-      gsap.to(featuredImg, {
-        scale: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      });
-    });
+.stk-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: all 0.4s ease;
+  font-size: 14px;
+}
+
+/* active */
+.stk-item.active .stk-body {
+  max-height: 120px;
+  padding: 15px 20px;
+}
+
+/* hover */
+.stk-item:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== SHOW ANIMATION ===== */
+.stk-show .stk-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stk-show .stk-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .stk-wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  // Newsletter Section Animation
-  gsap.from(".news-newsletter", {
-    scrollTrigger: {
-      trigger: ".news-newsletter",
-      start: "top 75%",
-    },
-    opacity: 1,
-    scale: 0.9,
-    y: 40,
-    duration: 0.8,
-    ease: "back.out",
+  .stk-float {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stk-title {
+    font-size: 26px;
+  }
+}
+    </style>
+
+<script>
+    (function() {
+    
+      const section = document.getElementById("stkStrategy");
+      const items = section.querySelectorAll(".stk-item");
+    
+      // CLICK ACCORDION
+      items.forEach(item => {
+        item.querySelector(".stk-head").addEventListener("click", () => {
+          items.forEach(i => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    
+      // SCROLL + AUTO OPEN
+      function handleScroll() {
+        const rect = section.getBoundingClientRect();
+        const trigger = window.innerHeight * 0.8;
+    
+        if (rect.top < trigger) {
+          section.classList.add("stk-show");
+    
+          // AUTO OPEN ONE BY ONE
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              items.forEach(i => i.classList.remove("active"));
+              item.classList.add("active");
+            }, index * 700);
+          });
+    
+          // run only once
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("load", handleScroll);
+    
+    })();
+    </script>
+
+<section class="stkT9_section">
+
+    <div class="stkT9_wrap">
+  
+      <div class="stkT9_head">
+        <span class="stkT9_badge">Our Scientists</span>
+        <h2 class="stkT9_title">
+          Enhance Research with <br> Expert Bio-Analysts
+        </h2>
+      </div>
+  
+      <div class="stkT9_grid">
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+  
+            <img src="./sana.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+  
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Dr. Guy Hawkins</h4>
+              <p>Lead Geneticist</p>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+            <img src="./nithiya.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Jacob Jones</h4>
+              <p>Manager</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+            <img src="./arjun.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Dr. Kristin Watson</h4>
+              <p>Bio-Scientist</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD -->
+        <div class="stkT9_card">
+          <div class="stkT9_box">
+            <img src="./joe.webp" class="stkT9_img">
+  
+            <div class="stkT9_social">
+              <button class="stkT9_btn"><i class="fa-solid fa-plus"></i></button>
+              <div class="stkT9_links">
+                <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+  
+            <div class="stkT9_info">
+              <h4>Dr. Bessie Cooper</h4>
+              <p>Chief Scientist</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <style>
+  
+  /* ICON HOVER COLOR */
+  .stkT9_links a:hover{
+    background:#0b2a5c;
+    color:#fff;
+    transform:scale(1.1);
+  }
+  
+  /* SMOOTH ICON TRANSITION */
+  .stkT9_links a{
+    transition:0.3s;
+  }
+  
+  
+
+/* ===== SECTION ===== */
+.stkT9_section{
+  padding:90px 20px;
+  background:#f3f6fb;
+  font-family:Poppins, sans-serif;
+}
+
+.stkT9_wrap{
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+.stkT9_head{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.stkT9_badge{
+  background:#0b2a5c;
+  color:#fff;
+  padding:10px 26px;
+  border-radius:50px;
+  display:inline-block;
+  margin-bottom:15px;
+}
+
+.stkT9_title{
+  font-size:34px;
+  color:#0b2a5c;
+}
+
+/* GRID */
+.stkT9_grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+/* CARD */
+.stkT9_box{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+
+/* IMAGE */
+.stkT9_img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.stkT9_box:hover .stkT9_img{
+  transform:scale(1.1);
+}
+
+/* ===== GLASS GLOW ===== */
+.stkT9_box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  padding:1px;
+  background:linear-gradient(120deg,#00c6ff,#0072ff,#00c6ff);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+
+  opacity:0;
+  transition:.4s;
+}
+
+.stkT9_box:hover::before{
+  opacity:1;
+}
+
+.stkT9_box:hover{
+  box-shadow:
+    0 0 25px rgba(0,198,255,0.3),
+    0 10px 40px rgba(0,0,0,0.2);
+  transform:translateY(-8px);
+}
+
+/* SHINE EFFECT */
+.stkT9_box::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transform:skewX(-25deg);
+}
+
+.stkT9_box:hover::after{
+  animation:stkT9_shine 1s;
+}
+
+@keyframes stkT9_shine{
+  100%{left:150%;}
+}
+
+/* SOCIAL */
+.stkT9_social{
+  position:absolute;
+  top:12px;
+  right:12px;
+}
+
+.stkT9_btn{
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:50%;
+  background:#0b2a5c;
+  color:#fff;
+  cursor:pointer;
+}
+
+.stkT9_links{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-top:8px;
+  opacity:0;
+  transform:translateY(-10px);
+  transition:.3s;
+}
+
+.stkT9_social.stkT9_active .stkT9_links{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.stkT9_links a{
+  background:#fff;
+  color:#0b2a5c;
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:13px;
+}
+
+/* INFO */
+.stkT9_info{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:18px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(8px);
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .stkT9_grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .stkT9_grid{
+    grid-template-columns:1fr;
+  }
+
+  .stkT9_title{
+    font-size:24px;
+  }
+}
+
+/* MOBILE TOUCH EFFECT */
+@media (hover:none){
+  .stkT9_box:active{
+    transform:scale(0.97);
+  }
+}
+
+/* ICON HOVER COLOR */
+.stkT9_links a:hover{
+  background:#0b2a5c;
+  color:#fff;
+  transform:scale(1.1);
+}
+
+/* SMOOTH ICON TRANSITION */
+.stkT9_links a{
+  transition:0.3s;
+}
+
+
+</style>
+
+<script>
+
+(function(){
+
+  const root = document.querySelector(".stkT9_section");
+  if(!root) return;
+
+  const socials = root.querySelectorAll(".stkT9_social");
+
+  socials.forEach(s=>{
+    const btn = s.querySelector(".stkT9_btn");
+
+    btn.addEventListener("click", function(e){
+      e.stopPropagation();
+
+      socials.forEach(el=>{
+        if(el!==s) el.classList.remove("stkT9_active");
+      });
+
+      s.classList.toggle("stkT9_active");
+    });
   });
 
-  // Newsletter Form Input Animation
-  const newsletterInput = document.querySelector(".newsletter-form input");
-  if (newsletterInput) {
-    newsletterInput.addEventListener("focus", () => {
-      gsap.to(newsletterInput, {
-        scale: 1.02,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-
-    newsletterInput.addEventListener("blur", () => {
-      gsap.to(newsletterInput, {
-        scale: 1,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-  }
-
-  // Subscribe Button Hover Animation
-  const subscribeBtn = document.querySelector(".btn-subscribe");
-  if (subscribeBtn) {
-    subscribeBtn.addEventListener("mouseenter", () => {
-      gsap.to(subscribeBtn, {
-        y: -3,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-
-    subscribeBtn.addEventListener("mouseleave", () => {
-      gsap.to(subscribeBtn, {
-        y: 0,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-
-    subscribeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      // Button click animation
-      gsap.to(subscribeBtn, {
-        scale: 0.98,
-        duration: 0.1,
-        yoyo: true,
-        repeat: 1,
-        ease: "power2.inOut",
-      });
-
-      // Optional: Add success animation
-      const originalText = subscribeBtn.textContent;
-      subscribeBtn.textContent = "✓ Subscribed!";
-
-      setTimeout(() => {
-        subscribeBtn.textContent = originalText;
-      }, 2000);
-    });
-  }
-
-  // Badge Animation on Hover
-  const featuredBadge = document.querySelector(".featured-badge");
-  if (featuredBadge) {
-    gsap.from(featuredBadge, {
-      opacity: 1,
-      y: -20,
-      duration: 0.6,
-      delay: 0.5,
-      ease: "back.out",
-    });
-
-    featuredBadge.addEventListener("mouseenter", () => {
-      gsap.to(featuredBadge, {
-        scale: 1.1,
-        boxShadow: "0 15px 40px rgba(46, 204, 113, 0.4)",
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-
-    featuredBadge.addEventListener("mouseleave", () => {
-      gsap.to(featuredBadge, {
-        scale: 1,
-        boxShadow: "0 10px 30px rgba(46, 204, 113, 0.2)",
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    });
-  }
-
-  // Parallax Effect for Featured Image (Scroll)
-  if (featuredImg) {
-    gsap.to(featuredImg, {
-      scrollTrigger: {
-        trigger: ".featured-main",
-        start: "top center",
-        end: "bottom center",
-        scrub: 1,
-        markers: false,
-      },
-      y: -50,
-      ease: "none",
-    });
-  }
-
-  // Card Read Time Badge Animation
-  document.querySelectorAll(".read-time").forEach((badge) => {
-    gsap.from(badge, {
-      opacity: 1,
-      scale: 0.8,
-      duration: 0.5,
-      delay: 0.3,
-      ease: "back.out",
-    });
+  root.addEventListener("click", ()=>{
+    socials.forEach(el=>el.classList.remove("stkT9_active"));
   });
 
-  // Floating Animation for Featured Badge
-  gsap.to(".featured-badge", {
-    y: -5,
-    duration: 2,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  });
-
-  // ================= GSAP for Additional Sections =================
-  function animateSection(selector, item) {
-    gsap.from(`${selector} .section-title`, {
-      scrollTrigger: {
-        trigger: selector,
-        start: "top 85%",
-      },
-      opacity: 1,
-      y: 40,
-      duration: 0.8,
-      ease: "back.out",
-    });
-
-    gsap.from(`${selector} ${item}`, {
-      scrollTrigger: {
-        trigger: selector,
-        start: "top 75%",
-      },
-      opacity: 1,
-      y: 50,
-      duration: 0.6,
-      stagger: 0.15,
-      ease: "power2.out",
-    });
-  }
-
-  animateSection(".trending-technology", ".feature-card");
-  animateSection(".breaking-news", ".headline-card");
-  animateSection(".featured-articles", ".feature-card");
-  animateSection(".startup-spotlight", ".feature-card");
-  animateSection(".tech-videos", ".video-card");
-  animateSection(".editors-picks", ".feature-card");
-
-  // video card interactions
-  document.querySelectorAll(".video-card").forEach((card) => {
-    const icon = card.querySelector(".play-overlay");
-    card.addEventListener("mouseenter", () => {
-      gsap.to(icon, { scale: 1.2, duration: 0.3, ease: "power2.out" });
-    });
-    card.addEventListener("mouseleave", () => {
-      gsap.to(icon, { scale: 1, duration: 0.3, ease: "power2.out" });
-    });
-    card.addEventListener("click", () => {
-      const url = card.dataset.videoUrl;
-      if (url) window.open(url, "_blank");
-    });
-  });
+})();
 </script>
+
+<section class="stkFaq-section">
+
+    <div class="stkFaq-container">
+  
+      <!-- LEFT IMAGE -->
+      <div class="stkFaq-imageWrap">
+        <img src="./clinical.webp" class="stkFaq-image">
+      </div>
+  
+      <!-- RIGHT CONTENT -->
+      <div class="stkFaq-content">
+  
+        <div class="stkFaq-head">
+          <span class="stkFaq-badge">FAQ’S</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            STACKLY is the hub for scientific pioneers and innovation enthusiasts,
+            offering breakthrough molecular technology before it reaches clinical practice.
+          </p>
+  
+          <a href="./404.html" class="stkFaq-btn">Get a Quote</a>
+        </div>
+  
+        <!-- ACCORDION -->
+        <div class="stkFaq-accordion">
+  
+          <div class="stkFaq-item active">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              How Can Biotechnology Benefit My Health?
+            </button>
+            <div class="stkFaq-answer">
+              Biotechnology enables personalized medicine, faster diagnostics, and improved treatments.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              What Are the Costs of Your Genomic Sequencing?
+            </button>
+            <div class="stkFaq-answer">
+              Costs vary depending on the complexity, but we provide flexible pricing models.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              How Do You Measure Project Success?
+            </button>
+            <div class="stkFaq-answer">
+              We track efficiency, accuracy, and clinical impact across all research outputs.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              Do You Provide Remote Consultations?
+            </button>
+            <div class="stkFaq-answer">
+              Yes, we provide fully remote consultations globally with expert teams.
+            </div>
+          </div>
+  
+          <div class="stkFaq-item">
+            <button class="stkFaq-question">
+              <span class="stkFaq-icon">+</span>
+              What Research Areas Do You Specialize In?
+            </button>
+            <div class="stkFaq-answer">
+              Genomics, AI-driven biology, drug discovery, and sustainable biotech solutions.
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.stkFaq-section{
+  padding:100px 20px;
+  background:linear-gradient(135deg,#0b2a5c,#020617);
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+}
+
+.stkFaq-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* ===== IMAGE ===== */
+.stkFaq-imageWrap{
+  height:100%;
+}
+
+.stkFaq-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* ===== CONTENT ===== */
+.stkFaq-head h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.stkFaq-head p{
+  color:#cbd5e1;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+/* CAPSULE */
+.stkFaq-badge{
+  display:inline-block;
+  padding:10px 26px;
+  border-radius:50px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+/* BUTTON */
+.stkFaq-btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:50px;
+  background:#020617;
+  color: white;
+  font-weight:600;
+  text-decoration:none;
+  margin-bottom:30px;
+}
+
+/* ===== ACCORDION ===== */
+.stkFaq-accordion{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.stkFaq-item{
+  background:rgba(255,255,255,0.08);
+  border-radius:14px;
+  overflow:hidden;
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+/* ACTIVE */
+.stkFaq-item.active{
+  background:rgba(255,255,255,0.15);
+}
+
+/* QUESTION */
+.stkFaq-question{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  padding:18px 20px;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* ICON */
+.stkFaq-icon{
+  min-width:28px;
+  height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(8px);
+  font-weight:bold;
+  transition:0.3s;
+}
+
+/* ICON ACTIVE */
+.stkFaq-item.active .stkFaq-icon{
+  transform:rotate(45deg);
+  background:#020617;
+  color:white;
+}
+
+/* ANSWER */
+.stkFaq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 20px;
+  font-size:14px;
+  color:#cbd5e1;
+  transition:0.4s ease;
+}
+
+.stkFaq-item.active .stkFaq-answer{
+  max-height:200px;
+  padding:15px 20px;
+}
+
+/* ===== ANIMATION ===== */
+.stkFaq-item{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s;
+}
+
+.stkFaq-item.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .stkFaq-container{
+    grid-template-columns:1fr;
+  }
+
+  .stkFaq-head{
+    text-align:center;
+  }
+
+  .stkFaq-head h2{
+    font-size:30px;
+  }
+}
+
+@media(max-width:600px){
+  .stkFaq-head h2{
+    font-size:24px;
+  }
+
+  .stkFaq-question{
+    font-size:14px;
+  }
+}
+  </style>
+
+<script>
+
+    /* ===== ACCORDION ===== */
+    const stkFaqItems = document.querySelectorAll(".stkFaq-item");
+    
+    stkFaqItems.forEach(item=>{
+      const btn = item.querySelector(".stkFaq-question");
+    
+      btn.addEventListener("click",()=>{
+    
+        stkFaqItems.forEach(i=>i.classList.remove("active"));
+    
+        item.classList.add("active");
+    
+      });
+    });
+    
+    
+    /* ===== SCROLL ANIMATION ===== */
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+    
+          const items = entry.target.querySelectorAll(".stkFaq-item");
+    
+          items.forEach((el,i)=>{
+            setTimeout(()=>{
+              el.classList.add("show");
+            }, i*150);
+          });
+    
+        }
+      });
+    },{threshold:0.2});
+    
+    observer.observe(document.querySelector(".stkFaq-accordion"));
+    
+    </script>
+
+
+
+<section class="stkT3-section">
+
+    <!-- BACKGROUND WAVES -->
+    <div class="stkT3-wave"></div>
+  
+    <div class="stkT3-container">
+  
+      <!-- HEADER -->
+      <div class="stkT3-header">
+        <span class="stkT3-badge">Client Testimonials</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+  
+      <!-- SLIDER -->
+      <div class="stkT3-slider" id="stkT3Slider">
+  
+        <!-- SLIDE 1 -->
+        <div class="stkT3-slide active">
+  
+          <div class="stkT3-left">
+            <div class="stkT3-imgWrap">
+              <img src="./joe.webp">
+              <div class="stkT3-quote">❝</div>
+            </div>
+            <div class="stkT3-stars">★★★★★</div>
+          </div>
+  
+          <div class="stkT3-right">
+            <p>
+              Ascend the mountain not to plant your flag, but to embrace the challenge,
+              savour the journey, and marvel at the view. Climb to experience the world,
+              not for the world to notice you.
+            </p>
+            <h4>Dr. Jacob Jones <span>/ Lab Director</span></h4>
+          </div>
+  
+        </div>
+  
+        <!-- SLIDE 2 -->
+        <div class="stkT3-slide">
+  
+          <div class="stkT3-left">
+            <div class="stkT3-imgWrap">
+              <img src="./arjun.webp">
+              <div class="stkT3-quote">❝</div>
+            </div>
+            <div class="stkT3-stars">★★★★★</div>
+          </div>
+  
+          <div class="stkT3-right">
+            <p>
+              Innovation is not just about discovery but about impact. Their solutions
+              transformed our workflow and boosted research accuracy significantly.
+            </p>
+            <h4>Dr. Dianne Russell <span>/ Research Founder</span></h4>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <!-- NAV -->
+      <!-- <div class="stkT3-nav">
+        <button id="stkT3Prev">←</button>
+        <button id="stkT3Next">→</button>
+      </div>  -->
+   
+    </div>
+  </section>
+
+  <style>
+    /* ===== SECTION ===== */
+.stkT3-section{
+  position:relative;
+  padding:120px 20px;
+  background:#f5f7fa;
+  overflow:hidden;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ===== WAVE BACKGROUND ===== */
+.stkT3-wave{
+  position:absolute;
+  width:200%;
+  height:200%;
+  top:-50%;
+  left:-50%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size:20px 20px;
+  animation:stkWaveMove 20s linear infinite;
+  opacity:0.5;
+}
+
+@keyframes stkWaveMove{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(80px,80px);}
+}
+
+/* ===== CONTAINER ===== */
+.stkT3-container{
+  max-width:1200px;
+  margin:auto;
+  position:relative;
+}
+
+/* ===== HEADER ===== */
+.stkT3-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.stkT3-badge{
+  display:inline-block;
+  padding:10px 30px;
+  border-radius:50px;
+  background:#020617;
+  color:#fff;
+  margin-bottom:15px;
+}
+
+.stkT3-header h2{
+  font-size:38px;
+  color:#0b2a5c;
+}
+
+/* ===== SLIDER ===== */
+.stkT3-slide{
+  display:none;
+  align-items:center;
+  gap:60px;
+}
+
+.stkT3-slide.active{
+  display:flex;
+  animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== LEFT ===== */
+.stkT3-left{
+  text-align:center;
+  min-width:260px;
+}
+
+.stkT3-imgWrap{
+  position:relative;
+  width:220px;
+  height:220px;
+  margin:auto;
+}
+
+.stkT3-imgWrap img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* QUOTE */
+.stkT3-quote{
+  position:absolute;
+  top:-10px;
+  right:10px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#020617;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+}
+
+/* STARS */
+.stkT3-stars{
+  margin-top:20px;
+  color:#ff9800;
+}
+
+/* ===== RIGHT ===== */
+.stkT3-right{
+  flex:1;
+}
+
+.stkT3-right p{
+  font-size:22px;
+  color:#555;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.stkT3-right h4{
+  font-size:20px;
+  color:#020617;
+}
+
+.stkT3-right span{
+  color:#777;
+}
+
+/* ===== NAV ===== */
+.stkT3-nav{
+  position:absolute;
+  right:20px;
+  bottom:10px;
+}
+
+.stkT3-nav button{
+  margin-left:10px;
+  padding:10px 16px;
+  border:none;
+  border-radius:50%;
+  background:#e0e0e0;
+  cursor:pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .stkT3-slide{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .stkT3-right p{
+    font-size:18px;
+  }
+}
+
+@media(max-width:600px){
+  .stkT3-imgWrap{
+    width:160px;
+    height:160px;
+  }
+
+  .stkT3-header h2{
+    font-size:26px;
+  }
+
+  .stkT3-right p{
+    font-size:16px;
+  }
+}
+  </style>
+
+  <script>
+    
+
+const slides = document.querySelectorAll(".stkT3-slide");
+let index = 0;
+let autoSlide;
+
+/* SHOW */
+function showSlide(i){
+  slides.forEach(s => s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+/* NEXT */
+document.getElementById("stkT3Next").onclick = ()=>{
+  index = (index + 1) % slides.length;
+  showSlide(index);
+};
+
+/* PREV */
+document.getElementById("stkT3Prev").onclick = ()=>{
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+};
+
+/* AUTO */
+function startAuto(){
+  autoSlide = setInterval(()=>{
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  },4000);
+}
+
+function stopAuto(){
+  clearInterval(autoSlide);
+}
+
+/* HOVER STOP */
+const slider = document.getElementById("stkT3Slider");
+slider.addEventListener("mouseenter", stopAuto);
+slider.addEventListener("mouseleave", startAuto);
+
+/* INIT */
+showSlide(0);
+startAuto();
+
+</script>
+  
+
+
+<section class="bio-price-section">
+
+    <div class="bio-price-bg"></div>
+    
+    <div class="bio-price-container">
+    
+    <h2 class="bio-price-title">Biotechnology Research Plans</h2>
+    
+    <p class="bio-price-subtitle">
+    Flexible biotechnology solutions for research labs, healthcare innovation
+    and AI-driven pharmaceutical discovery.
+    </p>
+    
+    <div class="bio-price-grid">
+    
+    <!-- PLAN 1 -->
+    
+    <div class="bio-price-card">
+    <h3 class="bio-price-plan">Basic Research</h3>
+    
+    <div class="bio-price-cost">$199<span>/month</span></div>
+    
+    <ul class="bio-price-features">
+    <li>Genome Data Analysis</li>
+    <li>Molecular Diagnostics</li>
+    <li>Basic AI Bioinformatics</li>
+    <li>Cloud Lab Storage</li>
+    </ul>
+    
+    <a href="404.html" class="bio-price-btn">Choose Plan</a>
+    </div>
+    
+    <!-- PLAN 2 -->
+    
+    <div class="bio-price-card bio-price-popular">
+    <h3 class="bio-price-plan">Advanced Biotech</h3>
+    
+    <div class="bio-price-cost">$399<span>/month</span></div>
+    
+    <ul class="bio-price-features">
+    <li>CRISPR Gene Editing Tools</li>
+    <li>Advanced Genomic Analysis</li>
+    <li>AI Drug Discovery Models</li>
+    <li>Biotech Lab Integration</li>
+    </ul>
+    
+    <a href="404.html" class="bio-price-btn">Choose Plan</a>
+    </div>
+    
+    <!-- PLAN 3 -->
+    
+    <div class="bio-price-card">
+    <h3 class="bio-price-plan">Enterprise Lab</h3>
+    
+    <div class="bio-price-cost">$699<span>/month</span></div>
+    
+    <ul class="bio-price-features">
+    <li>Full Genome Research Platform</li>
+    <li>AI Bioinformatics Engine</li>
+    <li>Pharmaceutical Development Tools</li>
+    <li>Priority Scientific Support</li>
+    </ul>
+    
+    <a href="404.html" class="bio-price-btn">Choose Plan</a>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <style>
+    
+    /* SECTION */
+    
+    .bio-price-section{
+    position:relative;
+    padding:110px 20px;
+    background:#020817;
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    }
+    
+    /* BACKGROUND IMAGE */
+    
+    .bio-price-bg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("./bio3.webp") center/cover no-repeat;
+    opacity:0.15;
+    animation:bioPriceBgMove 20s linear infinite;
+    z-index:0;
+    }
+    
+    /* BACKGROUND ANIMATION */
+    
+    @keyframes bioPriceBgMove{
+    
+    0%{transform:scale(1)}
+    50%{transform:scale(1.1)}
+    100%{transform:scale(1)}
+    
+    }
+    
+    /* CONTAINER */
+    
+    .bio-price-container{
+    position:relative;
+    z-index:5;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+    }
+    
+    /* TITLE */
+    
+    .bio-price-title{
+    font-size:40px;
+    color:white;
+    margin-bottom:10px;
+    }
+    
+    .bio-price-subtitle{
+    color: white;
+
+    max-width:650px;
+    margin:auto;
+    margin-bottom:60px;
+    }
+    
+    /* GRID */
+    
+    .bio-price-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    }
+    
+    /* CARD */
+    
+    .bio-price-card{
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:40px 25px;
+    border-radius:18px;
+    color:white;
+    backdrop-filter:blur(12px);
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(60px);
+    }
+    
+    /* POPULAR PLAN */
+    
+    .bio-price-popular{
+    border:1px solid #0b2a5c;
+    box-shadow:0 0 25px rgba(0,255,255,0.3);
+    }
+    
+    /* PLAN NAME */
+    
+    .bio-price-plan{
+    font-size:22px;
+    margin-bottom:15px;
+    }
+    
+    /* PRICE */
+    
+    .bio-price-cost{
+    font-size:38px;
+    margin-bottom:20px;
+    color: white;
+    }
+    
+    .bio-price-cost span{
+    font-size:16px;
+    color:#9bb7d3;
+    }
+    
+    /* FEATURES */
+    
+    .bio-price-features{
+    list-style:none;
+    padding:0;
+    margin-bottom:25px;
+    }
+    
+    .bio-price-features li{
+    margin:10px 0;
+    color:#dbe9ff;
+    font-size:14px;
+    }
+    
+    /* BUTTON */
+    
+    .bio-price-btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#0b2a5c;
+    color: white;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    }
+    
+    .bio-price-btn:hover{
+    background:#0b2a5c;
+    box-shadow:0 0 20px #0b2a5c;
+    }
+    
+    /* HOVER */
+    
+    .bio-price-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px rgba(0,255,255,0.35);
+    }
+    
+    /* SHOW ANIMATION */
+    
+    .bio-price-show{
+    opacity:1;
+    transform:translateY(0);
+    }
+    
+    /* TABLET */
+    
+    @media(max-width:1000px){
+    
+    .bio-price-grid{
+    grid-template-columns:repeat(2,1fr);
+    }
+    
+    }
+    
+    /* MOBILE */
+    
+    @media(max-width:600px){
+    
+    .bio-price-title{
+    font-size:28px;
+    }
+    
+    .bio-price-grid{
+    grid-template-columns:1fr;
+    }
+    
+    }
+    
+    </style>
+    
+    
+    
+    <script>
+    
+    /* CARD LOAD ANIMATION */
+    
+    const bioPriceCards = document.querySelectorAll(".bio-price-card");
+    
+    function bioPriceReveal(){
+    
+    bioPriceCards.forEach((card,i)=>{
+    
+    const top = card.getBoundingClientRect().top;
+    
+    if(top < window.innerHeight-80){
+    
+    setTimeout(()=>{
+    card.classList.add("bio-price-show");
+    },i*200);
+    
+    }
+    
+    });
+    
+    }
+    
+    window.addEventListener("scroll",bioPriceReveal);
+    window.addEventListener("load",bioPriceReveal);
+    
+    </script>
+    
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bio-footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO + ABOUT -->
+<div class="footer-col">
+  <a href="./index.html">
+  <img src="./logo.webp" class="footer-logo"></a>
+
+  <p>
+    Advancing biotechnology through innovation and research.
+    Transforming healthcare and life sciences globally.
+  </p>
+
+  <!-- FOLLOW US -->
+  <h4 class="follow-title">Follow Us</h4>
+
+  <div class="social-icons">
+    <a href="404.html"><i class="ri-facebook-fill"></i></a>
+    <a href="404.html"><i class="ri-twitter-x-line"></i></a>
+    <a href="404.html"><i class="ri-instagram-line"></i></a>
+    <a href="404.html"><i class="ri-linkedin-fill"></i></a>
+   
+  </div>
+</div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- LAB SERVICES -->
+    <div class="footer-col">
+      <h4>Laboratory Services</h4>
+      <ul>
+        <li><a href="404.html">Genetic Testing</a></li>
+        <li><a href="404.html">DNA Sequencing</a></li>
+        <li><a href="404.html">Cell Analysis</a></li>
+        <li><a href="404.html">Bioinformatics</a></li>
+        <li><a href="404.html">Clinical Trials</a></li>
+      </ul>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="footer-col">
+      <h4>Location</h4>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"></iframe>
+      </div>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-col">
+      <h4>Research Updates</h4>
+
+      <div class="subscribe">
+        <input type="email" id="email" placeholder="Enter Email">
+        <button onclick="subscribe()">Subscribe</button>
+      </div>
+
+      <span id="msg"></span>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>
+      © 2026 BioGen | All Rights Reserved |
+      <a href="404.html">Privacy Policy</a> |
+      <a href="404.html">Terms & Conditions</a>
+    </p>
+  </div>
+
+</footer>
+
+<style>
+  /* FOLLOW TITLE */
+.follow-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ICON STYLE */
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT (BIO GLOW) */
+.social-icons a:hover {
+  /* background: #00f7ff; */
+  color: #000;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px white;
+}
+
+/* MOBILE CENTER ALIGN */
+@media (max-width: 480px) {
+  .social-icons {
+    justify-content: center;
+  }
+
+  .follow-title {
+    text-align: center;
+  }
+}
+  /* PRE FOOTER */
+.pre-footer {
+  background: #0a0f1a;
+  padding: 40px 20px;
+}
+
+.pre-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pre-box {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+.pre-box i {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.bio-footer {
+  background: #05070d;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+/* LOGO */
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* LINKS */
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+/* SOCIAL */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* MAP */
+.map iframe {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* SUBSCRIBE */
+.subscribe {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.subscribe button {
+  padding: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* MESSAGE */
+#msg {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+  </style>
+
+<script>
+  function subscribe() {
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("msg");
+  
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  
+    if (email === "" || !email.match(pattern)) {
+      msg.style.color = "red";
+      msg.innerText = "Please fill correct mail id";
+      return;
+    }
+  
+    msg.style.color = "lightgreen";
+    msg.innerText = "Subscribed successfully!";
+  
+    setTimeout(() => {
+      window.location.href = "404.html";
+    }, 1200);
+  }
+  </script>
+</body>
+</html>
