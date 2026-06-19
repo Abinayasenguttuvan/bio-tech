@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Technology</title>
     <link rel="icon" href="./Assets/icon.webp" />
-    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="./signout.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Swiper CSS -->
     <link
@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <!-- <div class="header1">
+      <div class="header1">
         <div class="container1">
           <h3>Welcome To Stackly Daily News Technologies</h3>
         </div>
@@ -34,37 +34,32 @@
             <p>Support@stackly.com</p>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="header2">
         <div class="logo">
-          <a href="./index.html">
-            <img src="./Assets/logo.webp" alt="Stackly Logo"
-              style="height:60px;
-              filter: brightness(0) saturate(100%)
-              invert(12%) sepia(92%) saturate(2950%)
-              hue-rotate(350deg) brightness(70%) contrast(120%);">
-            </a>
+          <a href="./index2.html">
+            <img src="./Assets/logo.webp" alt="Logo" />
+          </a>
         </div>
 
         <nav>
           <ul>
             <li class="dropdown">
-              <a href="./index.html">Home</a>
+              <a href="./index2.html">Home</a>
 
               <span class="drop-toggle">
                 <i class="fa-solid fa-caret-down"></i>
               </span>
 
               <ul class="dropdown-menu">
-                <li><a href="./index2.html">Home 2</a></li>
+                <li><a href="./index.html">Home 1</a></li>
               </ul>
             </li>
 
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./service.html">Services</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./categories.html">Categories</a></li>
+            <li><a href="./latest-news.html">Latest News</a></li>
+            <li><a href="./tech-reviews.html">Tech Reviews</a></li>
+            <li><a href="./innovations.html">Innovations</a></li>
           </ul>
         </nav>
 
@@ -72,7 +67,7 @@
           <div class="login">
             <!-- <a class="btn" href="./app.html">Buy Now</a> -->
 
-            <a href="./login.html">
+            <a href="./login2.html">
               <i class="fa-regular fa-circle-user"></i>
             </a>
           </div>
@@ -97,31 +92,32 @@
          
         >
           <div class="dropdown-header">
-            <a href="./index.html">Home</a>
+            <a href="./index2.html">Home</a>
             <span class="drop-caret" id="home-caret">▾</span>
           </div>
           <ul class="submenu" id="home-dropdown">
-            <li><a href="./index2.html">Home 2</a></li>
+            <li><a href="./index.html">Home 1</a></li>
           </ul>
         </li>
 
         <li class="menu-item">
-          <a href="./about.html">About</a>
+          <a href="./categories.html">Categories</a>
         </li>
+
         <li class="menu-item">
-          <a href="./service.html">Services</a>
+          <a href="./latest-news.html">Latest News</a>
         </li>
-        <li class="menu-item">
-          <a href="./blog.html">Blog</a>
+
+        <li class="menu-item" >
+          <a href="./tech-reviews.html">Tech Reviews</a>
         </li>
+
         <li class="menu-item">
-          <a href="./contact.html">Contact Us</a>
+          <a href="./innovations.html">Innovations</a>
         </li>
-        <li class="menu-item">
-          <a href="./dashboard.html">Dashboard</a>
-        </li>
-        <li class="menu-item">
-          <a href="./login.html">Login</a>
+
+        <li class="menu-item" >
+          <a href="./login2.html">Login</a>
         </li>
       </ul>
 
@@ -134,45 +130,34 @@
 
     <div class="overlay" id="overlay"></div>
 
+
     <section class="Structure">
-      <div class="login-wrapper">
-        <div class="login-card">
+      <div class="signout-wrapper">
+        <div class="signout-card">
           <!-- LEFT SIDE -->
-          <div class="login-left">
-            <h1>Welcome back to <span>Stackly News Technology</span></h1>
+          <div class="signout-left">
+            <h1>Confirm Sign-out from <span>Stackly News Technology</span></h1>
 
             <ul>
-              <li>✔ Real-time coverage of the latest technology news</li>
-              <li>
-                ✔ In-depth analysis of AI, startups, and emerging innovations
-              </li>
-              <li>✔ Breaking updates from global tech companies</li>
-              <li>✔ Expert reviews of gadgets, software, and digital tools</li>
-              <li>
-                ✔ Insights into cybersecurity, data privacy, and future tech
-                trends
-              </li>
+              <li>✔ Secure account logout confirmation</li>
+              <li>✔ Protect your personal and browsing data</li>
+              <li>✔ Prevent unauthorized access to your account</li>
+              <li>✔ Safe and encrypted session termination</li>
             </ul>
 
-            <div class="tip">
-              Tip: Press
-              <a href="./error.html" class="tabb">
-                <strong>Tab</strong>
-              </a>
-              to move fields
-            </div>
+            <div class="tip">Tip: Re-enter credentials to sign out.</div>
           </div>
 
           <!-- RIGHT SIDE -->
-          <div class="login-right">
-            <h2>Log-in</h2>
-            <p>Access your Dashboard and Manage with Care.</p>
+          <div class="signout-right">
+            <h2>Sign-out</h2>
+            <p class="headings">Verify your account to complete logout.</p>
 
-            <form id="loginForm">
-              <div class="input-group email-group">
+            <form id="signoutForm">
+              <div class="input-group">
                 <input
                   type="email"
-                  id="email"
+                  id="signoutEmail"
                   placeholder="you@gmail.com"
                   required
                 />
@@ -181,21 +166,20 @@
               <div class="input-group password-group">
                 <input
                   type="password"
-                  id="password"
+                  id="signoutPassword"
                   placeholder="Password"
                   required
                 />
-                <span id="togglePassword">Show</span>
+                <span id="toggleSignoutPassword">Show</span>
               </div>
 
-              <a href="./forgotpassword.html" class="forgot"
-                >Forgot password?</a
-              >
-
-              <button type="submit" class="login-btn1">Log in</button>
-
-              <div class="signup">
-                <p>New here? <a href="./signout.html">Create an account</a></p>
+              <button type="submit" class="signout-btn">
+                Confirm Sign-out
+              </button>
+              <div class="link">
+                <p class="links">
+                  Already Have An Account ? <a href="./login2.html">Sign-In</a>
+                </p>
               </div>
             </form>
           </div>
@@ -203,16 +187,61 @@
       </div>
     </section>
 
+    <script>
+      const toggleSignoutPassword = document.getElementById(
+        "toggleSignoutPassword",
+      );
+      const signoutPassword = document.getElementById("signoutPassword");
+      const signoutForm = document.getElementById("signoutForm");
+
+      // Show / Hide Password
+      toggleSignoutPassword.addEventListener("click", () => {
+        const type = signoutPassword.type === "password" ? "text" : "password";
+        signoutPassword.type = type;
+        toggleSignoutPassword.textContent =
+          type === "password" ? "Show" : "Hide";
+      });
+
+      signoutForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("signoutEmail").value.trim();
+        const pass = signoutPassword.value.trim();
+
+        // Gmail validation
+        const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+        // Password validation
+        const passwordPattern =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
+
+        if (!gmailPattern.test(email)) {
+          alert("Email must end with @gmail.com");
+          return;
+        }
+
+        if (!passwordPattern.test(pass)) {
+          alert(
+            "Password must contain:\n- Uppercase letter\n- Lowercase letter\n- Number\n- Special symbol\n- Minimum 6 characters",
+          );
+          return;
+        }
+
+        alert("You have been securely signed out.");
+        window.location.href = "login2.html";
+      });
+    </script>
+
     <footer class="main-footer">
       <div class="footer-grid">
         <div class="footer-brand gsap-contact">
           <div class="logo" style="margin-bottom: 20px">
-            <a href="./index.html">
-              <img src="./Assets/logo.webp" alt="Stackly Logo"
-              style="height:60px;
-              filter: brightness(0) saturate(100%)
-              invert(12%) sepia(92%) saturate(2950%)
-              hue-rotate(350deg) brightness(70%) contrast(120%);">
+            <a href="./index2.html">
+              <img
+                src="./Assets/logo.webp"
+                alt="News Technology Logo"
+                style="max-width: 180px"
+              />
             </a>
           </div>
           <!-- <h2 class="footer-logo">MED<span>DEVICE</span></h2> -->
@@ -245,18 +274,18 @@
         <div class="footer-links gsap-contact">
           <h4>Quick Links</h4>
 
-          <a href="./about.html">About</a>
-          <a href="./service.html">Services</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./contact.html">Contact Us</a>
-          <a href="./dashboard.html">Dashboard</a>
-          <a href="./login.html">Login</a>
+          <a href="./categories.html">Categories</a>
+          <a href="./latest-news.html">Latest News</a>
+          <a href="./tech-reviews.html">Tech Reviews</a>
+          <a href="./innovations.html">Innovations</a>
+          <a href="./login2.html">Login</a>
         </div>
+
         <div class="footer-links">
           <h4>Navigation</h4>
-          <a href="./about.html">About</a>
-          <a href="./service.html">Services</a>
-          <a href="./blog.html">Blog</a>
+          <a href="./categories.html">Categories</a>
+          <a href="./latest-news.html">Latest News</a>
+          <a href="./tech-reviews.html">Tech Reviews</a>
         </div>
         <div class="footer-newsletter">
           <h4>Newsletter</h4>
@@ -264,7 +293,7 @@
             Stay updated with the latest technology news, trends, and
             innovations.
           </p>
-          <form action="./error.html">
+          <form action="./error2.html">
             <div class="news-input">
               <input type="email" placeholder="Email Address" required />
               <button type="submit">→</button>
@@ -275,8 +304,8 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Updates & Innovations. All Rights Reserved.</p>
         <div class="legal-links">
-          <a href="./error.html">Privacy Policy</a>
-          <a href="./error.html">ISO Compliance</a>
+          <a href="./error2.html">Privacy Policy</a>
+          <a href="./error2.html">ISO Compliance</a>
         </div>
       </div>
     </footer>
@@ -297,44 +326,3 @@
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-<script>
-  const togglePassword = document.getElementById("togglePassword");
-  const password = document.getElementById("password");
-  const form = document.getElementById("loginForm");
-
-  // Show / Hide Password
-  togglePassword.addEventListener("click", () => {
-    const type = password.type === "password" ? "text" : "password";
-    password.type = type;
-    togglePassword.textContent = type === "password" ? "Show" : "Hide";
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById("email").value.trim();
-    const pass = password.value.trim();
-
-    // Gmail validation
-    const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-
-    // Password validation
-    const passwordPattern =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
-
-    if (!gmailPattern.test(email)) {
-      alert("Email must end with @gmail.com");
-      return;
-    }
-
-    if (!passwordPattern.test(pass)) {
-      alert(
-        "Password must contain:\n- Uppercase letter\n- Lowercase letter\n- Number\n- Special symbol\n- Minimum 6 characters",
-      );
-      return;
-    }
-
-    alert("Login successful (demo)");
-  });
-</script>
